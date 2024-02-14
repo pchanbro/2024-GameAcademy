@@ -1,0 +1,4 @@
+﻿  main03.cpp
+C:\Users\User\Desktop\2024-GameAcademy\1개월차\workspace\240214_1\240214_1\main03.cpp(5,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\User\Desktop\2024-GameAcademy\1개월차\workspace\240214_1\240214_1\main03.cpp(32,6): warning C4101: '변수2' :참조되지 않은 지역 변수입니다.
+  240214_1.vcxproj -> C:\Users\User\Desktop\2024-GameAcademy\1개월차\workspace\240214_1\x64\Debug\240214_1.exe
