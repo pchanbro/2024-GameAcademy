@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\homework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|solutionrelative:240219_1\\homework.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\homework_textRpg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|solutionrelative:240219_1\\homework_textRpg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\main06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -38,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "homework_textRpg.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\homework_textRpg.cpp",
+              "RelativeDocumentMoniker": "240219_1\\homework_textRpg.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\homework_textRpg.cpp",
+              "RelativeToolTip": "240219_1\\homework_textRpg.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-21T10:24:20.475Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -48,23 +61,9 @@
               "RelativeDocumentMoniker": "240219_1\\main06.cpp",
               "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\main06.cpp",
               "RelativeToolTip": "240219_1\\main06.cpp",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAADUAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T12:28:16.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "homework.cpp",
-              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\homework.cpp",
-              "RelativeDocumentMoniker": "240219_1\\homework.cpp",
-              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\homework.cpp",
-              "RelativeToolTip": "240219_1\\homework.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T12:23:07.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T12:28:16.16Z"
             },
             {
               "$type": "Document",
@@ -74,10 +73,9 @@
               "RelativeDocumentMoniker": "240219_1\\main05.cpp",
               "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240219_1\\240219_1\\main05.cpp",
               "RelativeToolTip": "240219_1\\main05.cpp",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAF8AAAABAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAF8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T11:29:19.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T11:29:19.688Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "240219_1\\main04.cpp",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACwAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T11:14:49.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T11:14:49.15Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "240219_1\\main03.cpp",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAADEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T10:50:02.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T10:50:02.21Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "240219_1\\main02.cpp",
               "ViewState": "AQIAAHAAAAAAAAAAAAAgwIQAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T10:18:15.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T10:18:15.341Z"
             },
             {
               "$type": "Document",
@@ -128,8 +123,7 @@
               "RelativeToolTip": "240219_1\\main01.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-02-19T10:08:52.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T10:08:52.679Z"
             }
           ]
         }
