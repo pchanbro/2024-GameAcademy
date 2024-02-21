@@ -30,7 +30,7 @@
     <ClCompile Include="main05.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="homework.cpp">
+    <ClCompile Include="homework_textRpg.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="main06.cpp">
