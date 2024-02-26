@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240221\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D452D49E-A173-416B-8618-9D4CA69385EC}|240221\\240221.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240221\\240221\\homework6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D452D49E-A173-416B-8618-9D4CA69385EC}|240221\\240221.vcxproj|solutionrelative:240221\\homework6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D452D49E-A173-416B-8618-9D4CA69385EC}|240221\\240221.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240221\\240221\\homework1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D452D49E-A173-416B-8618-9D4CA69385EC}|240221\\240221.vcxproj|solutionrelative:240221\\homework1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "homework6.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240221\\240221\\homework6.cpp",
+              "RelativeDocumentMoniker": "240221\\homework6.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240221\\240221\\homework6.cpp",
+              "RelativeToolTip": "240221\\homework6.cpp",
+              "ViewState": "AQIAABcBAAAAAAAAAAAAAAAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-26T10:38:42.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "homework1.cpp",
               "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240221\\240221\\homework1.cpp",
               "RelativeDocumentMoniker": "240221\\homework1.cpp",
