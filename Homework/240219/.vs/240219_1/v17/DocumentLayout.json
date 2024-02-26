@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\240219_1\\main05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|solutionrelative:240219_1\\main05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\240219_1\\homework_textRpg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0DA16B9-A56D-4554-90AF-D2895F4F3072}|240219_1\\240219_1.vcxproj|solutionrelative:240219_1\\homework_textRpg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "homework_textRpg.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\240219_1\\homework_textRpg.cpp",
+              "RelativeDocumentMoniker": "240219_1\\homework_textRpg.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\240219_1\\homework_textRpg.cpp",
+              "RelativeToolTip": "240219_1\\homework_textRpg.cpp",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAAMYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-21T10:24:20.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main05.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\240219_1\\main05.cpp",
+              "RelativeDocumentMoniker": "240219_1\\main05.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240219\\240219_1\\main05.cpp",
+              "RelativeToolTip": "240219_1\\main05.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-19T11:29:19.688Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
