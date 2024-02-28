@@ -31,7 +31,10 @@ void ChooseMyHand(int* myHand)
 {
 	cout << "왼손을 선택하세요(0 : 가위, 1 : 바위, 2 : 보) : ";
 	cin >> myHand[RCP_HAND_LEFT];
-	while((myHand[RCP_HAND_LEFT] != RCP_ONE_ROCK) && (myHand[RCP_HAND_LEFT] != RCP_ONE_SCISSOR) && (myHand[RCP_HAND_LEFT] != RCP_ONE_PAPER))
+	while(
+		(myHand[RCP_HAND_LEFT] != RCP_ONE_ROCK) && 
+		(myHand[RCP_HAND_LEFT] != RCP_ONE_SCISSOR) && 
+		(myHand[RCP_HAND_LEFT] != RCP_ONE_PAPER))
 	{
 		cout << "플레이어의 왼손이 잘못 선택되었습니다. 다시 선택하세요.." << endl;
 		cin >> myHand[RCP_HAND_LEFT];
@@ -39,7 +42,10 @@ void ChooseMyHand(int* myHand)
 
 	cout << "오른손을 선택하세요(0 : 가위, 1 : 바위, 2 : 보) : ";
 	cin >> myHand[RCP_HAND_RIGHT];
-	while ((myHand[RCP_HAND_RIGHT] != RCP_ONE_ROCK) && (myHand[RCP_HAND_RIGHT] != RCP_ONE_SCISSOR) && (myHand[RCP_HAND_RIGHT] != RCP_ONE_PAPER))
+	while (
+		(myHand[RCP_HAND_RIGHT] != RCP_ONE_ROCK) && 
+		(myHand[RCP_HAND_RIGHT] != RCP_ONE_SCISSOR) && 
+		(myHand[RCP_HAND_RIGHT] != RCP_ONE_PAPER))
 	{
 		cout << "플레이어의 오른손이 잘못 선택되었습니다. 다시 선택하세요.." << endl;
 		cin >> myHand[RCP_HAND_RIGHT];
@@ -127,7 +133,7 @@ void PrintHandState(int* myHand, int* comHand)
 }
 
 // 5. 하나빼기할 내 손 선택 
-int chooseOneOutMyHand(int* myHand)
+int ChooseOneOutMyHand(int* myHand)
 {
 	int choice;
 	cout << "손을 선택하세요(0 : 왼손, 1: 오른손) :";
@@ -137,7 +143,7 @@ int chooseOneOutMyHand(int* myHand)
 }
 
 // 6. 하나빼기할 컴퓨터 손 선택 
-int chooseOneOutComHand(int* comHand)
+int ChooseOneOutComHand(int* comHand)
 {
 	cout << "컴퓨터가 손을 선택합니다. " << endl;
 	int choice = rand() % RCP_HAND_END;
@@ -188,11 +194,17 @@ void ShowResult(int choosedMyHand, int choosedComHand)
 {
 	cout << "가위바위보 하나빼기 결과 " << endl;
 	
-	if (((choosedMyHand == RCP_ONE_ROCK) && (choosedComHand == RCP_ONE_SCISSOR)) || ((choosedMyHand == RCP_ONE_SCISSOR) && (choosedComHand == RCP_ONE_PAPER)) || ((choosedMyHand == RCP_ONE_PAPER) && (choosedComHand == RCP_ONE_ROCK)))
+	if (
+		((choosedMyHand == RCP_ONE_ROCK) && (choosedComHand == RCP_ONE_SCISSOR)) ||
+		((choosedMyHand == RCP_ONE_SCISSOR) && (choosedComHand == RCP_ONE_PAPER)) ||
+		((choosedMyHand == RCP_ONE_PAPER) && (choosedComHand == RCP_ONE_ROCK)))
 	{
 		cout << "플레이어 승리!!" << endl;
 	} 
-	else if (((choosedMyHand == RCP_ONE_ROCK) && (choosedComHand == RCP_ONE_PAPER)) || ((choosedMyHand == RCP_ONE_SCISSOR) && (choosedComHand == RCP_ONE_ROCK)) || ((choosedMyHand == RCP_ONE_PAPER) && (choosedComHand == RCP_ONE_SCISSOR)))
+	else if (
+		((choosedMyHand == RCP_ONE_ROCK) && (choosedComHand == RCP_ONE_PAPER)) || 
+		((choosedMyHand == RCP_ONE_SCISSOR) && (choosedComHand == RCP_ONE_ROCK)) || 
+		((choosedMyHand == RCP_ONE_PAPER) && (choosedComHand == RCP_ONE_SCISSOR)))
 	{
 		cout << "플레이어 패배.." << endl;
 	}
@@ -221,10 +233,10 @@ void main()
 	PrintHandState(myHand, comHand);
 
 	// 5. 하나빼기할 내 손 선택 
-	int choosedMyHand = chooseOneOutMyHand(myHand);
+	int choosedMyHand = ChooseOneOutMyHand(myHand);
 
 	// 6. 하나빼기할 컴퓨터 손 선택 
-	int choosedComHand = chooseOneOutComHand(comHand);
+	int choosedComHand = ChooseOneOutComHand(comHand);
 
 	// 7. 최종 결정한 손 출력
 	PrintChoosedHand(choosedMyHand, choosedComHand);

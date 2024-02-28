@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D9FA4C2A-A463-4933-B292-F6D86C34D81E}|240226\\240226.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\240226\\homework2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D9FA4C2A-A463-4933-B292-F6D86C34D81E}|240226\\240226.vcxproj|solutionrelative:240226\\homework2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9FA4C2A-A463-4933-B292-F6D86C34D81E}|240226\\240226.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\240226\\homework1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D9FA4C2A-A463-4933-B292-F6D86C34D81E}|240226\\240226.vcxproj|solutionrelative:240226\\homework1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "homework2.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\240226\\homework2.cpp",
+              "RelativeDocumentMoniker": "240226\\homework2.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\240226\\homework2.cpp",
+              "RelativeToolTip": "240226\\homework2.cpp",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAAAC8AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T10:16:51.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "homework1.cpp",
               "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\240226\\homework1.cpp",
               "RelativeDocumentMoniker": "240226\\homework1.cpp",
               "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\Homework\\240226\\240226\\homework1.cpp",
               "RelativeToolTip": "240226\\homework1.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-02-26T12:17:04.757Z",
               "EditorCaption": ""
