@@ -15,7 +15,7 @@
 4. 단어 두개를 조합할 일이 있다면 (스페이스 쓸일이 있으면) 대문자로 구분한다.
 
 
-전역변수의 경우
+<전역변수의 경우>
 (_소문자) 로 시작
 ex) 
 int _myHand =0;
@@ -24,3 +24,15 @@ int _myHand =0;
 함수명은 대문자로 시작해야 한다.
 ex)
 void PrintGameStartScece()
+
+
+
+<구조체의 경우>
+// 대문자로 시작 (Pascal Case)
+struct Student
+{
+	// 변수도 대문자로 시작
+	int English;
+	int Math;
+	int Korean;
+};

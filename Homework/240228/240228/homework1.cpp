@@ -1,7 +1,13 @@
+// 선생님 피드백 빙고 파악할 때 size를 받아놓고 5라던지 이런거 썼음
+// 매크로 (#define)를 잘 안썼음
+
 #include <iostream>
 #include <Windows.h>
 
 using namespace std;
+
+#define BINGO_SIZE 25
+#define BINGO_WIN_COUNT 3
 
 int _myBoard[25] = {};
 int _comBoard[25] = {};
@@ -26,8 +32,8 @@ void main()
 	// 빙고게임 (vs Com)
 	
 	// 1. 빙고판을 생성한다.
-	GenarateBoardNum(_myBoard, 25);
-	GenarateBoardNum(_comBoard, 25);
+	GenarateBoardNum(_myBoard, BINGO_SIZE);
+	GenarateBoardNum(_comBoard, BINGO_SIZE);
 
 	// 2. 빙고게임 진행 여부 확인
 	// 2-1. 빙고 개수 파악
@@ -37,15 +43,15 @@ void main()
 
 		// 3. 빙고판 출력
 		cout << "플레이어 빙고판 " << endl;
-		PrintBingoBoard(_myBoard, 25);
+		PrintBingoBoard(_myBoard, BINGO_SIZE);
 		cout << "컴퓨터 빙고판 " << endl;
-		PrintBingoBoard(_comBoard, 25);
+		PrintBingoBoard(_comBoard, BINGO_SIZE);
 
 		// 4. 빙고판에서 지울 번호 선택
-		int input = ChooseNum(25);
+		int input = ChooseNum(BINGO_SIZE);
 
 		// 5. 선택한 번호 빙고에서 -1로 대체
-		DeleteNum(_myBoard, _comBoard, 25, input);
+		DeleteNum(_myBoard, _comBoard, BINGO_SIZE, input);
 
 		// 6. 현재 빙고 상태 출력
 		PrintBingoState();
@@ -92,15 +98,15 @@ void GenarateBoardNum(int* board, int size)
 bool IsContinue()
 {
 	// 2-1. 플레이어 빙고 개수 파악
-	_myBingo = HowManyBingo(_myBoard, 25);
+	_myBingo = HowManyBingo(_myBoard, BINGO_SIZE);
 	// 2-2. 컴퓨터 빙고 개수 파악
-	_comBingo = HowManyBingo(_comBoard, 25);
+	_comBingo = HowManyBingo(_comBoard, BINGO_SIZE);
 
-	if (_myBingo == 3)
+	if (_myBingo == BINGO_WIN_COUNT)
 	{
 		return false;
 	}
-	else if (_comBingo == 3)
+	else if (_comBingo == BINGO_WIN_COUNT)
 	{
 		return false;
 	}
@@ -108,6 +114,9 @@ bool IsContinue()
 	return true;
 }
 
+
+// 여기 빙고 카운트 셀 때가 문제 SIZE를 매개변수로 받아놓고 그걸 활용해서 빙고를 카운트하지 않고 따로 숫자(5)같은거 써서 판단함
+// sqrt() 함 찾아봐라
 // 2-1. 빙고 개수 파악
 int HowManyBingo(int* board, int size)
 {
@@ -130,6 +139,7 @@ int HowManyBingo(int* board, int size)
 		{
 			num++;
 		}
+		
 
 		if (num == 5)
 		{
@@ -256,7 +266,7 @@ bool IsWin()
 	// 플레이어 순서에 플레이어가 빙고가 안됐는데 컴퓨터가 빙고가 되면 컴퓨터 승리
 	if (_myTurn)
 	{
-		if (_myBingo == 3)
+		if (_myBingo == BINGO_WIN_COUNT)
 		{
 			return true;
 		}
@@ -269,7 +279,7 @@ bool IsWin()
 	// 컴퓨터 순서에 컴퓨터가 빙고가 안됐는데 플레이어가 빙고가 되면 플레이어 승리
 	else
 	{
-		if (_comBingo == 3)
+		if (_comBingo == BINGO_WIN_COUNT)
 		{
 			return false;
 		}
