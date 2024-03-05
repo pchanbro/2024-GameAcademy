@@ -11,6 +11,7 @@ void main()
 	cout << arr << endl;
 
 	int* ptr = arr;
+	// 포인터 변수도 배열 행동이 가능
 	for (int i = 0; i < 5; i++)
 	{
 		printf("%d\n", ptr[i]);
@@ -18,7 +19,8 @@ void main()
 
 	// 이중배열은 받을 수 없음
 	// 이게 뭔말일까 수업 영상을 다시 한 번 보자(day8 영상)
-	// int arr2[10] = {};
+	// int arr2[10][10] = {};
+	// 이 이중배열은 포인터로 받을 수 없다고 영상에 나온다.
 	// int* ptr2 = arr2;
 
 	int value = 3;
