@@ -72,6 +72,11 @@ void GenerateNumber(int* answer, int digit)
 	}
 }
 
+// 선생님 코멘트
+// 여기에 사실 "정답"이나 "게임종료" 같은걸 넣으면 좀 뭔가 안맞음
+// 차라리 함수를 int GameState(이걸 뭐 동사로 만들어서) 처럼 게임 상태를 리턴해주는 식으로
+// 보통 0을 continue로 하고 다른 숫자들을 다른 상태로 취급해서 한다고 한다.
+// 예를 들면 1은 정답, 2는 9회 종료 이런식으로 리턴해줘서 그에 따른 결과를 출력해주도록 한다.
 bool IsContinue(int round, int strike, int* answer, int digit)
 {
 	if (_userWin == true)

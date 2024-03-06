@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main01.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main07.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main06.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main05.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main04.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main04.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main03.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main03.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main02.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{074D28C5-74F7-49D5-89E7-3D5756B67B45}|240306_01\\240306_01.vcxproj|solutionrelative:240306_01\\main02.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main07.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main07.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main07.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main07.cpp",
+              "RelativeToolTip": "240306_01\\main07.cpp",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEMAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T12:34:32.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main06.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main06.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main06.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main06.cpp",
+              "RelativeToolTip": "240306_01\\main06.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAswA0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T12:25:55.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main05.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main05.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main05.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main05.cpp",
+              "RelativeToolTip": "240306_01\\main05.cpp",
+              "ViewState": "AQIAABMAAAAAAAAAAIA3wEIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T12:04:35.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main04.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main04.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main04.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main04.cpp",
+              "RelativeToolTip": "240306_01\\main04.cpp",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAAD0AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T11:49:06.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main03.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main03.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main03.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main03.cpp",
+              "RelativeToolTip": "240306_01\\main03.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T11:02:42.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main02.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main02.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main02.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main02.cpp",
+              "RelativeToolTip": "240306_01\\main02.cpp",
+              "ViewState": "AQIAADQAAAAAAAAAAAAswFMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T10:26:17.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main01.cpp",
+              "DocumentMoniker": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main01.cpp",
+              "RelativeDocumentMoniker": "240306_01\\main01.cpp",
+              "ToolTip": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\1\uAC1C\uC6D4\uCC28\\workspace\\240306_01\\240306_01\\main01.cpp",
+              "RelativeToolTip": "240306_01\\main01.cpp",
+              "ViewState": "AQIAABMAAAAAAAAAAAAswCEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-06T10:25:21.474Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
