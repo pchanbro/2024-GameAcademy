@@ -1,3 +1,15 @@
+// 선생님 코멘트
+// 1.
+// 4번의 PrintBetResult의 매개변수가 Betting인데
+// 함수가 어떤 함수의 매개변수가 되는건 문제가 아닌데
+// 지금 이 프로그램에선 Betting이 좀 핵심 기능을 하니까
+// 함수를 바로 매개변수로 넣어주지 말고
+// 다른 변수를 선언해서 그 값에 함수를 통해 return받은 값을 대입하고
+// 그 변수를 매개변수로 사용하는게 좋다.
+
+// 2. Card 구조체에서 shape 수랑 Number 수를 받아주는 함수를 만들어주면 좋다 (재사용성을 위해)
+// 그 함수를 통해 Card 구조체의 Print할 때 함수 안에서 사용하는 매개변수를 보기좋게 바꿔주는게 좋다.
+
 #include <iostream>
 #include <Windows.h>
 
@@ -9,6 +21,11 @@ struct Card
 
 	void Print();
 	void Swap(Card& another);
+	int GetShape();
+	int GetNumber()
+	{
+		return Index % 13 + 1;
+	}
 };
 
 struct Player
@@ -257,7 +274,7 @@ void PrintBetResult(int betMoney, Player& player, Card card)
 
 bool IsContinue(Player player, int cardNum)
 {
-	if (player.Money < 0 || 52 < cardNum + 1)
+	if (player.Money <= 0 || 52 < cardNum + 1)
 	{
 		return false;
 	}

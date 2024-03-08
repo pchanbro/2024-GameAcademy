@@ -1,0 +1,5 @@
+﻿  main02.cpp
+C:\Users\NewITest\Desktop\2024-GameAcademy\1개월차\workspace\240308_1\240308_1\Card.hpp(11,2): error C3861: 'Function3': 식별자를 찾을 수 없습니다.
+  (소스 파일 'main02.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\NewITest\Desktop\2024-GameAcademy\1개월차\workspace\240308_1\240308_1\main02.cpp(19,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
