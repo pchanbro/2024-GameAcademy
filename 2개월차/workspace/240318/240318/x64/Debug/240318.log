@@ -1,0 +1,16 @@
+﻿  main04.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(48,20): error C2187: 구문 오류: 예기치 않은 '*이(가) 있습니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(49,1): error C2244: 'BinaryTree<T>::GetNode': 함수 정의를 기존 선언과 일치시킬 수 없습니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(48,37): message : 'BinaryTree<T>::GetNode' 선언을 참조하십시오.
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(49,1): message : 정의
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(49,1): message : 'BinaryTree BinaryTree<T>::GetNode(T)'
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(49,1): message : 기존 선언
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(49,1): message : 'BinaryTree<T>::Node *BinaryTree<T>::GetNode(T)'
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(71,20): error C2187: 구문 오류: 예기치 않은 '*이(가) 있습니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(72,1): error C2244: 'BinaryTree<T>::CreateNode': 함수 정의를 기존 선언과 일치시킬 수 없습니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(71,37): message : 'BinaryTree<T>::CreateNode' 선언을 참조하십시오.
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(72,1): message : 정의
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(72,1): message : 'BinaryTree BinaryTree<T>::CreateNode(T)'
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(72,1): message : 기존 선언
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\BinaryTree.h(72,1): message : 'BinaryTree<T>::Node *BinaryTree<T>::CreateNode(T)'
+C:\Users\82102\Desktop\git\2024-GameAcademy\2개월차\workspace\240318\240318\main04.cpp(6,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
