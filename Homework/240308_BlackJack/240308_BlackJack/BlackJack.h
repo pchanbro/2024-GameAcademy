@@ -19,6 +19,8 @@ private:
 	Card _dealerCard[10] = {};
 	int _myIndex = 0;
 	int _dealerIndex = 0;
+	int _myCardSum = 0;
+	int _delearCardSum = 0;
 public:
 	BlackJack();
 	~BlackJack();
@@ -26,8 +28,12 @@ public:
 	void SuffleDeck(Card* deck);
 	bool IsContinue();
 	void Betting();
-	void GiveCard(Card* deck, Card& card, int& index);
-	void showMyCard(Card* myCard, int myIndex);
-	void showDealerCard(Card* dealerCard, int dealerIndex);
+	void GiveCard(Card* deck, Card* card, int& index);
+	void showMyCardNumber(Card* myCard, int myIndex);
+	void showDealerCardNumber(Card* dealerCard, int dealerIndex);
+	void DoGetMoreCard(Card* deck);
+	void dealerGetCard(Card* deck);
+	void showResult();
+	void isDeckAllUsed(Card* deck);
 };
 

@@ -12,24 +12,37 @@ BlackJack::BlackJack()
 	GenerateCard(deck);
 	SuffleDeck(deck);
 	
-	if (IsContinue())
+	while (IsContinue())
 	{
+		system("cls");
+
+		isDeckAllUsed(deck);
+
 		Betting();
 
 		_myIndex = 0;
-
+		_myCardSum = 0;
 		for (int i = 0; i < 2; i++)
 		{
-			GiveCard(deck, _myCard[i], _myIndex);
+			GiveCard(deck, _myCard, _myIndex);
 		}
 
 		_dealerIndex = 0;
+		_delearCardSum = 0;
 		for (int i = 0; i < 2; i++)
 		{
-			GiveCard(deck, _dealerCard[i], _dealerIndex);
+			GiveCard(deck, _dealerCard, _dealerIndex);
 		}
 
-		showMyCard(_myCard, _myIndex);
+		showMyCardNumber(_myCard, _myIndex);
+
+		DoGetMoreCard(deck);
+
+		dealerGetCard(deck);
+
+		showResult();
+
+		system("pause");
 
 	}
 }
@@ -121,6 +134,7 @@ bool BlackJack::IsContinue()
 
 void BlackJack::Betting()
 {
+	cout << "현재 소지금 : " << _playerMoney << endl;
 	cout << "베팅할 금액을 입력하세요 :";
 	cin >> _betMoney;
 
@@ -130,33 +144,170 @@ void BlackJack::Betting()
 		cout << "베팅할 금액을 입력하세요 :";
 		cin >> _betMoney;
 	}
+
+	_playerMoney -= _betMoney;
 }
 
-void BlackJack::GiveCard(Card* deck, Card& card, int& index)
+void BlackJack::GiveCard(Card* deck, Card* card, int& index)
 {
-	card.Index = deck[_deckIndex].Index;
+	isDeckAllUsed(deck);
+	card[index].Index = deck[_deckIndex].Index;
 	_deckIndex++;
 	index++;
 }
 
-void BlackJack::showMyCard(Card* myCard, int myIndex)
+void BlackJack::showMyCardNumber(Card* myCard, int myIndex)
 {
-	printf("내 카드 출력\n");
+	_myCardSum = 0;
+	int cardNumber = 0;
 	for (int i = 0; i < myIndex; i++)
 	{
-		printf("%d번째 카드 : ", myIndex);
+		cardNumber = myCard[i].Index % 13 + 1;
+		if (cardNumber == 1)
+		{
+			_myCardSum += 11;
+		}
+		else if (cardNumber <= 10)
+		{
+			_myCardSum += cardNumber;
+		}
+		else
+		{
+			_myCardSum += 10;
+		}
+	}
+
+	printf("\n내 카드 출력\n");
+	for (int i = 0; i < myIndex; i++)
+	{
+		cardNumber = myCard[i].Index % 13 + 1;
+		if ((21 < _myCardSum) && (cardNumber == 1))
+		{
+			_myCardSum -= 10;
+		}
+		printf("%d번째 카드 : ", cardNumber);
 		myCard[i].Print();
 		printf("\n");
 	}
+	
+	printf("카드 숫자 합 : %d\n", _myCardSum);
+	if (21 < _myCardSum)
+	{
+		printf("21초과...\n");
+	}
 }
 
-void BlackJack::showDealerCard(Card* dealerCard, int dealerIndex)
+void BlackJack::showDealerCardNumber(Card* dealerCard, int dealerIndex)
 {
-	printf("딜러 카드 출력\n");
+	_delearCardSum = 0;
+	int cardNumber = 0;
 	for (int i = 0; i < dealerIndex; i++)
 	{
-		printf("%d번째 카드 : ", dealerIndex);
+		cardNumber = dealerCard[i].Index % 13 + 1;
+		if (cardNumber == 1)
+		{
+			_delearCardSum += 11;
+		}
+		else if (cardNumber <= 10)
+		{
+			_delearCardSum += cardNumber;
+		}
+		else
+		{
+			_delearCardSum += 10;
+		}
+	}
+
+	printf("\n딜러 카드 출력\n");
+	for (int i = 0; i < dealerIndex; i++)
+	{
+		cardNumber = dealerCard[i].Index % 13 + 1;
+		if ((21 < _delearCardSum) && (cardNumber == 1))
+		{
+			_delearCardSum -= 10;
+		}
+		printf("%d번째 카드 : ", cardNumber);
 		dealerCard[i].Print();
 		printf("\n");
+	}
+
+	printf("카드 숫자 합 : %d\n", _delearCardSum);
+	if (21 < _delearCardSum)
+	{
+		printf("21초과...\n");
+	}
+}
+
+void BlackJack::DoGetMoreCard(Card* deck)
+{
+	int choice = 0;
+	while (_myCardSum <= 21)
+	{
+		printf("더 카드를 받으시겠습니까?? (0 : 받는다, 1: 그만한다) : ");
+		cin >> choice;
+		if (choice == 1)
+		{
+			break;
+		}
+		else
+		{
+			printf("플레이어가 카드를 1장 받았습니다.\n\n");
+			GiveCard(deck, _myCard, _myIndex);
+		}
+		showMyCardNumber(_myCard, _myIndex);
+	}
+	printf("플레이어 턴 종료\n\n");		
+}
+
+void BlackJack::dealerGetCard(Card* deck)
+{
+	while (_delearCardSum < 21)
+	{
+		if (21 < _myCardSum)
+		{
+			break;
+		}
+		else if (_myCardSum < _delearCardSum)
+		{
+			break;
+		}
+		else
+		{
+			printf("딜러가 카드를 1장 받았습니다.\n\n");
+			GiveCard(deck, _dealerCard, _dealerIndex);
+		}
+
+		showDealerCardNumber(_dealerCard, _dealerIndex);
+	}
+	printf("딜러 턴 종료\n\n");
+}
+
+void BlackJack::showResult()
+{
+	if (21 < _myCardSum)
+	{
+		cout << "이번 게임 결과 : 플레이어 패배...." << endl;
+	}
+	else if ((21 < _delearCardSum) || (_delearCardSum < _myCardSum))
+	{
+		cout << "이번 게임 결과 : 플레이어 승리!!!" << endl;
+		_playerMoney += _betMoney * 2;
+	}
+	else if (_myCardSum < _delearCardSum)
+	{
+		cout << "이번 게임 결과 : 플레이어 패배...." << endl;
+	}
+	else
+	{
+		cout << "이번 게임 결과 : 무승부" << endl;
+		_playerMoney += _betMoney;
+	}
+}
+
+void BlackJack::isDeckAllUsed(Card* deck)
+{
+	if (51 < _deckIndex)
+	{
+		SuffleDeck(deck);
 	}
 }
