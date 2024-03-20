@@ -1,0 +1,5 @@
+﻿  homework2.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240228\240228\homework2.cpp(10,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240228\240228\homework2.cpp(10,19): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240228\240228\homework2.cpp(16,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  240228.vcxproj -> C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240228\x64\Debug\240228.exe

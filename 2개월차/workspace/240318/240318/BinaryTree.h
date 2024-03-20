@@ -222,6 +222,39 @@ void BinaryTree<T>::RemoveNode(BinaryTree<T>::Node* removeNode)
 {
 	if (removeNode->Parent->Left == removeNode)
 	{
+		//1. 양쪽 갈래 모두 살아있을 때
+		if (removeNode->Left != nullptr && removeNode->Right != nullptr)
+		{
+			// 들어올 수 없음
+			printf("Error\n");
+			return;
+		}
+		// 2. 왼쪽 갈래만 살아있을 때
+		else if (removeNode->Left != nullptr && removeNode->Right == nullptr)
+		{
+			// 왼쪽 부모를 자기로 올리고 자기자신을 지운다.
+
+			// 나 = (부모의 왼쪽)
+			// 나의 왼쪽만 살아있으면
+			removeNode->Parent->Left = removeNode->Left;
+			removeNode->Left->Parent = removeNode->Parent;
+		} 
+		// 3. 오른쪽 갈래만 살아있을 때
+		else if (removeNode->Left == nullptr && removeNode->Right != nullptr)
+		{
+			// 오른쪽 부모를 자기로 올리고 자기자신을 지운다.
+
+			// 나 = (부모의 오른쪽)
+			// 나의 오른쪽만 살아있으면
+			removeNode->Parent->Left = removeNode->Right;
+			removeNode->Right->Parent = removeNode->Parent;
+		}
+		// 4. 둘다 없을 때
+		else if(removeNode->Left == nullptr && removeNode->Right == nullptr)
+		{
+
+		}
+
 		removeNode->Parent->Left == nullptr;
 	}
 	else

@@ -1,0 +1,4 @@
+﻿  homework1.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240304\240304\homework1.cpp(24,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240304\240304\homework1.cpp(28,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  240304.vcxproj -> C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240304\x64\Debug\240304.exe
