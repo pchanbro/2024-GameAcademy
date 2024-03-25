@@ -1,15 +1,10 @@
 #pragma once
+//자주 사용하지만, 자주변경되지 않는 내용들이 포함되는 헤더
 
-// pch.h에 주로 쓰이는 내용들 적어줍니다.
-
-// 프로젝트 - 속성 - C/C++ - 미리 컴파일된 헤더
-// 사용으로 변경
-// pch.h 
-
-// pch.cpp - 속성 - C/C++ - 미리 컴파일된 헤더
-// 만들기로 변경
-
-//자주 사용하지만, 자주 변경되지 않는 내용들이 포함되는 헤더
+//Windows API 라고 하는게, 
+//Windows 함수를 사용한다라는 의미에요
+//<windowsx.h> ,  <Windows.h> 여기에 들어있는 함수들이
+// Windows API 함수입니다.
 #include <Windows.h>
 #include <windowsx.h>
 
@@ -34,13 +29,9 @@
 //===========================================
 using namespace std;
 
-//===============================
-//		## 모듈 선언 ##
-//===============================
-#include "RandomModule.h"
 
 //===========================================
 //		## 전역 변수 선언 ##
 //===========================================
-extern HINSTANCE _hInstance; // instance란 프로그램(인스턴스) 객체 그 자체다 -> 작업관리자 하나하나가 
-extern HWND _hWnd;			 // wnd => 윈도우 객체
+extern HINSTANCE _hInstance;	// instance => 프로그램(인스턴스) 객체
+extern HWND _hWnd;				// wnd => 윈도우 객체
