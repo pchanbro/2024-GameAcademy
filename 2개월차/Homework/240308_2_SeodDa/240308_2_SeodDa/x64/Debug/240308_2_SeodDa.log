@@ -1,3 +1,0 @@
-﻿  SeodDa.cpp
-C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240308_2_SeodDa\240308_2_SeodDa\SeodDa.cpp(9,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  240308_2_SeodDa.vcxproj -> C:\Users\82102\Desktop\git\2024-GameAcademy\Homework\240308_2_SeodDa\x64\Debug\240308_2_SeodDa.exe
