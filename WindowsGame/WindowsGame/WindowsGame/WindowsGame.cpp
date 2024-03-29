@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include "WindowsGame.h"
+#include "Game.h"
 
 #define MAX_LOADSTRING 100
 
@@ -32,19 +33,40 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     }
 
 
-    MSG msg;
+    MSG msg = {}; // 이거 초기화 안해주면 실행 안됨
 
     // 3. 메세지 루프
     // 마우스를 움직였냐?
     // 키보드를 눌렀냐?
     // 다른 시스템적인 무언가가 왔냐?
     // 등 여러가지
-    while (GetMessage(&msg, nullptr, 0, 0))
-    {
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
-    }
+    Game game;
+    game.Init(_hWnd);
 
+    // GetMessage : 메세지가 올때까지 기다린다.
+    // PeekMessage : 메세지가 안오면 그냥 null처리하고 다시 while 루프를 돌린다.
+
+    uint64 prevTick = 0;
+
+    while (msg.message != WM_QUIT)
+    {
+        if (::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+        {
+            ::TranslateMessage(&msg);
+            ::DispatchMessage(&msg);
+        }
+        else
+        {
+            uint64 currentTick = GetTickCount64();
+            //if (currentTick - prevTick >= 30)
+            {
+                game.Updata();
+                game.Render();
+                prevTick = currentTick;
+            }
+            
+        }
+    }
     return (int) msg.wParam;
 }
 
@@ -97,6 +119,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    {
       return FALSE;
    }
+   _hWnd = hWnd;
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
@@ -114,8 +137,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
 //
 //
-int gugudan = 1;
-bool toggle = false;
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -138,40 +160,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         }
         break;
 
-    case WM_MOUSEMOVE:
-        _mousePos.x = GET_X_LPARAM(lParam);
-        _mousePos.y = GET_Y_LPARAM(lParam);
-
-        // 마우스 움직임이 있을때마다 실행시키겠다
-        // hWnd를 Rect영역(NULL이면 전체)  를 erase하고 다시 그리겠다.
-        ::InvalidateRect(_hWnd, NULL, true);
-        break;
-
-        
-    case WM_KEYDOWN:
-    {
-        if (wParam == 'A')
-        {
-            toggle = !toggle;
-            printf("A를 눌렀다\n");
-            ::InvalidateRect(_hWnd, NULL, true);
-        }
-
-        if (wParam == VK_RIGHT)
-        {
-            gugudan++;
-            printf("현재 단 : %d\n", gugudan);
-            ::InvalidateRect(_hWnd, NULL, true);
-        }
-        // VK_ 키보드 LEFT 왼쪽화살표
-        else if (wParam == VK_LEFT)
-        {
-            gugudan--;
-            printf("현재 단 : %d\n", gugudan);
-            ::InvalidateRect(_hWnd, NULL, true);
-        }
-    }
-        break;
+    
 
         // 화면을 그리는 메세지가 왔을 때 처리하는 부분
         // 호출 시점
@@ -184,70 +173,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 
-            // 가장 간단한 함수
-            // 사각형그리기
-            //::Rectangle(hdc, 100, 100, 200, 200);
-
-            // 원그리기
-            //::Ellipse(hdc, 250, 250, 350, 350);
-
-            // 구구단 적기
-            // Text 적기
-                wchar_t str[128];
-                //for (int i = 1; i < 10; i++)
-                //{
-                //    for (int j = 1; j < 10; j++)
-                //    {
-                //        wsprintf(str, L"%d X %d = %d", i, j, i * j);
-                //        ::TextOut(hdc, i * 70, j * 20 + (i / 3) * 200, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
-                //    }
-                //    if (i % 3 == 0)
-                //    {
-                //        wsprintf(str, L"");
-                //        ::TextOut(hdc, i * 70, 200, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
-                //    }
-                //}
-
-                wsprintf(str, L"Empty");
-                if (!toggle)
-                {
-                    ::TextOut(hdc, 70, 200, str, _tcslen(str));
-                }
-                else
-                {
-                    for (int i = 1; i < 10; i++)
-                    {
-                        for (int j = 1; j < 10; j++)
-                        {
-                            wsprintf(str, L"%d X %d = %d", i, j, i * j);
-                            ::TextOut(hdc, (i-1)%3 * 70, j * 20 + (i - 1) / 3 * 200, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
-                        }
-                    }
-                }
-
-            //구구단 적기
-            //Text 적기
-            //strlen => _tcsclen
-
-            //실습
-            //TextOut을 한번사용해서 
-            //아래처럼 출력되도록
-            //2중 or 3중포문 사용
-
-            //1단 2단 3단
-            //4단 5단 6단
-            //7단 8단 9단
-            //for (int i = 0; i < 10; i++)
-            {
-                wchar_t str[128];
-                for (int i = 1; i < 10; i++)
-                {
-                    wsprintf(str, L"%d X %d = %d", gugudan, i, gugudan * i);
-                    ::TextOut(hdc, _mousePos.x, _mousePos.y + i *20, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
-                }
-            }
+           
 
             EndPaint(hWnd, &ps);
         }

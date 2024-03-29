@@ -1,0 +1,281 @@
+// WindowsGame.cpp : 애플리케이션에 대한 진입점을 정의합니다.
+//
+
+#include "pch.h"
+#include "WindowsGame.h"
+
+#define MAX_LOADSTRING 100
+
+// 전역 변수:
+HINSTANCE   _hInstance;	        // instance => 프로그램(인스턴스) 객체
+HWND        _hWnd;				// wnd => 윈도우 객체
+POINT       _mousePos;          // 마우스 좌표
+// 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
+ATOM                MyRegisterClass(HINSTANCE hInstance);
+BOOL                InitInstance(HINSTANCE, int);
+LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
+                     _In_opt_ HINSTANCE hPrevInstance,
+                     _In_ LPWSTR    lpCmdLine,
+                     _In_ int       nCmdShow)
+{
+    // 1. 클래스 등록
+    MyRegisterClass(hInstance);
+
+    // 2. 윈도우 생성
+    // 애플리케이션 초기화를 수행합니다:
+    if (!InitInstance (hInstance, nCmdShow))
+    {
+        return FALSE;
+    }
+
+
+    MSG msg;
+
+    // 3. 메세지 루프
+    // 마우스를 움직였냐?
+    // 키보드를 눌렀냐?
+    // 다른 시스템적인 무언가가 왔냐?
+    // 등 여러가지
+    while (GetMessage(&msg, nullptr, 0, 0))
+    {
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
+    }
+
+    return (int) msg.wParam;
+}
+
+
+
+//
+//  함수: MyRegisterClass()
+//
+//  용도: 창 클래스를 등록합니다.
+//
+ATOM MyRegisterClass(HINSTANCE hInstance)
+{
+    WNDCLASSEXW wcex;
+
+    wcex.cbSize = sizeof(WNDCLASSEX);
+
+    wcex.style          = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc    = WndProc;  // 이건 중요함 외워야됨
+    wcex.cbClsExtra     = 0;
+    wcex.cbWndExtra     = 0;
+    wcex.hInstance      = hInstance;
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINDOWSGAME));
+    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+    wcex.lpszMenuName   = nullptr;
+    wcex.lpszClassName  = _TEXT("WindowsGame"); // _T 나 _TEXT 나 둘 다 가능하다.
+    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+
+    return RegisterClassExW(&wcex);
+}
+
+//
+//   함수: InitInstance(HINSTANCE, int)
+//
+//   용도: 인스턴스 핸들을 저장하고 주 창을 만듭니다.
+//
+//   주석:
+//
+//        이 함수를 통해 인스턴스 핸들을 전역 변수에 저장하고
+//        주 프로그램 창을 만든 다음 표시합니다.
+//
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+{
+   hInstance = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
+
+   HWND hWnd = CreateWindowW(_T("WindowsGame"), _T("GameClient"), WS_OVERLAPPEDWINDOW,
+      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+
+   if (!hWnd)
+   {
+      return FALSE;
+   }
+
+   ShowWindow(hWnd, nCmdShow);
+   UpdateWindow(hWnd);
+
+   return TRUE;
+}
+
+//
+//  함수: WndProc(HWND, UINT, WPARAM, LPARAM)
+//
+//  용도: 주 창의 메시지를 처리합니다.
+//
+//  WM_COMMAND  - 애플리케이션 메뉴를 처리합니다.
+//  WM_PAINT    - 주 창을 그립니다.
+//  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
+//
+//
+int gugudan = 1;
+bool toggle = false;
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    switch (message)
+    {
+    case WM_COMMAND:
+        {
+            int wmId = LOWORD(wParam);
+            // 메뉴 선택을 구문 분석합니다:
+            switch (wmId)
+            {
+            case IDM_ABOUT:
+                DialogBox(_hInstance, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                break;
+            case IDM_EXIT:
+                DestroyWindow(hWnd);
+                break;
+            default:
+                return DefWindowProc(hWnd, message, wParam, lParam);
+            }
+        }
+        break;
+
+    case WM_MOUSEMOVE:
+        _mousePos.x = GET_X_LPARAM(lParam);
+        _mousePos.y = GET_Y_LPARAM(lParam);
+
+        // 마우스 움직임이 있을때마다 실행시키겠다
+        // hWnd를 Rect영역(NULL이면 전체)  를 erase하고 다시 그리겠다.
+        ::InvalidateRect(_hWnd, NULL, true);
+        break;
+
+        
+    case WM_KEYDOWN:
+    {
+        if (wParam == 'A')
+        {
+            toggle = !toggle;
+            printf("A를 눌렀다\n");
+            ::InvalidateRect(_hWnd, NULL, true);
+        }
+
+        if (wParam == VK_RIGHT)
+        {
+            gugudan++;
+            // gugudan = min(gugudan, 9); 이런거 좀 쓰면 좋다.
+            // 위의 주석처리한 함수가 아래거랑 동일한 효과를 보인다.
+            if (9 < gugudan)
+            {
+                gugudan = 9;
+            }
+            printf("현재 단 : %d\n", gugudan);
+            ::InvalidateRect(_hWnd, NULL, true);
+        }
+        // VK_ 키보드 LEFT 왼쪽화살표
+        else if (wParam == VK_LEFT)
+        {
+            // gugudan = max(gugudan, 1);
+            gugudan--;
+            if (gugudan < 1)
+            {
+                gugudan = 1;
+            }
+            printf("현재 단 : %d\n", gugudan);
+            ::InvalidateRect(_hWnd, NULL, true);
+        }
+    }
+        break;
+
+        // 화면을 그리는 메세지가 왔을 때 처리하는 부분
+        // 호출 시점
+        // 1. 게임 시작했을 때
+        // 2. InvalidateRect를 호출했을 때
+    case WM_PAINT: // windowMessage
+        {
+            //PAINTSTRUCT : 그림도구
+            //HDC : 도화지
+
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(hWnd, &ps);
+            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+
+            // 가장 간단한 함수
+            // 사각형그리기
+            //::Rectangle(hdc, 100, 100, 200, 200);
+
+            // 원그리기
+            //::Ellipse(hdc, 250, 250, 350, 350);
+
+            // 구구단 적기
+            // Text 적기
+            //strlen => _tcsclen
+
+            //실습
+            //TextOut을 한번사용해서 
+            //아래처럼 출력되도록
+            //2중 or 3중포문 사용
+
+            //1단 2단 3단
+            //4단 5단 6단
+            //7단 8단 9단
+            
+            // for(int i = 0 ; i < N ; i++) => N번 반복한다.
+            // for(int i = 0 ; i <= N ; i++) => 0 ~ N 까지 반복한다.
+                wchar_t str[128];
+
+                wsprintf(str, L"Empty");
+                if (toggle == false)
+                {
+                    ::TextOut(hdc, 70, 200, str, _tcslen(str));
+                }
+                else
+                {
+                    for (int i = 1; i <= 9; i++) // 가독성 좋도록 1 ~ 9까지 반보간다. 느낌으로 가자
+                    {
+                        for (int j = 1; j <= 9; j++)
+                        {
+                            wsprintf(str, L"%d X %d = %d", i, j, i * j);
+                            ::TextOut(hdc, (i - 1)%3 * 70, j * 20 + (i - 1) / 3 * 200, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
+                        }
+                    }
+                }
+
+            // 마우스에 1가지 단만 따라다니도록 하는것
+            {
+                wchar_t str[128];
+                for (int i = 1; i <= 9; i++)
+                {
+                    wsprintf(str, L"%d X %d = %d", gugudan, i, gugudan * i);
+                    ::TextOut(hdc, _mousePos.x, _mousePos.y + i *20, str, _tcslen(str));    
+                }
+            }
+
+            EndPaint(hWnd, &ps);
+        }
+        break;
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
+    }
+    return 0;
+}
+
+// 정보 대화 상자의 메시지 처리기입니다.
+INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    UNREFERENCED_PARAMETER(lParam);
+    switch (message)
+    {
+    case WM_INITDIALOG:
+        return (INT_PTR)TRUE;
+
+    case WM_COMMAND:
+        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+        {
+            EndDialog(hDlg, LOWORD(wParam));
+            return (INT_PTR)TRUE;
+        }
+        break;
+    }
+    return (INT_PTR)FALSE;
+}
