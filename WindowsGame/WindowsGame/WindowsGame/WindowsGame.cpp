@@ -154,18 +154,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             toggle = !toggle;
             printf("A를 눌렀다\n");
+            ::InvalidateRect(_hWnd, NULL, true);
         }
 
         if (wParam == VK_RIGHT)
         {
             gugudan++;
             printf("현재 단 : %d\n", gugudan);
+            ::InvalidateRect(_hWnd, NULL, true);
         }
         // VK_ 키보드 LEFT 왼쪽화살표
         else if (wParam == VK_LEFT)
         {
             gugudan--;
             printf("현재 단 : %d\n", gugudan);
+            ::InvalidateRect(_hWnd, NULL, true);
         }
     }
         break;
@@ -208,16 +211,19 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 //}
 
                 wsprintf(str, L"Empty");
-                if (toggle)
+                if (!toggle)
                 {
                     ::TextOut(hdc, 70, 200, str, _tcslen(str));
                 }
                 else
                 {
-                    for (int i = 1; i < 9; i++)
+                    for (int i = 1; i < 10; i++)
                     {
-                        wsprintf(str, L"%d * %d = %d", i, gugudan, i * gugudan);
-                        ::TextOut(hdc, i * 70, 200, str, _tcslen(str));
+                        for (int j = 1; j < 10; j++)
+                        {
+                            wsprintf(str, L"%d X %d = %d", i, j, i * j);
+                            ::TextOut(hdc, (i-1)%3 * 70, j * 20 + (i - 1) / 3 * 200, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
+                        }
                     }
                 }
 
@@ -236,8 +242,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             //for (int i = 0; i < 10; i++)
             {
                 wchar_t str[128];
-                wsprintf(str, L"%d, %d", _mousePos.x, _mousePos.y);
-                ::TextOut(hdc, _mousePos.x, _mousePos.y, str, _tcsclen(str));
+                for (int i = 1; i < 10; i++)
+                {
+                    wsprintf(str, L"%d X %d = %d", gugudan, i, gugudan * i);
+                    ::TextOut(hdc, _mousePos.x, _mousePos.y + i *20, str, _tcslen(str)); // _tcslen은 strlen의 wstring 버젼    
+                }
             }
 
             EndPaint(hWnd, &ps);

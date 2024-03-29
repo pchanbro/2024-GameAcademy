@@ -2,6 +2,16 @@
 
 using namespace std;
 
+class Key
+{
+
+};
+
+class MasterKey : public Key
+{
+
+};
+
 int main()
 {
 	// 형 변환 캐스팅 (4가지)
@@ -9,6 +19,10 @@ int main()
 	// 1개는 C형식입니다.
 
 	// 자료형과 변수
+	int a = 3;
+	float b = 1.1f;
+	string str = "My String";
+	bool d = true;
 
 	// 1. - C형식 캐스팅
 	int e = (int)b;
@@ -31,7 +45,7 @@ int main()
 	// 거의 안쓴다.
 	// 메모리 그대로 캐스팅해줄때.
 	// 문서에서 이렇게 하라는거 아니면 쓴적이 없다고 한다.
-	int a = 123;
+	int bb = 123;
 	int* ptr1 = reinterpret_cast<int*>(bb);
 
 	cout << *ptr1 << endl;
