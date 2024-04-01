@@ -19,8 +19,10 @@ private:
 	RECT _rect = {};	// 크기 담당
 	HDC _hdcBack = {};	// 유저에게 보이지 않는 화면
 	HBITMAP _bmpBack = {};
+	
 
 private:
-	int _x;
+	RECT _player = {};
+	RECT _enemy = {};
 };
 

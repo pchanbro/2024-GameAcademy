@@ -2,7 +2,7 @@
 #include "Game.h"
 Game::Game()
 {
-	_x = 0;
+
 }
 Game::~Game()
 {
@@ -28,41 +28,128 @@ void Game::Init(HWND hwnd)
 
 
 	// 싱글톤 초기화
-	GET_SINGLE(TimeManager)->Init();
+	Time->Init();
+	Input->Init(_hwnd);
 
+	//---------------------------------
+	// ## 코드 짜는 곳
+	//---------------------------------
+	_player.left = 100;
+	_player.right = 200;
+	_player.top = 100;
+	_player.bottom = 200;
+
+	_enemy.left = 250;
+	_enemy.right = 300;
+	_enemy.top = 200;
+	_enemy.bottom = 250;
 }
+
 void Game::Updata()
 {
 	// 싱글톤 업데이트
-	GET_SINGLE(TimeManager)->Updata();
+	Time->Updata();
+	Input->Updata();
+
+	//---------------------------------
+	// ## 코드 짜는 곳
+	//---------------------------------
 
 
-	_x++;
+	//--------------------------------
+	// 실습
+	// 1. wasd 나 방향키로,
+	//	  _player를 움직일 수 있게한다.
+	// 2. _player와 _enemy가 부딪히면
+	//	  ::MessageBox(_hwnd, L"알림", L"충돌되었습니다", 0);
+	//  를 실행한다.
+	// 3. _player를 마우스로 클릭하면
+	//	  ::MessageBox(_hwnd, L"알림", L"플레이어를 선택하였습니다", 0);
+	// 를 실행한다.
+	// 
+	//--------------------------------
+	if (Input->GetKeyDown(KeyCode::Right))
+	{
+		_player.left += 5;
+		_player.right += 5;
+	}
+
+	if (Input->GetKeyDown(KeyCode::Left))
+	{
+		_player.left -= 5;
+		_player.right -= 5;
+	}
+
+	if (Input->GetKeyDown(KeyCode::Down))
+	{
+		_player.top += 5;
+		_player.bottom += 5;
+	}
+
+	if (Input->GetKeyDown(KeyCode::Up))
+	{
+		_player.top -= 5;
+		_player.bottom -= 5;
+	}
+
+	if (Input->GetKeyDown(KeyCode::A))
+	{
+		::MessageBox(_hwnd, L"충돌되었습니다", L"알림", 0);
+	}
+
+	if ((_player.left <= _enemy.left && _enemy.left <= _player.right && _player.top <= _enemy.top && _enemy.top <= _player.bottom) ||
+		(_player.left <= _enemy.right && _enemy.right <= _player.right && _player.top <= _enemy.top && _enemy.top <= _player.bottom) ||
+		(_player.left <= _enemy.left && _enemy.left <= _player.right && _player.top <= _enemy.bottom && _enemy.bottom <= _player.bottom) ||
+		(_player.left <= _enemy.right && _enemy.right <= _player.right && _player.top <= _enemy.bottom && _enemy.bottom <= _player.bottom))
+	{
+		::MessageBox(_hwnd, L"충돌되었습니다", L"알림", 0);
+	}
+
+	
+	// 함수화를 해야하는 이유 -> 영어로 읽는데 읽었을 때 그 의미를 이해할 수 있기 때문에 함수화를 하고 그게 더 좋은 코드다.
+	{
+		POINT mousePos = Input->GetMousePos();
+		if (_player.left < mousePos.x && mousePos.x < _player.right &&
+			_player.top < mousePos.y && mousePos.y < _player.bottom)
+		{
+			if (Input->GetKeyDown(KeyCode::LeftMouse))
+			{
+				::MessageBox(_hwnd, L"충돌되었습니다", L"알림", 0);
+			}
+		}
+	}
 }
+
 void Game::Render()
 {
 	//FPS 출력
 	{
-		uint32 fps = GET_SINGLE(TimeManager)->GetFps();
-		float deltaTime = GET_SINGLE(TimeManager)->GetDeltaTime();
+		uint32 fps = Time->GetFps();
+		float deltaTime = Time->GetDeltaTime();
 
 		wstring timeStr = format(L"FPS({0}), DT({1} ms)", fps, static_cast<int32>(deltaTime * 1000));
 		::TextOut(_hdcBack, 0, 0, timeStr.c_str(), timeStr.length());
 	}
 
 
+	// 마우스좌표 출력
+	{
+		POINT mousePos = Input->GetMousePos();
+		wstring timeStr = format(L"mouse({0}, {1})", mousePos.x, mousePos.y);
+		::TextOut(_hdcBack, 0, 20, timeStr.c_str(), timeStr.length());
+	}
 
-	// 유저에게 보이지 않는 화면에 애국가 1절 적기
-	wstring str = L"동해물과 백두산이";
-	::TextOut(_hdcBack, 100 + _x % 700, 100, str.c_str(), str.length());
 
-	//이렇게 해도 된다. 물론 앞으로는 wchar보다는 wstring를 쓸 것이다.
-	//wchar_t str[128];
-	//wsprintf(str, L"동해물과 백두산이 마르고 닳도록\n하느님이 보우하사 우리나라 만세\n무궁화 삼천리 화려강산\n대한사랑 대한으로 길이 보전하세");
-	//::TextOut(_hdcBack, 100 + _x % 700, 100, str, _tcslen(str));
+	//---------------------------------
+	// ## 코드 짜는 곳
+	//---------------------------------
+	::Rectangle(_hdcBack, _player.left, _player.top, _player.right, _player.bottom);
+	::Rectangle(_hdcBack, _enemy.left, _enemy.top, _enemy.right, _enemy.bottom);
 
-	// 비트블릿은 고속 복사이다.
-	::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY); // SRCCOPY = source copy
+
+	// 비트블릿 : 고속 복사
 	// 복사 해줬으면 뒤의 화면의 내용은 지워줘야 한다. 그거까지 한 사이클!
+	::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY); // SRCCOPY = source copy
 	::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
+	
 }

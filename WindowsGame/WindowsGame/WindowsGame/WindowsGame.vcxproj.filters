@@ -49,6 +49,9 @@
     <ClInclude Include="TimeManager.h">
       <Filter>01.Managers</Filter>
     </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -80,6 +83,12 @@
       <Filter>00.MainGame</Filter>
     </ClCompile>
     <ClCompile Include="TimeManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
       <Filter>01.Managers</Filter>
     </ClCompile>
   </ItemGroup>
