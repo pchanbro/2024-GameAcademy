@@ -115,11 +115,12 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    HWND hWnd = CreateWindowW(_T("WindowsGame"), _T("GameClient"), WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
+   _hWnd = hWnd;
+
    if (!hWnd)
    {
       return FALSE;
    }
-   _hWnd = hWnd;
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
@@ -173,8 +174,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-
-           
 
             EndPaint(hWnd, &ps);
         }

@@ -24,5 +24,8 @@ private:
 private:
 	RECT _player = {};
 	RECT _enemy = {};
+	int line = 3;
+	int row = 3;
+	int gugudan = 0;
 };
 

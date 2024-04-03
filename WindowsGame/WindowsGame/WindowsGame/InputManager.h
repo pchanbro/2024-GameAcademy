@@ -30,7 +30,7 @@ enum
 {	// key의 종류는 총 256개 UINT8_MAX는 256
 	// static_cast<int32>(UINT8_MAX) 는 그냥 UINT8_MAX와 같다
 	// 이걸 안하면 실행했을 때 warning이 뜨는데 
-	// 엔진에서는 이걸 없애주는게 중요하기 때문에 쓴다.
+	// 엔진에서는 이 warning을 없애주는게 중요하기 때문에 쓴다.
 	KEY_CODE_COUNT = static_cast<int32>(UINT8_MAX) + 1,
 	KEY_STATE_COUNT = static_cast<int32>(KeyState::End)
 
@@ -58,8 +58,6 @@ private:
 	vector<KeyState> _states;
 	POINT _mousePos;
 };
-
-#define Input GET_SINGLE(InputManager)
 
 // _states[키코드] = Pressed;
 // _states[키코드] = Up;

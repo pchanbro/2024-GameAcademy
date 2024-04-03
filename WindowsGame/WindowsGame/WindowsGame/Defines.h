@@ -13,3 +13,7 @@ public:									\
 	}									\
 
 #define GET_SINGLE(ClassName)	ClassName::GetInstance()
+
+// 이걸 쓰면 앞으로 Input, Time이라는 변수명을 사용할 수 없다.
+#define Input GET_SINGLE(InputManager)
+#define Time GET_SINGLE(TimeManager)

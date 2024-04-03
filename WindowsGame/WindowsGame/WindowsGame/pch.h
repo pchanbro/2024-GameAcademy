@@ -46,5 +46,5 @@ using namespace std;
 //===========================================
 extern HINSTANCE _hInstance;	// instance => 프로그램(인스턴스) 객체
 extern HWND _hWnd;				// wnd => 윈도우 객체
-// extern POINT _moustPos;			// 마우스 좌표 240401 InputManager의 추가
+// extern POINT _moustPos;			// 마우스 좌표 240401 InputManager의 추가로 이부분은 안쓴다
 // 그 안에 마우스를 다루는게 있어서 제거

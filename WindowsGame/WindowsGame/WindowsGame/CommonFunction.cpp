@@ -10,6 +10,8 @@ namespace Collision
 		{
 			return true;
 		}
+
+		return false;
 	}
 
 	// 오버로딩 : 함수명은 같은데 매개변수가 다른거
@@ -39,6 +41,7 @@ namespace Collision
 		POINT pt8 = { rect2.right, rect2.bottom };
 
 		return PtInRect(pt1, rect2) || PtInRect(pt2, rect2) || PtInRect(pt3, rect2) || PtInRect(pt4, rect2) ||
-			PtInRect(pt5, rect2) || PtInRect(pt6, rect2) || PtInRect(pt7, rect2) || PtInRect(pt8, rect2);
+			PtInRect(pt5, rect1) || PtInRect(pt6, rect1) || PtInRect(pt7, rect1) || PtInRect(pt8, rect1);
 	}
+
 }

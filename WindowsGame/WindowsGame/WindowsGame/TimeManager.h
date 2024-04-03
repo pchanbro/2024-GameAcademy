@@ -21,7 +21,3 @@ private:
 	float _frameTime = 0.0f;
 	uint32 _frameCount = 0;
 };
-
-
-// 이걸 쓰면 앞으로 Time이라는 변수명을 사용할 수 없다.
-#define Time GET_SINGLE(TimeManager)

@@ -39,9 +39,9 @@ void Game::Init(HWND hwnd)
 	_player.top = 100;
 	_player.bottom = 200;
 
-	_enemy.left = 250;
-	_enemy.right = 300;
-	_enemy.top = 200;
+	_enemy.left = 300;
+	_enemy.right = 450;
+	_enemy.top = 100;
 	_enemy.bottom = 250;
 }
 
@@ -55,69 +55,83 @@ void Game::Updata()
 	// ## 코드 짜는 곳
 	//---------------------------------
 
+	/* 구구단 
+	if (Input->GetKeyDown(KeyCode::LeftMouse))
+	{
+		POINT mousePos = Input->GetMousePos();
+		gugudan = 0;
+		wchar_t str[128];
+		for (int i = 1; i <= line; i++)
+		{
+			for (int j = 1; j <= row; j++)
+			{
+				if (_player.left + (j - 1) * 200 < mousePos.x && mousePos.x < _player.right + (j - 1) * 200 &&
+					_player.top + (i - 1) * 200 < mousePos.y && mousePos.y < _player.bottom + (i - 1) * 200)
+				{
+					gugudan = gugudan + i + j;
+					if (i == 1)
+					{
+						gugudan -= 1;
+					}
+					else if (i == 2)
+					{
+						gugudan += 1;
+					}
+					else if (i == 3)
+					{
+						gugudan += 3;
+					}
+				}
+			}
+		}
+	}*/
 
-	//--------------------------------
-	// 실습
-	// 1. wasd 나 방향키로,
-	//	  _player를 움직일 수 있게한다.
-	// 2. _player와 _enemy가 부딪히면
-	//	  ::MessageBox(_hwnd, L"알림", L"충돌되었습니다", 0);
-	//  를 실행한다.
-	// 3. _player를 마우스로 클릭하면
-	//	  ::MessageBox(_hwnd, L"알림", L"플레이어를 선택하였습니다", 0);
-	// 를 실행한다.
-	// 
-	//--------------------------------
 	if (Input->GetKeyDown(KeyCode::Right))
 	{
-		_player.left += 5;
-		_player.right += 5;
+		_player.left += 10;
+		_player.right += 10;
+		if ((Collision::RectInRect(_player, _enemy) && (_player.right == _enemy.left)))
+		{
+			_enemy.left += 10;
+			_enemy.right += 10;
+		}
 	}
 
 	if (Input->GetKeyDown(KeyCode::Left))
 	{
-		_player.left -= 5;
-		_player.right -= 5;
+		_player.left -= 10;
+		_player.right -= 10;
+		if ((Collision::RectInRect(_player, _enemy) && (_player.left == _enemy.right)))
+		{
+			_enemy.left -= 10;
+			_enemy.right -= 10;
+		}
 	}
 
 	if (Input->GetKeyDown(KeyCode::Down))
 	{
-		_player.top += 5;
-		_player.bottom += 5;
+		_player.top += 10;
+		_player.bottom += 10;
+		if ((Collision::RectInRect(_player, _enemy) && (_player.bottom == _enemy.top)))
+		{
+			_enemy.top += 10;
+			_enemy.bottom += 10;
+		}
 	}
 
 	if (Input->GetKeyDown(KeyCode::Up))
 	{
-		_player.top -= 5;
-		_player.bottom -= 5;
-	}
-
-	if (Input->GetKeyDown(KeyCode::A))
-	{
-		::MessageBox(_hwnd, L"충돌되었습니다", L"알림", 0);
-	}
-
-	if ((_player.left <= _enemy.left && _enemy.left <= _player.right && _player.top <= _enemy.top && _enemy.top <= _player.bottom) ||
-		(_player.left <= _enemy.right && _enemy.right <= _player.right && _player.top <= _enemy.top && _enemy.top <= _player.bottom) ||
-		(_player.left <= _enemy.left && _enemy.left <= _player.right && _player.top <= _enemy.bottom && _enemy.bottom <= _player.bottom) ||
-		(_player.left <= _enemy.right && _enemy.right <= _player.right && _player.top <= _enemy.bottom && _enemy.bottom <= _player.bottom))
-	{
-		::MessageBox(_hwnd, L"충돌되었습니다", L"알림", 0);
+		_player.top -= 10;
+		_player.bottom -= 10;
+		if ((Collision::RectInRect(_player, _enemy) && (_player.top == _enemy.bottom)))
+		{
+			_enemy.top -= 10;
+			_enemy.bottom -= 10;
+		}
 	}
 
 	
-	// 함수화를 해야하는 이유 -> 영어로 읽는데 읽었을 때 그 의미를 이해할 수 있기 때문에 함수화를 하고 그게 더 좋은 코드다.
-	{
-		POINT mousePos = Input->GetMousePos();
-		if (_player.left < mousePos.x && mousePos.x < _player.right &&
-			_player.top < mousePos.y && mousePos.y < _player.bottom)
-		{
-			if (Input->GetKeyDown(KeyCode::LeftMouse))
-			{
-				::MessageBox(_hwnd, L"충돌되었습니다", L"알림", 0);
-			}
-		}
-	}
+	
 }
 
 void Game::Render()
@@ -143,6 +157,28 @@ void Game::Render()
 	//---------------------------------
 	// ## 코드 짜는 곳
 	//---------------------------------
+	
+	/* 구구단
+	for (int i = 1; i <= line; i++)
+	{
+		for (int j = 1; j <= row; j++)
+		{
+			::Rectangle(_hdcBack, _player.left + (j - 1) * 200, _player.top + (i - 1) * 200, _player.right + (j - 1) * 200, _player.bottom + (i - 1) * 200);
+		}
+	}
+
+	{
+		POINT mousePos = Input->GetMousePos();
+		wchar_t str[128];
+		
+		for (int i = 1; i <= 9; i++)
+		{
+			wsprintf(str, L"%d X %d = %d", gugudan, i, gugudan * i);
+			::TextOut(_hdc, mousePos.x, mousePos.y + i * 20, str, _tcslen(str));
+		}
+	}*/
+	
+
 	::Rectangle(_hdcBack, _player.left, _player.top, _player.right, _player.bottom);
 	::Rectangle(_hdcBack, _enemy.left, _enemy.top, _enemy.right, _enemy.bottom);
 
