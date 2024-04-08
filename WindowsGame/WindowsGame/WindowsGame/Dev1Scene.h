@@ -11,7 +11,7 @@ public:
 
 private:
 	RECT _rect = {};
-	CenterRect _player;
-	Vector2 _playerDir;
+	Vector2 _platerDir;
+	Vector2 _targetPos
 };
 

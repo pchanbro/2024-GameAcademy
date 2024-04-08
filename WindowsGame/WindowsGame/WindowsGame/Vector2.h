@@ -21,5 +21,28 @@ struct Vector2
 
 	Vector2(float x, float y);
 	Vector2();
-};
 
+	// 내적은 Dot
+	// 내적은 주로 두 vector사이의 각도 계산할 때 많이 쓰인다.
+	// A Dot B = A.x * B.x + A.y * B.y
+	// A Dot B = |A||B|cos(theta)
+	//		-> A B 둘 다 길이가 1이면 A Dot B = cos(theta)
+	//		-> theta는 두 벡터가 이루는 각도를 나타낸다.
+	//		-> 즉, 내적은 두 벡터가 이루는 각도를 구할 때 사용한다.
+	// Tip1. 
+	//  - cos 그래프는
+	//	- 0도일 때 1, 90도일 때 0, 180도 일 때 -1
+
+	// Tip2.
+	//  - 내적으로는 각도가 180도가 넘는 각도는 구할 수 없다.
+
+	// Tip3.
+	//  - other 벡터가 내 뒤에 있는지 확인하려면
+	//	- 내적이 0보다 작으면 내 뒤에 있습니다. (90도가 넘어갔다는 뜻)
+	
+
+	float Dot(Vector2 other);
+
+	Vector2 Reflect(Vector2 normal);
+
+};

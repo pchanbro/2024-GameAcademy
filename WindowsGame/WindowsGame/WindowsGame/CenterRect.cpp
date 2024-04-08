@@ -9,6 +9,8 @@ RECT CenterRect::ToRect()
 	rect.right = static_cast<LONG>(pos.x + width / 2);
 	rect.top = static_cast<LONG>(pos.y - height / 2);
 	rect.bottom = static_cast<LONG>(pos.y + height / 2);
+
+	return rect;
 }
 
 void CenterRect::Draw(HDC hdc)
