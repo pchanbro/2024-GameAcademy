@@ -1,13 +1,5 @@
 #pragma once
-
-// typedef의 반대가 using
-// typedef A B
-// A를 B라고 부르겠다.
-
-// uinsg A B
-// B를 A라고 부르겠다
-
-// 타입들을 추가하겠다.
+// 타입들을 추가해줄거에요.
 
 using int8 = __int8;
 using int16 = __int16;

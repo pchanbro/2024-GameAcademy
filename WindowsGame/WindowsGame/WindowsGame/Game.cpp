@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Game.h"
+
 Game::Game()
 {
 
@@ -30,19 +31,10 @@ void Game::Init(HWND hwnd)
 	// 싱글톤 초기화
 	Time->Init();
 	Input->Init(_hwnd);
+	GET_SINGLE(SceneManager)->Init();
 
-	//---------------------------------
-	// ## 코드 짜는 곳
-	//---------------------------------
-	_player.left = 100;
-	_player.right = 200;
-	_player.top = 100;
-	_player.bottom = 200;
 
-	_enemy.left = 300;
-	_enemy.right = 450;
-	_enemy.top = 100;
-	_enemy.bottom = 250;
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
 }
 
 void Game::Updata()
@@ -50,88 +42,7 @@ void Game::Updata()
 	// 싱글톤 업데이트
 	Time->Updata();
 	Input->Updata();
-
-	//---------------------------------
-	// ## 코드 짜는 곳
-	//---------------------------------
-
-	/* 구구단 
-	if (Input->GetKeyDown(KeyCode::LeftMouse))
-	{
-		POINT mousePos = Input->GetMousePos();
-		gugudan = 0;
-		wchar_t str[128];
-		for (int i = 1; i <= line; i++)
-		{
-			for (int j = 1; j <= row; j++)
-			{
-				if (_player.left + (j - 1) * 200 < mousePos.x && mousePos.x < _player.right + (j - 1) * 200 &&
-					_player.top + (i - 1) * 200 < mousePos.y && mousePos.y < _player.bottom + (i - 1) * 200)
-				{
-					gugudan = gugudan + i + j;
-					if (i == 1)
-					{
-						gugudan -= 1;
-					}
-					else if (i == 2)
-					{
-						gugudan += 1;
-					}
-					else if (i == 3)
-					{
-						gugudan += 3;
-					}
-				}
-			}
-		}
-	}*/
-
-	if (Input->GetKeyDown(KeyCode::Right))
-	{
-		_player.left += 10;
-		_player.right += 10;
-		if ((Collision::RectInRect(_player, _enemy) && (_player.right == _enemy.left)))
-		{
-			_enemy.left += 10;
-			_enemy.right += 10;
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::Left))
-	{
-		_player.left -= 10;
-		_player.right -= 10;
-		if ((Collision::RectInRect(_player, _enemy) && (_player.left == _enemy.right)))
-		{
-			_enemy.left -= 10;
-			_enemy.right -= 10;
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::Down))
-	{
-		_player.top += 10;
-		_player.bottom += 10;
-		if ((Collision::RectInRect(_player, _enemy) && (_player.bottom == _enemy.top)))
-		{
-			_enemy.top += 10;
-			_enemy.bottom += 10;
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::Up))
-	{
-		_player.top -= 10;
-		_player.bottom -= 10;
-		if ((Collision::RectInRect(_player, _enemy) && (_player.top == _enemy.bottom)))
-		{
-			_enemy.top -= 10;
-			_enemy.bottom -= 10;
-		}
-	}
-
-	
-	
+	GET_SINGLE(SceneManager)->Update();
 }
 
 void Game::Render()
@@ -153,34 +64,7 @@ void Game::Render()
 		::TextOut(_hdcBack, 0, 20, timeStr.c_str(), timeStr.length());
 	}
 
-
-	//---------------------------------
-	// ## 코드 짜는 곳
-	//---------------------------------
-	
-	/* 구구단
-	for (int i = 1; i <= line; i++)
-	{
-		for (int j = 1; j <= row; j++)
-		{
-			::Rectangle(_hdcBack, _player.left + (j - 1) * 200, _player.top + (i - 1) * 200, _player.right + (j - 1) * 200, _player.bottom + (i - 1) * 200);
-		}
-	}
-
-	{
-		POINT mousePos = Input->GetMousePos();
-		wchar_t str[128];
-		
-		for (int i = 1; i <= 9; i++)
-		{
-			wsprintf(str, L"%d X %d = %d", gugudan, i, gugudan * i);
-			::TextOut(_hdc, mousePos.x, mousePos.y + i * 20, str, _tcslen(str));
-		}
-	}*/
-	
-
-	::Rectangle(_hdcBack, _player.left, _player.top, _player.right, _player.bottom);
-	::Rectangle(_hdcBack, _enemy.left, _enemy.top, _enemy.right, _enemy.bottom);
+	GET_SINGLE(SceneManager)->Render(_hdcBack);
 
 
 	// 비트블릿 : 고속 복사

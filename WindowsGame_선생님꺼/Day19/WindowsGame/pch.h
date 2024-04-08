@@ -35,17 +35,17 @@
 //===========================================
 using namespace std;
 
+
 //===========================================
 //		## 싱글톤 ##
 //===========================================
-#include "TimeManager.h"	// Time
-#include "InputManager.h"	// Input
-#include "SceneManager.h"	// 얘는 위의 2개처럼 define을 만들진 않았다.
+#include "TimeManager.h"	//Time
+#include "InputManager.h"	//Input
+#include "SceneManager.h"
+
 
 //===========================================
 //		## 전역 변수 선언 ##
 //===========================================
 extern HINSTANCE _hInstance;	// instance => 프로그램(인스턴스) 객체
 extern HWND _hWnd;				// wnd => 윈도우 객체
-// extern POINT _moustPos;			// 마우스 좌표 240401 InputManager의 추가로 이부분은 안쓴다
-// 그 안에 마우스를 다루는게 있어서 제거

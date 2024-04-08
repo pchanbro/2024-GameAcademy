@@ -1,0 +1,185 @@
+Game.h에서
+
+#pragma once
+class Game
+{
+public:
+	Game();
+	~Game();
+
+public:
+	void Init(HWND hwnd);
+	void Updata();
+	void Render();
+
+private:
+	HWND _hwnd;
+	HDC _hdc;		// 유저에게 보여줄 화면
+
+private:
+	// 더블버퍼링 변수
+	RECT _rect = {};	// 크기 담당
+	HDC _hdcBack = {};	// 유저에게 보이지 않는 화면
+	HBITMAP _bmpBack = {};
+	
+
+private:
+	//------------------------------
+	//	## 코드 짜는 곳
+	//------------------------------
+
+	vector<RECT> _gugudanVec = {};
+	int _dan = 0;
+};
+
+
+
+그리고
+
+
+
+
+Game.cpp에서
+구구단 수도코드
+// 1. 숙제풀이 (구구단)
+// Windows API 왔다고 수도코드를 안쓰면 안된다.
+// 수도코드는 평생 써야한다.
+// 수도코드 없이 코드를 짜지 말라
+// 상황에 맞게 짜야한다. 
+// Init
+//	- 구구단 상자 9개 변수를 만들어야함.		(상자 변수는 vector<RECT> gugudan 라는 자료형을 사용합니다.) (구구단은 벡터쓰는게 좋다)
+//	- 현재 단 = 0 초기화
+ 
+// Updata(매 프레임, 변수를 변경해주는 곳)
+// 
+// if( 마우스 좌클릭 했을 때)
+// {
+//		for( 구구단상자 )
+//		{
+//			if(PtInRect (구구단상자[i], 마우스좌표) )
+//				{
+//					현재 단 = 몇번째 구구단 상자를 클릭했는지 저장.
+//				}
+//		}
+// }
+
+// Render(매 프레임, 그림을 그리는 곳)
+// - if( 현재 단 != 0)
+//		마우스 주변으로 구구단 그려주기
+
+
+#include "pch.h"
+#include "Game.h"
+#include "Scene.h"
+
+Game::Game()
+{
+
+}
+Game::~Game()
+{
+
+}
+
+void Game::Init(HWND hwnd)
+{
+	this->_hwnd = hwnd;
+	this->_hdc = ::GetDC(this->_hwnd);
+
+	// 더블버퍼링
+	::GetClientRect(_hwnd, &_rect);		// 윈도우핸들의 크기를 반환하겠다.
+
+	_hdcBack = ::CreateCompatibleDC(_hdc);  // 유저에게 보이는 화면이랑 최대한 비슷하게 화면을 구성해라.
+	_bmpBack = ::CreateCompatibleBitmap(_hdc, _rect.right, _rect.bottom);  // _hdc와 호환되는 비트맵 생성
+	HBITMAP prev = (HBITMAP)::SelectObject(_hdcBack, _bmpBack);  // _hdcBack에 _bmp 연결
+	::DeleteObject(prev);
+	// 여기까지가 화면 두 개를 준비한 상태
+	// 앞으로 할 것은 
+	// 뒤에 있을 화면에 그림을 그리고
+	// 그걸 앞에 화면에 고속복사 할 것
+
+
+	// 싱글톤 초기화
+	Time->Init();
+	Input->Init(_hwnd);
+
+	//------------------------------
+	//	## 코드 짜는 곳
+	//------------------------------
+	for (int i = 0; i < 9; i++)
+	{
+		RECT rect;
+		int x = 0;
+		int y = 0;
+		int spaceX = 200;
+		int spaceY = 200;
+		int offSetX = 300;
+		int offSetY = 100;
+		// width height 한 100정도 지정
+		int width = 100;
+		int height = 100;
+
+		x = i % 3 * spaceX + offSetX;
+		y = i / 3 * spaceY + offSetY;
+
+		rect.left = x - width / 2;
+		rect.right = x + width / 2;
+		rect.top = y - height / 2;
+		rect.bottom = y + height / 2;
+
+		_gugudanVec.push_back(rect);
+	}
+}
+
+void Game::Updata()
+{
+	// 싱글톤 업데이트
+	Time->Updata();
+	Input->Updata();
+
+	//------------------------------
+	//	## 코드 짜는 곳
+	//------------------------------
+	if (Input->GetKeyDown(KeyCode::LeftMouse))
+	{
+		for (int i = 0; i < _gugudanVec.size(); i++)
+		{
+			if (Collision::PtInRect(Input->GetMousePos(), _gugudanVec[i]))
+			{
+				_dan = i + 1;
+			}
+		}
+	}
+	
+}
+
+void Game::Render()
+{
+	//------------------------------
+	//	## 코드 짜는 곳
+	//------------------------------
+
+	for (int i = 0; i < _gugudanVec.size(); i++)
+	{
+		::Rectangle(_hdcBack, _gugudanVec[i].left, _gugudanVec[i].top, _gugudanVec[i].right, _gugudanVec[i].bottom);
+	}
+
+	if (_dan != 0)
+	{
+		POINT mousePos = Input->GetMousePos();
+
+		for (int i = 01; i <= 9; i++)
+		{
+			wstring str = format(L"{0} x {1} = {2}", _dan, i, _dan * i);
+			::TextOut(_hdcBack, mousePos.x, mousePos.y + 15 * i, str.c_str(), str.length());
+		}
+	}
+
+
+
+	// 비트블릿 : 고속 복사
+	// 복사 해줬으면 뒤의 화면의 내용은 지워줘야 한다. 그거까지 한 사이클!
+	::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY); // SRCCOPY = source copy
+	::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
+	
+}

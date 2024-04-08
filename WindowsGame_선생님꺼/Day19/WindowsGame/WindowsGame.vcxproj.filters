@@ -6,35 +6,35 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="00.MainGame">
-      <UniqueIdentifier>{91dadf47-217f-4c97-8e15-e2113943b0b9}</UniqueIdentifier>
+      <UniqueIdentifier>{16eeb066-6835-4e77-ab71-51faa2a56940}</UniqueIdentifier>
     </Filter>
     <Filter Include="01.Managers">
-      <UniqueIdentifier>{d93af217-e694-4607-9411-098786fde118}</UniqueIdentifier>
+      <UniqueIdentifier>{67553a7c-d79b-4d46-b6d0-92cbb0211ce4}</UniqueIdentifier>
     </Filter>
     <Filter Include="99.Utils">
-      <UniqueIdentifier>{244f2eb7-e071-448f-974c-b3037ce77534}</UniqueIdentifier>
+      <UniqueIdentifier>{3e8c1370-f658-4c97-9daf-fd20246c9123}</UniqueIdentifier>
     </Filter>
     <Filter Include="999.Comments">
-      <UniqueIdentifier>{34acaad2-4a3a-4d95-8313-574cd6e5173e}</UniqueIdentifier>
+      <UniqueIdentifier>{a453a446-5a59-49b6-aee5-5a9fefa45660}</UniqueIdentifier>
     </Filter>
     <Filter Include="02.Scenes">
-      <UniqueIdentifier>{b760f924-41da-468e-9382-192c3198a5e9}</UniqueIdentifier>
+      <UniqueIdentifier>{5881474c-1b3d-4bfa-91b8-bb71e44e0631}</UniqueIdentifier>
     </Filter>
     <Filter Include="02.Scenes\Game">
-      <UniqueIdentifier>{ccf88bfe-831f-4a34-9cba-42dc6c8c99a0}</UniqueIdentifier>
+      <UniqueIdentifier>{ccb59179-03f0-4f2a-a69b-a1656b22ab8f}</UniqueIdentifier>
     </Filter>
     <Filter Include="99.Utils\Types">
-      <UniqueIdentifier>{216ed056-4702-4cf0-a610-eb912eb8bb4d}</UniqueIdentifier>
+      <UniqueIdentifier>{1ad87a52-8343-4253-b776-ac78049c6171}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
       <Filter>99.Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
+    <ClInclude Include="framework.h">
       <Filter>99.Utils</Filter>
     </ClInclude>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="Resource.h">
       <Filter>99.Utils</Filter>
     </ClInclude>
     <ClInclude Include="WindowsGame.h">
