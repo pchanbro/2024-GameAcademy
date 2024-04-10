@@ -14,3 +14,10 @@ enum class SceneType
 	Homework1Scene,
 	Homework2Scene
 };
+
+enum class ColliderType
+{
+	None,
+	Box,
+	Circle
+};

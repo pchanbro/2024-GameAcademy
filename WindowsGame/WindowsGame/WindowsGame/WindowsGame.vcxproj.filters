@@ -26,6 +26,18 @@
     <Filter Include="99.Utils\Types">
       <UniqueIdentifier>{216ed056-4702-4cf0-a610-eb912eb8bb4d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Objects">
+      <UniqueIdentifier>{ca1acd49-2002-4ded-b9b3-7aa63146caca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components">
+      <UniqueIdentifier>{898015da-e1ec-4761-b086-a92ac101f9f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Components\Collider">
+      <UniqueIdentifier>{950960a3-f0c0-483f-84cb-4e3766fbeed0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects\Game">
+      <UniqueIdentifier>{b6c0d849-76bf-423b-b364-d9b2ff2e406a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -85,6 +97,22 @@
     <ClInclude Include="Homework1Scene.h">
       <Filter>02.Scenes\Game</Filter>
     </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>03.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>04.Components\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>04.Components\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerActor.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -151,6 +179,25 @@
     <ClCompile Include="Homework1Scene.cpp">
       <Filter>02.Scenes\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Day21.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>03.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>04.Components\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>04.Components\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerActor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Day16.cpp">

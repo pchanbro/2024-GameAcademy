@@ -27,8 +27,10 @@
 //		## 자료 구조 ##
 //===========================================
 #include <vector>
-#include <unordered_map>
+#include <unordered_map> // Map은 c#에선 Dictionary, Map은 (key, value) 쌍을 이루어 만든 노드, binary tree같은 트리형태를 사용하는데, key로 대체한다. 
+#include <unordered_set> // binary tree와 같다, Map에서 key, value가 하나씩만 있는것 즉 key가 value인것
 #include <map>
+#include <set>
 
 //===========================================
 //		## NAMESPACE ##

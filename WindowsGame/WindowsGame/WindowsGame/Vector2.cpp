@@ -85,7 +85,7 @@ Vector2 Vector2::Reflect(Vector2 normal)
 	
 	// 근데 여기서 왜 normal과 origin 모두 길이가 1일때 가정인가?
 	// origin까지 길이가 1인 이유가 뭔지 모르겠다.
-	// 반사했을 때의 벡터는 방향만 알면 되니까 그런건가?
+	// 반사했을 때의 벡터는 방향만 알면 되니까 그런건가? -> 맞다 그리고 모든 방향벡터는 길이가 1이다.
 
 	Vector2 normalizedNormalVector = normal.Normalize();
 	Vector2 normalizedOriginVector = this->Normalize();
