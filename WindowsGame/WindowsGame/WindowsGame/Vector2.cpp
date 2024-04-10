@@ -50,10 +50,11 @@ float Vector2::Length()
 {
 	return static_cast<float>(::sqrt(x * x + y * y));
 }
+
 Vector2 Vector2::Normalize()
 {
 	float length = this->Length();
-	if (length <= 0.00000000001f)
+	if (length <= 0.00000000001f) // 이게 length == 0 의 의미를 가진 건데 length == 0 이렇게 쓰면 안되기 때문에 length <= 0.00000000001f 이렇게 표시한다.
 	{
 		return *this;
 	}
@@ -80,9 +81,30 @@ Vector2 Vector2::Reflect(Vector2 normal)
 {
 
 	// origin : 자기자신
-	// normal : 노말벡터, 법선벡터, 길이 1
+	// normal : 노말벡터, 법선벡터, 길이가 1
 	
+	// 근데 여기서 왜 normal과 origin 모두 길이가 1일때 가정인가?
+	// origin까지 길이가 1인 이유가 뭔지 모르겠다.
+	// 반사했을 때의 벡터는 방향만 알면 되니까 그런건가?
 
+	Vector2 normalizedNormalVector = normal.Normalize();
+	Vector2 normalizedOriginVector = this->Normalize();
 
-	return Vector2{};
+	Vector2 temp = normalizedNormalVector;
+	float tempLength = normalizedOriginVector.Dot(normal * -1);
+	temp *= tempLength;
+
+	return normalizedOriginVector + temp * 2;
+}
+
+Vector2 Vector2::Reflect(Vector2 originVector, Vector2 normal)
+{
+	Vector2 normalizedNormalVector = normal.Normalize();
+	Vector2 normalizedOriginVector = originVector.Normalize();
+
+	Vector2 temp = normalizedNormalVector;
+	float tempLength = normalizedOriginVector.Dot(normal * -1);
+	temp *= tempLength;
+
+	return normalizedOriginVector + temp * 2;
 }

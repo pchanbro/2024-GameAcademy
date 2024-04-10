@@ -14,9 +14,10 @@ namespace Collision
 		return false;
 	}
 
-	// 오버로딩 : 함수명은 같은데 매개변수가 다른거
 	// 오버라이드 : 클래스에서의 상속개념 (virtual)
 	//				자식클래스를 호출하도록 하는
+
+	// 오버로딩 : 함수명은 같은데 매개변수가 다른거
 	bool ptInRect(int ptX, int ptY, int x1, int y1, int x2, int y2)
 	{
 		if (x1 <= ptX && ptX <= x2 &&

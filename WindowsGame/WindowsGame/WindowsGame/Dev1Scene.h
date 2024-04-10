@@ -10,8 +10,10 @@ public:
 	virtual void Release() override;
 
 private:
-	RECT _rect = {};
-	Vector2 _platerDir;
-	Vector2 _targetPos
+	CenterRect _player;
+	Vector2 _playerDir;
+	Vector2 _targetPos = { -1, -1 };
+
+	CenterRect _wall = {};
 };
 

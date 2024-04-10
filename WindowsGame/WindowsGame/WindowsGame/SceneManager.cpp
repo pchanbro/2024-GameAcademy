@@ -3,6 +3,7 @@
 #include "Scene.h"
 #include "Dev1Scene.h"
 #include "Dev2Scene.h"
+#include "Homework1Scene.h"
 
 void SceneManager::Init()
 {
@@ -57,7 +58,7 @@ void SceneManager::Update()
 		newScene = new Dev2Scene();
 		break;
 	case SceneType::Homework1Scene:
-		newScene = new Scene();
+		newScene = new Homework1Scene();
 		break;
 	case SceneType::Homework2Scene:
 		newScene = new Scene();

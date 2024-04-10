@@ -4,6 +4,7 @@
 void Dev2Scene::Init()
 {
 	Super::Init();
+
 }
 void Dev2Scene::Render(HDC hdc)
 {

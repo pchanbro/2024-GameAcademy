@@ -82,6 +82,9 @@
     <ClInclude Include="CenterRect.h">
       <Filter>99.Utils\Types</Filter>
     </ClInclude>
+    <ClInclude Include="Homework1Scene.h">
+      <Filter>02.Scenes\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -144,6 +147,9 @@
     </ClCompile>
     <ClCompile Include="Day20.cpp">
       <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="Homework1Scene.cpp">
+      <Filter>02.Scenes\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,11 +1,13 @@
 #pragma once
-// class와 struct는 어감상 차인데 
+// class와 struct는 차이는 딱히 없는데 그냥 단어 차이
+// 근데 이제 쓰이는 용도가 있다.
+// struct는 data에 쓰이고 class는 객체
 // 대부분의 vector는 구조체이다.
 struct Vector2
 {
 	float x = 0, y = 0;
 
-	Vector2 operator-(const POINT pt);
+	Vector2 operator-(const POINT pt); // const는 뒤의거 변경 안된다는 의미로 사용
 	Vector2 operator-(const Vector2 other);
 	void operator-=(const Vector2 other);
 	Vector2 operator+(const POINT pt);
@@ -19,8 +21,8 @@ struct Vector2
 	float Length();
 	Vector2 Normalize(); // 벡터의 길이를 1로 만들어준다.
 
-	Vector2(float x, float y);
-	Vector2();
+	Vector2(float x, float y); // 생성자
+	Vector2(); // 생성자
 
 	// 내적은 Dot
 	// 내적은 주로 두 vector사이의 각도 계산할 때 많이 쓰인다.
@@ -45,4 +47,5 @@ struct Vector2
 
 	Vector2 Reflect(Vector2 normal);
 
+	static Vector2 Reflect(Vector2 originVector, Vector2 normal);
 };
