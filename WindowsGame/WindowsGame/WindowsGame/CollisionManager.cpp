@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CollisionManager.h"
 #include "Collider.h"
+#include "Actor.h"
 
 void CollisionManager::Init()
 {
@@ -35,21 +36,26 @@ void CollisionManager::Update()
 				// 충돌 Map안에 없으면
 				if (false == c1->_collisionMap.contains(c2))
 				{
-					// 충돌 Map에 넣어준ㄴ다.
+					// 충돌 Map에 넣어준다.
 					c1->_collisionMap.insert(c2);
 					c2->_collisionMap.insert(c1);
 					// 충돌되었다고 Actor에 알림.
-					c1->GetOwner()->OnTriggerExit(c1, c2);
-					c2->GetOwner()->OnTriggerExit(c2, c1);
+					c1->GetOwner()->OnTriggerEnter(c1, c2);
+					c2->GetOwner()->OnTriggerEnter(c2, c1);
 
 				}
 			}
+			// 충돌이 안되어 있으면 
 			else
 			{
+				// 충돌 Map에 있으면
 				if (true == c1->_collisionMap.contains(c2))
 				{
 					c1->_collisionMap.erase(c2);
 					c2->_collisionMap.erase(c1);
+					// 충돌되었다고 Actor에 알림.
+					c1->GetOwner()->OnTriggerExit(c1, c2);
+					c2->GetOwner()->OnTriggerExit(c2, c1);
 				}
 			}
 		}
@@ -60,7 +66,7 @@ void CollisionManager::AddCollider(Collider* collider)
 	_colliders.push_back(collider);
 	// 이럴거면 _colliders를 public으로 만드는게 낫지 않나?
 	// 하지만 변수 자체를 노출시키지 않는것이 좋다.
-	// 함수는 찾기가 쉬운데, 변수는 찾기 어렵기 때문이다.
+	// 함수는 로그를 추적, 찾기가 쉬운데, 변수는 찾기 어렵기 때문이다.(변수명을 바꾼다거나 하면 진짜 곤란함)
 }
 void CollisionManager::RemoveCollider(Collider* collider)
 {
@@ -71,7 +77,6 @@ void CollisionManager::RemoveCollider(Collider* collider)
 	{
 		_colliders.erase(findIt);
 	}
-
 }
 void CollisionManager::ClearCollider()
 {

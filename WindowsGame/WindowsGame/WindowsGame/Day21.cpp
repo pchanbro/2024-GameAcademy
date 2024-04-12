@@ -22,7 +22,6 @@ void Comment2()
 
 	// 1. Actor, GameObject 개념 배우기
 	// 2. Collision Manager 충돌 매니저
-	// 3. 벽돌깨기 만들기
 }
 
 void Comment3()
@@ -64,14 +63,16 @@ void Comment3()
 	// Unity : GameObject에 Component로 Player라는 Component를 붙인다.
 	//		GameObject를 상속받아서 무언가 만들 수 없다.
 
-	// 우리의 경우
+	// 우리의 경우 Unity Unreal 같은 고도화된 것을 만드는게 아니기 때문에 
+	// 그 사이의 어중간한 것을 만들것이다.
 	// 이름은 Actor라 지어주고
 	// 언리얼 늬앙스로 따라갈거다.
 	// 근데 Actor나 GameObject나 다를게 딱히 없다.
 
 
 	// Unity -> Collider가 Component로 들어간다.
-	// Unreal -> Actor안에서 설정하게끔 되어있다. ( 내부적으론 Compont)
+	// Unreal -> Actor안에서 설정하게끔 되어있다. ( 내부적으론 Component)
+	// 둘다 내부적으론 Component이다
 }
 
 void Comment4()
@@ -79,23 +80,27 @@ void Comment4()
 	// Component (컴포넌트)
 
 	// 컴포넌트가 게임에서 되게 중요한 패턴
+	// 게임 개발에서 꼭 있어야 하는 패턴
 
 	// CBD
 	// Component Based Development
 	// 컴포넌트 기반의 프로그래밍
 
 	// 패턴 -> 기법 -> 꼼수
-	// 디자인패턴
+	// 이런걸 디자인패턴 이라고 했었다.
 	// 컴포넌트 패턴이라고하는 디자인패턴이 존재한다.
 	
+	// 컴포넌트 패턴
 	// 객체하나를 만들고
 	// 여기에 여러가지 Component를 붙여서
 	// 객체 하나를 여러가지 느낌으로 커스터마이징 가능하도록 만드는 기법
 	
-	// 1초마다 몇미터씩 움직이는 Component
+	// ex) 1초마다 몇미터씩 움직이는 Component
 	// 은신상태를 하게하는 Component가 있다.
 
 	// 롤 - 상태이상
 	// StunComponent
 	// hideComponent은신 컴포넌트
+
+	// 우리가 오늘 만드는 component는 Actor를 위한 것이다.
 }

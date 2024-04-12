@@ -6,9 +6,11 @@ protected:
 	ColliderType _colliderType;
 
 public:
-	unordered_set<Collider*> _collisionMap; // binary트리 같은 경우 수가 지저분하게 추가되도 자동 정렬을 해주진 않겠다.
-	
+	unordered_set<Collider*> _collisionMap; 
+	// binary트리 같은 모습에서 수가 지저분하게 추가되도 자동 정렬을 해주진 않겠다. 같은 느낌으로 쓰는 것
+
 public:
+	// 상속받은 것은 이 구조를 써줘라
 	using Super = Component;
 
 public:
@@ -25,7 +27,7 @@ public:
 public:
 	Collider(ColliderType colliderType) { _colliderType = colliderType; }
 	virtual ~Collider() {}
-}
+};
 
 
 // 생성자 소멸자 순서

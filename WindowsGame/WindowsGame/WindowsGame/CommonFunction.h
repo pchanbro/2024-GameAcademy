@@ -10,17 +10,18 @@ namespace Collision
 	bool RectInRect(RECT rect1, RECT rect2);
 }
 
-
+// 도형에 관한 자료형 만들 때 주로쓰는 namespace
 namespace Shape
 {
-	// 도형에 관한 자료형 만들 때 주로쓰는 namespace
-
-	// inline 키워드는 #define (매크로 한것과 같은 속도를 내기 위해서 사용함)
+	// inline 키워드는 #define (define 매크로 한것과 같은 속도를 내기 위해서 사용함)
+	// (매크로 속도가 엄청 빠름)
 	// 근데 cpu 마음이라
 	// inline을 쓴다해서
 	// 빠르게 해줄지 말지는 cpu가 알아서 결정
 	// (쓴다고 해서 손해는 없음)
+	// 하지만 여태까지 안쓴이유
 	// inline단점 : 헤더에서만 구현해야함.
+	// 헤더에서 구현하면 코드가 꼬이는 link error가 발생
 	inline RECT MakeRect(int x, int y, int width, int height)
 	{
 		RECT rc;
@@ -32,7 +33,7 @@ namespace Shape
 		return rc;
 	}
 
-	inline CenterRect MakeCenterRect(int x, int y, int width, int height)
+	inline CenterRect MakeCenterRect(float x, float y, float width, float height)
 	{
 		CenterRect rc;
 		rc.pos.x = x;
@@ -43,7 +44,7 @@ namespace Shape
 		return rc;
 	}
 
-	inline CenterRect MakeCenterRectLTRB(int left, int top, int right, int bottom)
+	inline CenterRect MakeCenterRectLTRB(float left, float top, float right, float bottom)
 	{
 		CenterRect rc;
 		rc.pos.x = (left + top) / 2;

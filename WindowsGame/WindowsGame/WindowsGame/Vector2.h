@@ -42,7 +42,6 @@ struct Vector2
 	//  - other 벡터가 내 뒤에 있는지 확인하려면
 	//	- 내적이 0보다 작으면 내 뒤에 있습니다. (90도가 넘어갔다는 뜻)
 	
-
 	float Dot(Vector2 other);
 
 	Vector2 Reflect(Vector2 normal);

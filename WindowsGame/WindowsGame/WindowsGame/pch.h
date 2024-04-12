@@ -43,6 +43,7 @@ using namespace std;
 #include "TimeManager.h"	// Time
 #include "InputManager.h"	// Input
 #include "SceneManager.h"	// 얘는 위의 2개처럼 define을 만들진 않았다.
+#include "CollisionManager.h"
 
 //===========================================
 //		## 전역 변수 선언 ##

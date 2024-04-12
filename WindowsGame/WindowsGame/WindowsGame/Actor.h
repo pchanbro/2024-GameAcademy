@@ -1,6 +1,7 @@
-// actor는 여러가지 component를 들고 있어야함
 #pragma once
+// actor는 여러가지 component를 들고 있어야함
 class Component;
+class Collider;
 class Actor
 {
 	// Actor의 기본적인 속성은 많이 안들어가 있는게 좋다.

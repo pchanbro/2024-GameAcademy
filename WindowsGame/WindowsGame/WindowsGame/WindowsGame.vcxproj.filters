@@ -112,7 +112,9 @@
     <ClInclude Include="CollisionManager.h">
       <Filter>01.Managers</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerActor.h" />
+    <ClInclude Include="PlayerActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -197,7 +199,9 @@
     <ClCompile Include="CollisionManager.cpp">
       <Filter>01.Managers</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerActor.cpp" />
+    <ClCompile Include="PlayerActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Day16.cpp">
