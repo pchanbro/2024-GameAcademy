@@ -10,12 +10,13 @@
 // 전역 변수:
 HINSTANCE   _hInstance;	        // instance => 프로그램(인스턴스) 객체
 HWND        _hWnd;				// wnd => 윈도우 객체
-POINT       _mousePos;          // 마우스 좌표
+
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
 BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+void                SetWindowSize(int x, int y, int width, int height);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -126,6 +127,18 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    UpdateWindow(hWnd);
 
    return TRUE;
+}
+
+void SetWindowSize(int x, int y, int width, int height)
+{
+    RECT rc;
+    rc.left = 0;
+    rc.top = 0;
+    rc.right = width;
+    rc.bottom = height;
+
+    ::AdjustWindowRect(&rc, WS_CAPTION | WS_SYSMENU, false);
+    ::SetWindowPos(_hWnd, NULL, x, y, rc.right - rc.left, rc.bottom - rc.top, SWP_NOZORDER | SWP_NOMOVE);
 }
 
 //

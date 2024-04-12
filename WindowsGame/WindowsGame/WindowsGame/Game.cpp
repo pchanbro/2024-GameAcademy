@@ -35,7 +35,7 @@ void Game::Init(HWND hwnd)
 	GET_SINGLE(CollisionManager)->Init();
 
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::InGameScene);
 }
 
 void Game::Updata()

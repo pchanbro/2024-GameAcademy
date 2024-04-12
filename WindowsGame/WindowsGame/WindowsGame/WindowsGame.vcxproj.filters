@@ -94,9 +94,6 @@
     <ClInclude Include="CenterRect.h">
       <Filter>99.Utils\Types</Filter>
     </ClInclude>
-    <ClInclude Include="Homework1Scene.h">
-      <Filter>02.Scenes\Game</Filter>
-    </ClInclude>
     <ClInclude Include="Actor.h">
       <Filter>03.Objects</Filter>
     </ClInclude>
@@ -114,6 +111,21 @@
     </ClInclude>
     <ClInclude Include="PlayerActor.h">
       <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="BallActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="BrickActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PaddleActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameScene.h">
+      <Filter>02.Scenes\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -178,9 +190,6 @@
     <ClCompile Include="Day20.cpp">
       <Filter>999.Comments</Filter>
     </ClCompile>
-    <ClCompile Include="Homework1Scene.cpp">
-      <Filter>02.Scenes\Game</Filter>
-    </ClCompile>
     <ClCompile Include="Day21.cpp">
       <Filter>999.Comments</Filter>
     </ClCompile>
@@ -201,6 +210,24 @@
     </ClCompile>
     <ClCompile Include="PlayerActor.cpp">
       <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="BallActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BrickActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PaddleActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameScene.cpp">
+      <Filter>02.Scenes\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
