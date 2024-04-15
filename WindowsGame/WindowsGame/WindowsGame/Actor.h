@@ -21,9 +21,9 @@ public:
 public:
 	// 충돌 시작되었을때.
 	// Unity
-	void OnTriggerEnter(Collider* collider, Collider* other);
+	virtual void OnTriggerEnter(Collider* collider, Collider* other);
 	// 충돌 끝났을때 
-	void OnTriggerExit(Collider* collider, Collider* other);
+	virtual void OnTriggerExit(Collider* collider, Collider* other);
 
 	// Unreal
 	// void OnComponentBeginOverlap(Collider* collider, Collider * other);

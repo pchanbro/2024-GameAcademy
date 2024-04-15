@@ -3,7 +3,7 @@
 #include "Scene.h"
 #include "Dev1Scene.h"
 #include "Dev2Scene.h"
-#include "Homework1Scene.h"
+#include "InGameScene.h"
 
 void SceneManager::Init()
 {
@@ -57,11 +57,8 @@ void SceneManager::Update()
 	case SceneType::Dev2Scene:
 		newScene = new Dev2Scene();
 		break;
-	case SceneType::Homework1Scene:
-		newScene = new Homework1Scene();
-		break;
-	case SceneType::Homework2Scene:
-		newScene = new Scene();
+	case SceneType::InGameScene:
+		newScene = new InGameScene();
 		break;
 	default:
 		break;

@@ -17,13 +17,13 @@ void PlayerActor::Update()
 
 	if (Input->GetKeyDown(KeyCode::RightMouse) && _name == "플레이어1")
 	{
-		// 마우스 클릭했을 때 플레이어가 움직여줄 방향을 정해준다.
+		//마우스 클릭했을때 플레이어가 움직여줄 방향을 정해준다.
 		POINT pt = Input->GetMousePos();
 		_targetPos = Vector2(pt.x, pt.y);
-		_moveDir = (_targetPos - _body.pos).Normalize(); // 방향벡터는 항상 길이가 1이어야 한다.
+		_moveDir = (_targetPos - _body.pos).Normalize();
 	}
 
-	if (2 < (_targetPos - _body.pos).Length())
+	if (10 < (_targetPos - _body.pos).Length())
 	{
 		_body.pos += _moveDir * (Time->GetDeltaTime() * 100);
 	}
@@ -31,4 +31,5 @@ void PlayerActor::Update()
 void PlayerActor::Release()
 {
 	Super::Release();
+
 }

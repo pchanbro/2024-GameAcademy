@@ -68,6 +68,7 @@ void CollisionManager::AddCollider(Collider* collider)
 	// 하지만 변수 자체를 노출시키지 않는것이 좋다.
 	// 함수는 로그를 추적, 찾기가 쉬운데, 변수는 찾기 어렵기 때문이다.(변수명을 바꾼다거나 하면 진짜 곤란함)
 }
+
 void CollisionManager::RemoveCollider(Collider* collider)
 {
 	// 지울때 쓰는거
@@ -78,6 +79,7 @@ void CollisionManager::RemoveCollider(Collider* collider)
 		_colliders.erase(findIt);
 	}
 }
+
 void CollisionManager::ClearCollider()
 {
 	_colliders.clear();
