@@ -112,13 +112,13 @@
     <ClInclude Include="PlayerActor.h">
       <Filter>03.Objects\Game</Filter>
     </ClInclude>
+    <ClInclude Include="PaddleActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
     <ClInclude Include="BallActor.h">
       <Filter>03.Objects\Game</Filter>
     </ClInclude>
     <ClInclude Include="BrickActor.h">
-      <Filter>03.Objects\Game</Filter>
-    </ClInclude>
-    <ClInclude Include="PaddleActor.h">
       <Filter>03.Objects\Game</Filter>
     </ClInclude>
     <ClInclude Include="PlayerController.h">
@@ -214,13 +214,13 @@
     <ClCompile Include="Day22.cpp">
       <Filter>999.Comments</Filter>
     </ClCompile>
+    <ClCompile Include="PaddleActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
     <ClCompile Include="BallActor.cpp">
       <Filter>03.Objects\Game</Filter>
     </ClCompile>
     <ClCompile Include="BrickActor.cpp">
-      <Filter>03.Objects\Game</Filter>
-    </ClCompile>
-    <ClCompile Include="PaddleActor.cpp">
       <Filter>03.Objects\Game</Filter>
     </ClCompile>
     <ClCompile Include="PlayerController.cpp">
