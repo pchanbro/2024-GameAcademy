@@ -10,8 +10,7 @@ enum class SceneType
 	None,
 	Dev1Scene,
 	Dev2Scene,
-
-	InGameScene,
+	InGameScene
 };
 
 enum class ColliderType
@@ -19,11 +18,4 @@ enum class ColliderType
 	None,
 	Box,
 	Circle
-};
-
-enum class GameState
-{
-	None,
-	Wait,
-	Play
 };
