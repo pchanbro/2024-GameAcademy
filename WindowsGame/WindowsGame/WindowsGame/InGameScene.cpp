@@ -22,7 +22,7 @@ void InGameScene::Init()
 		this->SpawnActor(_ball);
 	}
 
-	for(int i = 0 ; i < 30 ; i++)
+	for(int i = 0 ; i < 40 ; i++)
 	{
 		_brick = new BrickActor();
 		_brick->x = i % 10;

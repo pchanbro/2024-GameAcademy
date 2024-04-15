@@ -55,6 +55,17 @@ namespace Shape
 		return rc;
 	}
 
+	inline CenterRect MakeCenterRectLTWH(float left, float top, float right, float bottom)
+	{
+		CenterRect rc;
+		rc.pos.x = (left + top) / 2;
+		rc.pos.y = (top + bottom) / 2;
+		rc.width = right - left;
+		rc.height = bottom - top;
+
+		return rc;
+	}
+
 	inline void ChangeToNormalValue(RECT& rc)
 	{
 		if (rc.left > rc.right)

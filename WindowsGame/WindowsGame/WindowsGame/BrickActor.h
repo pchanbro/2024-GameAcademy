@@ -12,6 +12,7 @@ public:
 
 	virtual void OnTriggerEnter(Collider* collider, Collider* other) override;
 
+	// 아래와 같은 요소는 private로 받아서 get set으로 받아주는게 좋다 웬만하면 변수를 노출시키지 마라
 public:
 	int x = 0;
 	int y = 0;

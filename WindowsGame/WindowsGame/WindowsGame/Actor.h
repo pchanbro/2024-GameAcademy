@@ -10,6 +10,8 @@ protected:
 	string _name;
 	vector<Component*> _components;
 
+	bool _isEnable = true;
+
 public:
 	// 게터(Getter), 세터(Setter)
 	CenterRect GetBody() { return _body; }
@@ -17,6 +19,9 @@ public:
 
 	string GetName() { return _name; }
 	void SetName(string name) { _name = name; }
+
+	bool GetEnable() { return _isEnable; }
+	void SetEnable(bool isEnable) { _isEnable = isEnable; }
 
 public:
 	// 충돌 시작되었을때.

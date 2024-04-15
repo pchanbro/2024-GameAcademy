@@ -18,8 +18,12 @@ public:
 	void SetMoveDir(Vector2 moveDir) { _moveDir = moveDir; }
 	Vector2 GetMoveDir() { return _moveDir; }
 
+	void Bounce(RECT myRect, RECT otherRect);
+
 private:
 	float _speed = 0.0f;
 	Vector2 _moveDir = {};
+	void bounceBall(Collider* collider, Collider* other);
+
 };
 

@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "BrickActor.h"
 #include "BoxCollider.h"
-#include "BallActor.h"
 #include "InGameScene.h"
 
 
@@ -28,8 +27,6 @@ void BrickActor::Render(HDC hdc)
 void BrickActor::Update()
 {
 	Super::Update();
-
-
 }
 
 void BrickActor::Release()
@@ -37,6 +34,7 @@ void BrickActor::Release()
 	Super::Release();
 }
 
+// 뭔가 작용이 일어나는건 당하는 쪽에서 발생시키는게 좋다.
 void BrickActor::OnTriggerEnter(Collider* collider, Collider* other)
 {
 	Super::OnTriggerEnter(collider, other);
