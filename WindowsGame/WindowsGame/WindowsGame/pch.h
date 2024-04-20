@@ -44,6 +44,8 @@ using namespace std;
 #include "InputManager.h"	// Input
 #include "SceneManager.h"	// 얘는 위의 2개처럼 define을 만들진 않았다.
 #include "CollisionManager.h"
+#include "ResourceManager.h"
+#include "RandomManager.h"
 
 //===========================================
 //		## 윈도우 사이즈 ##

@@ -47,7 +47,7 @@ namespace Shape
 	inline CenterRect MakeCenterRectLTRB(float left, float top, float right, float bottom)
 	{
 		CenterRect rc;
-		rc.pos.x = (left + top) / 2;
+		rc.pos.x = (left + right) / 2;
 		rc.pos.y = (top + bottom) / 2;
 		rc.width = right - left;
 		rc.height = bottom - top;
@@ -55,13 +55,13 @@ namespace Shape
 		return rc;
 	}
 
-	inline CenterRect MakeCenterRectLTWH(float left, float top, float right, float bottom)
+	inline CenterRect MakeCenterRectLTWH(float left, float top, float width, float height)
 	{
 		CenterRect rc;
-		rc.pos.x = (left + top) / 2;
-		rc.pos.y = (top + bottom) / 2;
-		rc.width = right - left;
-		rc.height = bottom - top;
+		rc.pos.x = left + (width / 2);
+		rc.pos.y = top + (height / 2);
+		rc.width = width;
+		rc.height = height;
 
 		return rc;
 	}

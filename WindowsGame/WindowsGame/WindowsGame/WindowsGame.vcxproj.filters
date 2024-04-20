@@ -97,9 +97,6 @@
     <ClInclude Include="CenterRect.h">
       <Filter>99.Utils\Types</Filter>
     </ClInclude>
-    <ClInclude Include="Actor.h">
-      <Filter>03.Objects</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>04.Components</Filter>
     </ClInclude>
@@ -138,6 +135,21 @@
     </ClInclude>
     <ClInclude Include="Vector2Int.h">
       <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>05.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>05.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>03.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteActor.h">
+      <Filter>03.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomManager.h">
+      <Filter>01.Managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -252,6 +264,21 @@
     </ClCompile>
     <ClCompile Include="Vector2Int.cpp">
       <Filter>99.Utils\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>05.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>05.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteActor.cpp">
+      <Filter>03.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomManager.cpp">
+      <Filter>01.Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

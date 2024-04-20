@@ -13,8 +13,6 @@ void BrickActor::Init()
 	BoxCollider* collider = new BoxCollider();
 	collider->SetCollision(Shape::MakeCenterRect(0, 0, WIN_SIZE_X / 10 - 1, 25));
 	this->AddComponent(collider);
-	this->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 20 + WIN_SIZE_X / 10 * x , 26 * (y + 3), WIN_SIZE_X / 10 - 1, 25));
-
 }
 
 void BrickActor::Render(HDC hdc)

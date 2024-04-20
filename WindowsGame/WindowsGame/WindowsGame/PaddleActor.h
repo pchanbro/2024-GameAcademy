@@ -1,6 +1,6 @@
 #pragma once
-#include "Actor.h"
-class PaddleActor : public Actor
+#include "SpriteActor.h"
+class PaddleActor : public SpriteActor
 {
 public:
 	using Super = Actor;

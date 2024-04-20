@@ -2,6 +2,7 @@
 #include "Dev1Scene.h"
 #include "PlayerActor.h"
 #include "BoxCollider.h"
+#include "SpriteActor.h"
 
 void Dev1Scene::Init()
 {
@@ -11,28 +12,20 @@ void Dev1Scene::Init()
 	// 지금은 헤더파일에 Super 변수 만들어줬으니 이렇게 쓴다.
 	Super::Init();
 
-	{
-		PlayerActor* player = new PlayerActor();
-		player->Init();
-		player->SetName("플레이어1");
+	// Windows API에서는 bmp밖에 사용이 안된다.(png파일같은건 로딩 불가능)
+	// 게임을 많이 뜯어봤으면
+	// png파일이 훨씬 더 많은걸 볼 수 있다. (이건 Direct X에서 제공해주는 API를 통해 로딩한 것!)
 
-		BoxCollider* collider = new BoxCollider();
-		collider->SetCollision(Shape::MakeCenterRect(0, 0, 100, 100));
-		player->AddComponent(collider);
-		player->SetBody(Shape::MakeCenterRect(100, 100, 100, 100));
-		this->SpawnActor(player);
-	}
+	// Texture는 T로 시작, Sprite는 S로 시작
+	Resource->LoadTexture(L"텍스처 키, 찾기 쉬운거로 정해서 외우기, 겹치지 않게 주의하셈, T_Background", L"Mole/bg_mole.bmp");
+	Resource->CreateSprite(L"S_MoleBackground", Resource->GetTexture(L"T_MoleBackground"));
 
 	{
-		PlayerActor* player = new PlayerActor();
-		player->Init();
-		player->SetName("플레이어2");
-
-		BoxCollider* collider = new BoxCollider();
-		collider->SetCollision(Shape::MakeCenterRect(0, 0, 100, 100));
-		player->AddComponent(collider);
-		player->SetBody(Shape::MakeCenterRect(500, 500, 100, 100));
-		this->SpawnActor(player);
+		SpriteActor* spriteActor = new SpriteActor();
+		spriteActor->SetSprite(Resource->GetSprite(L"S_MoleBackground"));
+		spriteActor->Init();
+		spriteActor->SetBody(Shape::MakeCenterRectLTRB(0, 0, 1296, 1000));
+		SpawnActor(spriteActor);
 	}
 }
 

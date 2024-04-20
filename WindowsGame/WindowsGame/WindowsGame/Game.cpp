@@ -7,7 +7,12 @@ Game::Game()
 }
 Game::~Game()
 {
-
+	GET_SINGLE(ResourceManager)->Release();
+	
+	// 메모리 누수난거 
+	// 안지워주면
+	// PC에 계속 남아있는 경우가 있다.
+	// 그런거 지워주는 코드 이후에 추가하겠다.
 }
 
 void Game::Init(HWND hwnd)
@@ -33,6 +38,8 @@ void Game::Init(HWND hwnd)
 	Input->Init(_hwnd);
 	GET_SINGLE(SceneManager)->Init();
 	GET_SINGLE(CollisionManager)->Init();
+	Resource->Init();
+	//Random->Init();
 
 
 	GET_SINGLE(SceneManager)->ChangeScene(SceneType::InGameScene);

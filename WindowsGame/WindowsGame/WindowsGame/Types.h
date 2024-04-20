@@ -19,4 +19,5 @@ using uint32 = unsigned __int32;
 using uint64 = unsigned __int64;
 
 #include "Vector2.h"
+#include "Vector2Int.h"
 #include "CenterRect.h"
