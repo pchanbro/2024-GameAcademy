@@ -8,8 +8,6 @@ void SpriteActor::Init()
 }
 void SpriteActor::Render(HDC hdc)
 {
-	Super::Render(hdc);
-
 	if (_sprite == nullptr) return;
 
 	Vector2Int size = _sprite->GetSize();
@@ -22,11 +20,13 @@ void SpriteActor::Render(HDC hdc)
 		size.y,
 		_sprite->GetDC(),
 		_sprite->GetPos().x,
-		_sprite->GetPos().x,
+		_sprite->GetPos().y,
 		size.x,
 		size.y,
 		_sprite->GetTransparent() // Åõ¸í»ö
 	);
+
+	Super::Render(hdc);
 
 }
 void SpriteActor::Update()

@@ -42,7 +42,7 @@ void Game::Init(HWND hwnd)
 	Random->Init();
 
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev2Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::MoleGameScene);
 }
 
 void Game::Updata()
@@ -56,6 +56,8 @@ void Game::Updata()
 
 void Game::Render()
 {
+	GET_SINGLE(SceneManager)->Render(_hdcBack);
+
 	//FPS Ãâ·Â
 	{
 		uint32 fps = Time->GetFps();

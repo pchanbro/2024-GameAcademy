@@ -10,6 +10,13 @@ void BoxCollider::Render(HDC hdc)
 {
 	Super::Render(hdc);
 
+	HBRUSH emptyBrush = GetStockBrush(NULL_BRUSH);
+	HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, emptyBrush);
+
+	this->GetCollision().Draw(hdc);
+	SelectObject(hdc, oldBrush);
+	DeleteObject(emptyBrush);
+
 }
 void BoxCollider::Update()
 {

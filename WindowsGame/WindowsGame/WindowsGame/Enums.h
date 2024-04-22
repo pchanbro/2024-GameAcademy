@@ -12,6 +12,7 @@ enum class SceneType
 	Dev2Scene,
 
 	InGameScene,
+	MoleGameScene,
 };
 
 enum class ColliderType
@@ -26,4 +27,9 @@ enum class GameState
 	None,
 	Wait,
 	Play
+};
+
+enum class MoleGameState
+{
+	None,
 };

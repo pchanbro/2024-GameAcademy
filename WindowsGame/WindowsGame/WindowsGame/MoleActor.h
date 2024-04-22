@@ -1,9 +1,18 @@
 #pragma once
-#include "Actor.h"
-class MoleActor : public Actor
+#include "SpriteActor.h"
+
+enum class MoleActorState
+{
+	Out,
+	In,
+	Die,
+	None
+};
+
+class MoleActor : public SpriteActor
 {
 public:
-	using Super = Actor;
+	using Super = SpriteActor;
 public:
 	virtual void Init() override;
 	virtual void Render(HDC hdc) override;
@@ -11,9 +20,14 @@ public:
 	virtual void Release() override;
 
 public:
-	virtual void OnTriggerEnter(Collider* collider, Collider* other) override;
+	void ComeOut(); // ¶¥±¼¿¡¼­ ³ª¿À´Ù.
+	void ComeIn(); // ¶¥±¼·Î µé¾î°¡´Ù
+	void Die(); // Á×´Ù
+
+	void ChangeState(MoleActorState state);
 
 private:
-	bool existence = false;
+	float _comeInTimer = 0.0f;
+	MoleActorState _state = MoleActorState::None;
 };
 
