@@ -39,10 +39,10 @@ void Game::Init(HWND hwnd)
 	GET_SINGLE(SceneManager)->Init();
 	GET_SINGLE(CollisionManager)->Init();
 	Resource->Init();
-	//Random->Init();
+	Random->Init();
 
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::InGameScene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev2Scene);
 }
 
 void Game::Updata()

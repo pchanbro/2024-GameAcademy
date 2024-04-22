@@ -11,7 +11,7 @@ public:
 	void Init();
 	void Release();
 
-	Texture* LoadTexture(const wstring& key, const wstring& path, uint32 transparent = RGB(255, 0, 255));
+	Texture* LoadTexture(const wstring& key, const wstring& path, uint32 transparent = RGB(255, 0, 255)); // 여기서 값을 미리 넣어준 것을 디폴트 인자라고 한다. 헤더 파일에서는 이렇게 먼저 넣어줘도 되지만 cpp파일에서는 이렇게 미리 넣어주면 오류가 난다.
 	Texture* GetTexture(const wstring& key);
 
 	Sprite* CreateSprite(const wstring& key, Texture* texture, int x = 0, int y = 0, int cx = 0, int cy = 0);
@@ -25,6 +25,13 @@ private:
 // 경로 
 // ../Resources/Mole/bg_mole.bmp 이 파일을 찾으려 하는데 파일이 없다더라.
 // ../ 이니까 WindowsGame.vcxproj 기준으로 폴더 하나 앞으로 나가야 한다는 것
+
+// 디버깅할때는 상대경로 기준을
+//		.vcxproj 파일 기주으로 하고
+// 배포할떄는
+//		.exe 파일 기준으로 상대경로를 정한다.
+// ../ => 폴더를 하나 밖으로 나간다.
+// ../Resources/Mole/bg_mole.bmp 이 파일을 찾으려 하는데 파일이 없다더라.
 
 
 //map은

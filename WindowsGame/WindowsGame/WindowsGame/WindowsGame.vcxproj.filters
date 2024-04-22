@@ -151,6 +151,12 @@
     <ClInclude Include="RandomManager.h">
       <Filter>01.Managers</Filter>
     </ClInclude>
+    <ClInclude Include="HammerActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="MoleActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -279,6 +285,12 @@
     </ClCompile>
     <ClCompile Include="RandomManager.cpp">
       <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="HammerActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="MoleActor.cpp">
+      <Filter>03.Objects\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,9 @@
 #pragma once
-#include "Actor.h"
-class BrickActor : public Actor
+#include "SpriteActor.h"
+class BrickActor : public SpriteActor
 {
 public:
-	using Super = Actor;
+	using Super = SpriteActor;
 public:
 	virtual void Init() override;
 	virtual void Render(HDC hdc) override;

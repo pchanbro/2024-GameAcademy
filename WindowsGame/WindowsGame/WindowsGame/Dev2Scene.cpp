@@ -1,10 +1,28 @@
 #include "pch.h"
 #include "Dev2Scene.h"
+#include "MoleActor.h"
+#include "HammerActor.h"
 
 void Dev2Scene::Init()
 {
 	Super::Init();
 
+	{
+		_hammer = new HammerActor();
+		_hammer->Init();
+		this->SpawnActor(_hammer);
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		
+		MoleActor* _mole = new MoleActor();
+		_mole->SetBody(Shape::MakeCenterRectLTWH(i * 400 + 100, 300, 200, 200));
+		_mole->Init();
+		Time->Updata();
+		this->SpawnActor(_mole);
+		_mole = nullptr;
+	}
 }
 void Dev2Scene::Render(HDC hdc)
 {
@@ -17,10 +35,6 @@ void Dev2Scene::Update()
 {
 	Super::Update();
 
-	if (Input->GetKey(KeyCode::Control) && Input->GetKeyDown(KeyCode::RightMouse))
-	{
-		GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
-	}
 }
 void Dev2Scene::Release()
 {

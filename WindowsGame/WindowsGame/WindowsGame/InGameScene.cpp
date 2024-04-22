@@ -22,12 +22,12 @@ void InGameScene::Init()
 		this->SpawnActor(_ball);
 	}
 
-	for(int i = 0 ; i < 10 ; i++)
+	for(int i = 0 ; i < 30 ; i++)
 	{
 		for (int j = 0; j < 4; j++)
 		{
 			BrickActor* brick = new BrickActor();
-			brick->SetBody(Shape::MakeCenterRectLTWH(i * 150, j * 30, 150, 30));
+			brick->SetBody(Shape::MakeCenterRectLTWH(i * 45, j * 22, 45, 22));
 			brick->Init();
 			this->SpawnActor(brick);
 		

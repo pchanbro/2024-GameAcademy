@@ -14,6 +14,7 @@ void SpriteActor::Render(HDC hdc)
 
 	Vector2Int size = _sprite->GetSize();
 
+	// 블리트 중 하나
 	::TransparentBlt(hdc,
 		static_cast<int>(_body.pos.x - size.x / 2),
 		static_cast<int>(_body.pos.y - size.y / 2),
@@ -24,7 +25,7 @@ void SpriteActor::Render(HDC hdc)
 		_sprite->GetPos().x,
 		size.x,
 		size.y,
-		_sprite->GetTransparent()
+		_sprite->GetTransparent() // 투명색
 	);
 
 }

@@ -9,12 +9,18 @@ void BallActor::Init()
 {
 	Super::Init();
 
+	Resource->LoadTexture(L"T_ball", L"BrickGame/ball.bmp");
+	Resource->CreateSprite(L"S_ball", Resource->GetTexture(L"T_ball"));
+
+
+	this->SetSprite(Resource->GetSprite(L"S_ball"));
+
 	this->SetName("Ball");
 
 	BoxCollider* collider = new BoxCollider();
-	collider->SetCollision(Shape::MakeCenterRect(0, 0, 20, 20));
+	collider->SetCollision(Shape::MakeCenterRect(0, 0, 18, 18));
 	this->AddComponent(collider);
-	this->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y - 70 - 26, 26, 26));
+	this->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y - 70 - 26, 23, 21));
 
 	_speed = 500;
 }
@@ -23,7 +29,6 @@ void BallActor::Render(HDC hdc)
 {
 	Super::Render(hdc);
 
-	_body.Draw(hdc);
 }
 
 void BallActor::Update()

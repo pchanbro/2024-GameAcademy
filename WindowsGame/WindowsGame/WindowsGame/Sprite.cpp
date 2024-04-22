@@ -10,7 +10,7 @@ Sprite::Sprite(Texture* texture, int x, int y, int cx, int cy) : _texture(textur
 	// _y = y;
 	// _cx = cx;
 	// _cy = cy;
-	// 근데 둘 중 하나 선택하라면 지금 여기에 이게 더 좋다.
+	// 근데 둘 중 하나 선택하라면 지금 여기에 이렇게 쓰는게 더 좋다.
 }
 Sprite::~Sprite()
 {

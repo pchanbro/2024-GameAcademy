@@ -14,7 +14,7 @@ void ResourceManager::Release()
 	// resources 다 delete 해줘야함
 
 	// for-ranged 방식
-	for (auto& item : _resources) // _resources의 내용들을 다 돈다.
+	for (auto& item : _resources) // _resources의 내용들을 다 돈다. key를 받기 위해서 이렇게 쓴다. for문으로는 이게 불가능
 	{
 		SAFE_DELETE(item.second);
 	}
@@ -23,6 +23,7 @@ void ResourceManager::Release()
 
 Texture* ResourceManager::LoadTexture(const wstring& key, const wstring& path, uint32 transparent)
 {
+	// 이미 키에 대한 값이 존재하면 그냥 바로 리턴
 	if (_resources.contains(key))
 	{
 		return GetTexture(key);
@@ -50,6 +51,7 @@ Sprite* ResourceManager::CreateSprite(const wstring& key, Texture* texture, int 
 		return GetSprite(key);
 	}
 
+	// cx cy가 0으로 오면 전체크기로 받아줌
 	if (cx == 0)
 	{
 		cx = texture->GetSize().x;
