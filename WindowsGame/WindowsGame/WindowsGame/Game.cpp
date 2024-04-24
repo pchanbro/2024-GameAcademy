@@ -56,7 +56,9 @@ void Game::Updata()
 
 void Game::Render()
 {
+
 	GET_SINGLE(SceneManager)->Render(_hdcBack);
+
 
 	//FPS 출력
 	{
@@ -74,8 +76,6 @@ void Game::Render()
 		wstring timeStr = format(L"mouse({0}, {1})", mousePos.x, mousePos.y);
 		::TextOut(_hdcBack, 0, 20, timeStr.c_str(), timeStr.length());
 	}
-
-	GET_SINGLE(SceneManager)->Render(_hdcBack);
 
 
 	// 비트블릿 : 고속 복사

@@ -25,6 +25,9 @@ public:
 	void Die(); // ав╢ы
 
 	void ChangeState(MoleActorState state);
+	MoleActorState GetState() { return _state; }
+
+
 
 private:
 	float _comeInTimer = 0.0f;

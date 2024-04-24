@@ -10,11 +10,14 @@ void BoxCollider::Render(HDC hdc)
 {
 	Super::Render(hdc);
 
-	HBRUSH emptyBrush = GetStockBrush(NULL_BRUSH);
+	// 아래서 this->GetCollision().Draw(hdc); 이거 하면서 만든 네모를 투명하게 만들어주는 과정
+	HBRUSH emptyBrush = GetStockBrush(NULL_BRUSH);  
 	HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, emptyBrush);
 
 	this->GetCollision().Draw(hdc);
-	SelectObject(hdc, oldBrush);
+
+	// 앞으로 만들것들도 투명하면 곤란하니 원래대로 돌려주는 과정
+	SelectObject(hdc, oldBrush);  
 	DeleteObject(emptyBrush);
 
 }

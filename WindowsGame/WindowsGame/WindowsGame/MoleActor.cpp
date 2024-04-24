@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "MoleActor.h"
 #include "BoxCollider.h"
-#include "Dev2Scene.h"
 
 void MoleActor::Init()
 {
@@ -22,7 +21,13 @@ void MoleActor::Update()
 	if (Input->GetKeyDown(KeyCode::Space))
 	{
 		//죽기 실행
-		ChangeState(MoleActorState::Die);
+		ChangeState(MoleActorState::Die);  
+		// 그냥 바로 Die(); 해서 함수를 호출하는게 아니라 이렇게 호출하면 몬스터의 상태만 바꿔줬는데 알아서 동작하는것 같은 효과를 준다.
+		// 스타크래프트로 치면
+		// 유닛한테 
+		// 패트롤 상태 << 명령을 주면
+		// 상태만 변경,
+		// 코드단에서는 state만 제어해주면 다 알아서 되는 것 같은거다.
 	}
 
 	if (Input->GetKeyDown(KeyCode::Control))
@@ -60,12 +65,11 @@ void MoleActor::ComeIn()
 {
 	cout << "MoleActor::ComeIn()" << endl;
 
+	// 땅꿀로 들어가면 그림을 그려주면 안되니까 NULL로 해준다.
 	this->SetSprite(nullptr);
 }
 void MoleActor::Die()
 {
-	cout << "MoleActor::Die()" << endl;
-
 	// 수도코드
 	// 죽었을 떄 기능?
 

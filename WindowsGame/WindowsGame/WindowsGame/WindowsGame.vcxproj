@@ -156,7 +156,6 @@
     <ClInclude Include="Enums.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="HammerActor.h" />
     <ClInclude Include="InGameScene.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MoleActor.h" />
@@ -221,7 +220,6 @@
     <ClCompile Include="Dev1Scene.cpp" />
     <ClCompile Include="Dev2Scene.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="HammerActor.cpp" />
     <ClCompile Include="InGameScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="MoleActor.cpp" />

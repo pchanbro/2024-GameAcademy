@@ -1,17 +1,11 @@
 #include "pch.h"
 #include "Dev2Scene.h"
 #include "MoleActor.h"
-#include "HammerActor.h"
 
 void Dev2Scene::Init()
 {
 	Super::Init();
 
-	{
-		_hammer = new HammerActor();
-		_hammer->Init();
-		this->SpawnActor(_hammer);
-	}
 
 	for (int i = 0; i < 3; i++)
 	{

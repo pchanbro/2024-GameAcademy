@@ -35,6 +35,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -49,6 +50,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -63,6 +65,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -78,6 +81,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -92,6 +96,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -106,6 +111,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -120,6 +126,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -134,6 +141,7 @@ void MoleGameScene::Init()
 		}
 
 		mole->Init();
+		_moles.push_back(mole);
 		this->SpawnActor(mole);
 	}
 
@@ -152,6 +160,9 @@ void MoleGameScene::Init()
 		this->SpawnActor(_hammer);
 	}
 
+
+	_regenTimer = 0.5f;
+
 }
 void MoleGameScene::Render(HDC hdc)
 {
@@ -160,6 +171,10 @@ void MoleGameScene::Render(HDC hdc)
 
 	wstring str = L"MoleGameScene";
 	::TextOut(hdc, 0, 45, str.c_str(), str.length());
+
+
+	wstring scoreStr = format(L"score : {0}", score);
+	::TextOut(hdc, 390, 20, scoreStr.c_str(), scoreStr.length());
 }
 void MoleGameScene::Update()
 {
@@ -170,10 +185,24 @@ void MoleGameScene::Update()
 	//------------------------------------
 	POINT mousePos = Input->GetMousePos();
 	_hammer->SetBody(Shape::MakeCenterRect(mousePos.x, mousePos.y, 51, 51));
+	RECT hammerRect = _hammer->GetBody().ToRect();
 
 	if (Input->GetKeyDown(KeyCode::LeftMouse))
 	{
 		_hammer->SetSprite(Resource->GetSprite(L"S_Hammer_Hit"));
+
+		for (MoleActor* hittedMoleActor : _moles)
+		{
+			if (hittedMoleActor->GetState() == MoleActorState::Out)
+			{
+				RECT hittedMoleRect = hittedMoleActor->GetBody().ToRect();
+				if (Collision::RectInRect(hammerRect, hittedMoleRect))
+				{
+					hittedMoleActor->ChangeState(MoleActorState::Die);
+					score++;
+				}
+			}
+		}
 	}
 
 	if (Input->GetKeyUp(KeyCode::LeftMouse))
@@ -186,6 +215,31 @@ void MoleGameScene::Update()
 	//------------------------------------
 
 	// N초마다 랜덤한 두더지가 ChangeState(In) 으로 변한다.
+
+	// -------선생님 수도코드------
+	// 1. n초를 측정한다.
+	// -> Timer 사용
+	// 1. float timer 선언
+	// 2. Init에서 timer = 0.5f;
+	// 3. timer -= Time->GetDeltaTime();
+	// if(timer <= 0.0f)
+	//		if( 두더지상태 == Out)
+	//		두더지가 ChangeState(In)으로 변한다
+	//	------------------------------------
+
+	_regenTimer -= Time->GetDeltaTime();
+	if (_regenTimer <= 0.0f)
+	{
+		_regenTimer = 0.5f;
+		// 랜덤한 두더지가 ChangeState(In)으로 변한다
+		// 랜덤한 두더지를 가져오려면 벡터로 두더지들을 받아주어야 한다.
+		MoleActor* randomMoleActor = _moles[Random->GetRandomInt(0, _moles.size() - 1)];
+		if (randomMoleActor->GetState() == MoleActorState::In)
+		{
+			randomMoleActor->ChangeState(MoleActorState::Out);
+		}
+	}
+
 
 	// n초가 지난다. 델타타임 가져와서 n초가 되면 초기화 되도록 한다.
 	// if (0.0f <= _timer)

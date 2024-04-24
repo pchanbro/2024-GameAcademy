@@ -1,6 +1,7 @@
 #pragma once
 #include "Scene.h"
-class SpriteActor;			
+class SpriteActor;
+class MoleActor;
 class MoleGameScene : public Scene
 {
 	using Super = Scene;
@@ -17,5 +18,9 @@ public:
 	MoleGameState _gameState = MoleGameState::None;
 
 	SpriteActor* _hammer = nullptr;
+
+	float _regenTimer = 0.5f;
+	vector<MoleActor*> _moles;	
+	int score = 0;
 };
 
