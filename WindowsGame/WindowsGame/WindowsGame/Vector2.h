@@ -23,6 +23,7 @@ struct Vector2
 
 	Vector2(float x, float y); // 생성자
 	Vector2(); // 생성자
+	
 
 	// 내적은 Dot
 	// 내적은 주로 두 vector사이의 각도 계산할 때 많이 쓰인다.

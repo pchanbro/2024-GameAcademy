@@ -17,6 +17,11 @@ public:
 	CenterRect GetBody() { return _body; }
 	void SetBody(CenterRect body) { _body = body; }
 
+	void SetPos(Vector2 pos) { _body.pos = pos; }
+	vector2 GetPos() { return _body.pos; }
+
+	void SetWidth(float width) { _body.width = width; }
+
 	string GetName() { return _name; }
 	void SetName(string name) { _name = name; }
 
@@ -38,6 +43,24 @@ public:
 public:
 	void AddComponent(Component* component);
 	void RemoveComponent(Component* component);
+	template<typename T>
+	T* GetComponent()
+	{
+		for (auto component : _components)
+		{
+			if (typeid(*component) == typeid(T))
+			{
+				// dynamic_cast => 특정이벤트에서 한 번!(특정이벤트란, 매프레임 할 정도는 아니고 클릭 한 번 할떄정도?
+				T* result = dynamic_cast<T*>(component);
+				if (result != nullptr)
+				{
+					return result;
+				}
+			}
+		}
+		
+		return nullptr;
+	}
 
 public:
 	virtual void Init();

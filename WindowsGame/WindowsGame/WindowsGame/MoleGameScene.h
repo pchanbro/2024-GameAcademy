@@ -2,6 +2,7 @@
 #include "Scene.h"
 class SpriteActor;
 class MoleActor;
+class HammerActor;
 class MoleGameScene : public Scene
 {
 	using Super = Scene;
@@ -17,7 +18,7 @@ public:
 	
 	MoleGameState _gameState = MoleGameState::None;
 
-	SpriteActor* _hammer = nullptr;
+	HammerActor _hammer = nullptr;
 
 	float _regenTimer = 0.5f;
 	vector<MoleActor*> _moles;	

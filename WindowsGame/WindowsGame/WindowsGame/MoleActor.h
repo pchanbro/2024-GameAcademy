@@ -28,7 +28,6 @@ public:
 	MoleActorState GetState() { return _state; }
 
 
-
 private:
 	float _comeInTimer = 0.0f;
 	MoleActorState _state = MoleActorState::None;

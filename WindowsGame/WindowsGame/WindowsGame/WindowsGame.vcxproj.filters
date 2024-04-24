@@ -151,14 +151,20 @@
     <ClInclude Include="RandomManager.h">
       <Filter>01.Managers</Filter>
     </ClInclude>
-    <ClInclude Include="HammerActor.h">
-      <Filter>03.Objects\Game</Filter>
-    </ClInclude>
     <ClInclude Include="MoleActor.h">
       <Filter>03.Objects\Game</Filter>
     </ClInclude>
     <ClInclude Include="MoleGameScene.h">
       <Filter>02.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="HammerActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerHammerController.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Flipbook.h">
+      <Filter>05.Resources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -289,9 +295,6 @@
     <ClCompile Include="RandomManager.cpp">
       <Filter>01.Managers</Filter>
     </ClCompile>
-    <ClCompile Include="HammerActor.cpp">
-      <Filter>03.Objects\Game</Filter>
-    </ClCompile>
     <ClCompile Include="MoleActor.cpp">
       <Filter>03.Objects\Game</Filter>
     </ClCompile>
@@ -300,6 +303,18 @@
     </ClCompile>
     <ClCompile Include="MoleGameScene.cpp">
       <Filter>02.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day26.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="HammerActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerHammerController.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Flipbook.cpp">
+      <Filter>05.Resources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

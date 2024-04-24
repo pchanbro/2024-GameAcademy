@@ -3,6 +3,7 @@
 #include "SpriteActor.h"
 #include "MoleActor.h"
 #include "BoxCollider.h"
+#include "HammerActor.h"
 
 void MoleGameScene::Init()
 {
@@ -151,14 +152,13 @@ void MoleGameScene::Init()
 		Resource->CreateSprite(L"S_Hammer_Idle", Resource->GetTexture(L"T_Hammer"), 0, 0, 51, 51);
 		Resource->CreateSprite(L"S_Hammer_Hit", Resource->GetTexture(L"T_Hammer"), 51, 0, 51, 51);
 
-		_hammer = new SpriteActor();
-		_hammer->SetName("Hammer");
+		HammerActor* _hammer = new HammerActor();
 		Sprite* sprite = Resource->GetSprite(L"S_Hammer_Hit");
 		_hammer->SetSprite(sprite);
 		_hammer->Init();
-
 		this->SpawnActor(_hammer);
 	}
+
 
 
 	_regenTimer = 0.5f;
@@ -183,38 +183,29 @@ void MoleGameScene::Update()
 	//------------------------------------
 	//	# 해머 작동 #
 	//------------------------------------
-	POINT mousePos = Input->GetMousePos();
-	_hammer->SetBody(Shape::MakeCenterRect(mousePos.x, mousePos.y, 51, 51));
-	RECT hammerRect = _hammer->GetBody().ToRect();
-
-	if (Input->GetKeyDown(KeyCode::LeftMouse))
-	{
-		_hammer->SetSprite(Resource->GetSprite(L"S_Hammer_Hit"));
-
-		for (MoleActor* hittedMoleActor : _moles)
-		{
-			if (hittedMoleActor->GetState() == MoleActorState::Out)
-			{
-				RECT hittedMoleRect = hittedMoleActor->GetBody().ToRect();
-				if (Collision::RectInRect(hammerRect, hittedMoleRect))
-				{
-					hittedMoleActor->ChangeState(MoleActorState::Die);
-					score++;
-				}
-			}
-		}
-	}
-
-	if (Input->GetKeyUp(KeyCode::LeftMouse))
-	{
-		_hammer->SetSprite(Resource->GetSprite(L"S_Hammer_Idle"));
-	}
+	
 
 	//------------------------------------
 	//	# 두더지 나오게 하기 #
 	//------------------------------------
 
 	// N초마다 랜덤한 두더지가 ChangeState(In) 으로 변한다.
+
+
+	// n초가 지난다. 델타타임 가져와서 n초가 되면 초기화 되도록 한다.
+	// if (0.0f <= _timer)
+	/*{
+		_timer -= Time->GetDeltaTime();
+
+		if (_timer < 0.0f)
+		{
+			ChangeState(MoleActorState::In);
+		}
+	}*/
+	// 임의의 두더지를 가져온다
+	// 두더지의 상태를 확인한다.
+	// 두더지의 상태가 Out인 경우에만 In으로 변경한다.
+
 
 	// -------선생님 수도코드------
 	// 1. n초를 측정한다.
@@ -241,19 +232,6 @@ void MoleGameScene::Update()
 	}
 
 
-	// n초가 지난다. 델타타임 가져와서 n초가 되면 초기화 되도록 한다.
-	// if (0.0f <= _timer)
-	/*{
-		_timer -= Time->GetDeltaTime();
-
-		if (_timer < 0.0f)
-		{
-			ChangeState(MoleActorState::In);
-		}
-	}*/
-	// 임의의 두더지를 가져온다
-	// 두더지의 상태를 확인한다.
-	// 두더지의 상태가 Out인 경우에만 In으로 변경한다.
 
 }
 void MoleGameScene::Release()

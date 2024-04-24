@@ -154,8 +154,10 @@
     <ClInclude Include="Dev1Scene.h" />
     <ClInclude Include="Dev2Scene.h" />
     <ClInclude Include="Enums.h" />
+    <ClInclude Include="Flipbook.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="HammerActor.h" />
     <ClInclude Include="InGameScene.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="MoleActor.h" />
@@ -164,6 +166,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PlayerActor.h" />
     <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PlayerHammerController.h" />
     <ClInclude Include="RandomManager.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceBase.h" />
@@ -217,9 +220,14 @@
     <ClCompile Include="Day25.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Day26.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Dev1Scene.cpp" />
     <ClCompile Include="Dev2Scene.cpp" />
+    <ClCompile Include="Flipbook.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HammerActor.cpp" />
     <ClCompile Include="InGameScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="MoleActor.cpp" />
@@ -231,6 +239,7 @@
     </ClCompile>
     <ClCompile Include="PlayerActor.cpp" />
     <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PlayerHammerController.cpp" />
     <ClCompile Include="RandomManager.cpp" />
     <ClCompile Include="ResourceBase.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
