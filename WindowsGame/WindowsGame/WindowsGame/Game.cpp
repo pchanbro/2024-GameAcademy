@@ -42,7 +42,7 @@ void Game::Init(HWND hwnd)
 	Random->Init();
 
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev2Scene);
 }
 
 void Game::Updata()

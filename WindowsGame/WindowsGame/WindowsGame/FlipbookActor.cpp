@@ -31,9 +31,21 @@ void FlipbookActor::Render(HDC hdc)
 void FlipbookActor::Update()
 {
 	Super::Update();
+	if (_flipbook == nullptr) return;
+
 
 	const FlipbookInfo& info = _flipbook->GetInfo();
+	int frameAmount = (info.end - info.start + 1);
+
 	_sumTime += Time->GetDeltaTime();
+
+	// 변경되는 원하는 시간
+	// duration(총 걸린 시간) / frameAmount(장수)
+	// 1장을 실행시킬때 몇초가 걸릴까?
+	// frameAmount : duration = 1 : ??
+	// ?? = duration / frameAmount
+
+	float delta = info.duration / frameAmount;
 
 	if (this->_loop)
 	{
@@ -51,19 +63,6 @@ void FlipbookActor::Update()
 				}
 			}
 			_sumTime = 0;
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::A))
-	{
-		cout << "변경!" << endl;
-		FlipbookInfo tmpInfo = info;
-		tmpInfo.loop = !info.loop;
-		_flipbook->SetInfo(tmpInfo);
-
-		if (this->_loop == false)
-		{
-			this->_loop = true;
 		}
 	}
 	

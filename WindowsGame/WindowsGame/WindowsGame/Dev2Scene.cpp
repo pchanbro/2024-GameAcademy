@@ -1,22 +1,19 @@
 #include "pch.h"
 #include "Dev2Scene.h"
 #include "MoleActor.h"
+#include "FlipbookActor.h"
+#include "Flipbook.h"
+#include "CreatureActor.h"
+#include "UserCharacterController.h"
 
 void Dev2Scene::Init()
 {
 	Super::Init();
 
+	CreatureActor* _creature = new CreatureActor();
+	_creature->Init();
+	SpawnActor(_creature);
 
-	for (int i = 0; i < 3; i++)
-	{
-		
-		MoleActor* _mole = new MoleActor();
-		_mole->SetBody(Shape::MakeCenterRectLTWH(i * 400 + 100, 300, 200, 200));
-		_mole->Init();
-		Time->Updata();
-		this->SpawnActor(_mole);
-		_mole = nullptr;
-	}
 }
 void Dev2Scene::Render(HDC hdc)
 {

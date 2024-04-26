@@ -169,6 +169,12 @@
     <ClInclude Include="FlipbookActor.h">
       <Filter>03.Objects</Filter>
     </ClInclude>
+    <ClInclude Include="CreatureActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="UserCharacterController.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -321,6 +327,15 @@
     </ClCompile>
     <ClCompile Include="FlipbookActor.cpp">
       <Filter>03.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Day27.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="CreatureActor.cpp">
+      <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="UserCharacterController.cpp">
+      <Filter>03.Objects\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

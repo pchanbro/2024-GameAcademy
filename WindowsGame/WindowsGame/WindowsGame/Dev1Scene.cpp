@@ -30,13 +30,19 @@ void Dev1Scene::Init()
 		SpawnActor(spriteActor);
 	}*/
 
-	Resource->LoadTexture(L"T_Character", L"FlipbookTest/character.bmp");
+	Resource->LoadTexture(L"T_Character", L"FlipbookTest/PlayerDown.bmp", RGB(128, 128, 128));
 	FlipbookInfo info = {};
 	info.start = 0;
-	info.end = 12;
-	info.size = Vector2Int(32, 32);
+	info.end = 9;
+	info.line = 1;
+	info.size = Vector2Int(200, 200);
+	info.loop = true;
+	info.duration = 1.0f;
+
 	info.texture = Resource->GetTexture(L"T_Character");
 	Resource->CreateFlipbook(L"FB_CharacterIdle", info);
+
+
 
 	{
 		FlipbookActor* flipbookActor = new FlipbookActor();
