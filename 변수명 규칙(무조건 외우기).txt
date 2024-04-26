@@ -16,7 +16,7 @@
 
 
 <전역변수의 경우>
-(_소문자) 로 시작
+( _(언더바) + 소문자 ) 로 시작
 ex) 
 int _myHand =0;
 
@@ -25,9 +25,7 @@ int _myHand =0;
 ex)
 void PrintGameStartScece()
 
-
-
-<구조체의 경우>
+<구조체, 클래스, enum 의 경우>
 // 대문자로 시작 (Pascal Case)
 struct Student
 {
