@@ -9,6 +9,8 @@ public:
 	virtual void Update() override;
 	virtual void Release() override;
 
+	void LoadResource();
+
 private:
 	/*CenterRect _player;
 	Vector2 _playerDir;

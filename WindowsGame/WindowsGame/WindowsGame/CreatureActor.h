@@ -9,13 +9,13 @@ enum class CreatureActorState
 	None,
 };
 
-enum class Direction
+enum eCreatureDirection
 {
-	Up,
-	Down,
-	Left,
-	Right,
-	None
+	RIGHT,
+	LEFT,
+	UP,
+	DOWN,
+	END
 };
 
 class CreatureActor : public FlipbookActor
@@ -30,6 +30,10 @@ public:
 	virtual void Release() override;
 
 public:
+	
+	void ChangeDirection(eCreatureDirection dir);
+	void UpdateInput();
+
 	CreatureActor() {}
 	virtual ~CreatureActor() {}
 
@@ -38,13 +42,12 @@ public:
 
 private:
 	void Attack(); 
-	void Move(Direction dir);
+	void Move(eCreatureDirection dir);
 	void Idle(); 
 
-private:
-	CreatureActorState _state = CreatureActorState::None;
-
 protected:
-	Direction _dir = Direction::None;
+	eCreatureDirection _dir = eCreatureDirection::DOWN;
+	Flipbook* _idleFlipbook[eCreatureDirection::END] = {};
+	CreatureActorState _state = CreatureActorState::None;
 };
 

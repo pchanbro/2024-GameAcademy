@@ -1,0 +1,4 @@
+﻿  240429.cpp
+C:\Users\NewITest\Desktop\2024-GameAcademy\3개월차\Day29\240429\240429\240429.cpp(27,13): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\NewITest\Desktop\2024-GameAcademy\3개월차\Day29\240429\240429\240429.cpp(28,13): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  240429.vcxproj -> C:\Users\NewITest\Desktop\2024-GameAcademy\3개월차\Day29\240429\x64\Debug\240429.exe

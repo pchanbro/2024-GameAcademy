@@ -86,6 +86,9 @@ void CreatureActor::Update()
 {
 	Super::Update();
 
+	// TODO : Controller로 교체할 것들
+	// XXX : 어떤 위험이 있을때 코멘트
+
 	if (Input->GetKeyDown(KeyCode::Up))
 	{
 		SetFlipbook(Resource->GetFlipbook(L"FB_PlayerUp"));
@@ -152,6 +155,29 @@ void CreatureActor::Release()
 	Super::Release();
 }
 
+void CreatureActor::ChangeDirection(eCreatureDirection dir)
+{
+	// 수도코드
+
+	// _dir = dir;
+	// 만약에 방향이 바뀌었으면, SetFlipbook을 해준다.
+
+	if (_dir == dir) return;
+
+	_dir = dir;
+	switch (_dir)
+	{
+	case eCreatureDirection::DOWN:
+		break;
+	case eCreatureDirection::UP:
+		break;
+	case eCreatureDirection::LEFT:
+		break;
+	case eCreatureDirection::RIGHT:
+		break;
+	}
+}
+
 void CreatureActor::ChangeState(CreatureActorState state)
 {
 	if (_state == state) return;
@@ -181,7 +207,7 @@ void CreatureActor::Attack()
 
 }
 
-void CreatureActor::Move(Direction dir)
+void CreatureActor::Move(eCreatureDirection dir)
 {
 
 }

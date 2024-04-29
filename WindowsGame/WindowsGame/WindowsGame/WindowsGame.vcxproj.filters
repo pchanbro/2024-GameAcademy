@@ -343,6 +343,9 @@
     <ClCompile Include="OmokStoneActor.cpp">
       <Filter>03.Objects\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Day28.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Day16.cpp">
