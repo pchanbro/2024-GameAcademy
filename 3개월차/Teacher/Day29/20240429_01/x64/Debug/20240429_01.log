@@ -1,0 +1,4 @@
+﻿  20240429_01.cpp
+C:\Works\SuyoungBaek\Day28\20240429_01\20240429_01\20240429_01.cpp(17,13): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Works\SuyoungBaek\Day28\20240429_01\20240429_01\20240429_01.cpp(18,13): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  20240429_01.vcxproj -> C:\Works\SuyoungBaek\Day28\20240429_01\x64\Debug\20240429_01.exe

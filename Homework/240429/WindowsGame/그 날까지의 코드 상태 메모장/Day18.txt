@@ -1,0 +1,20 @@
+ Game.cpp 파일에서 없어진 부분
+
+
+// 유저에게 보이지 않는 화면에 애국가 1절 적기
+wstring str = L"동해물과 백두산이";
+::TextOut(_hdcBack, 100 + _x % 700, 100, str.c_str(), str.length());
+
+//이렇게 해도 된다. 물론 앞으로는 wchar보다는 wstring를 쓸 것이다.
+//wchar_t str[128];
+//wsprintf(str, L"동해물과 백두산이 마르고 닳도록\n하느님이 보우하사 우리나라 만세\n무궁화 삼천리 화려강산\n대한사랑 대한으로 길이 보전하세");
+//::TextOut(_hdcBack, 100 + _x % 700, 100, str, _tcslen(str));
+
+// 비트블릿은 고속 복사이다.
+::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY); // SRCCOPY = source copy
+// 복사 해줬으면 뒤의 화면의 내용은 지워줘야 한다. 그거까지 한 사이클!
+::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS);
+
+
+
+
