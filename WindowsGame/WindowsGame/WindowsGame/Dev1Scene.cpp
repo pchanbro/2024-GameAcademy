@@ -2,10 +2,13 @@
 #include "Dev1Scene.h"
 #include "PlayerActor.h"
 #include "BoxCollider.h"
+#include "Sprite.h"
 #include "SpriteActor.h"
 #include "FlipbookActor.h"
 #include "Flipbook.h"
 #include "CreatureActor.h"
+#include "CameraComponent.h"
+#include "Texture.h"
 
 void Dev1Scene::Init()
 {
@@ -14,6 +17,16 @@ void Dev1Scene::Init()
 
 	_monster = new FlipbookActor();
 
+	SpriteActor* background = nullptr;
+	{
+		background = new SpriteActor();
+		Sprite* sprite = Resource->GetSprite(L"S_Background");
+		background->SetSprite(sprite);
+		background->SetBody(Shape::MakeCenterRectLTWH(0, 0, sprite->GetSize().x, sprite->GetSize().y));
+		background->Init();
+		this->SpawnActor(background);
+	}
+
 	{
 		CreatureActor* actor = new CreatureActor();
 
@@ -21,12 +34,31 @@ void Dev1Scene::Init()
 		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
 		actor->SetPos(Vector2(WIN_SIZE_X / 2, WIN_SIZE_Y / 2));
 
+		{
+			CameraComponent* component = new CameraComponent();
+			component->SetLTWH(background->GetSprite());
+			component->Init();
+			actor->AddComponent(component);
+		}
+
 		BoxCollider* collider = new BoxCollider();
-		collider->SetCollision(Shape::MakeCenterRect(0, 30, 50, 15));
+		collider->SetCollision(Shape::MakeCenterRect(100, 0, 10, 50));
 		actor->AddComponent(collider);
 
 		_colliders.push_back(collider);
 		
+		actor->Init();
+		this->SpawnActor(actor);
+	}
+
+
+	{
+		FlipbookActor* actor = new FlipbookActor();
+
+
+		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
+		actor->SetPos(Vector2(WIN_SIZE_X / 2 - 100 , WIN_SIZE_Y / 2));
+
 		actor->Init();
 		this->SpawnActor(actor);
 	}
@@ -64,7 +96,8 @@ void Dev1Scene::Update()
 	for (BoxCollider* collider : _colliders)
 	{
 		RECT rc1 = collider->GetCollision().ToRect();
-		RECT rc2 = _monster->GetBody().ToRect();
+		// GetComponent를 통한 GetCollision 받기
+		RECT rc2 = _monster->GetComponent<BoxCollider>()->GetCollision().ToRect();
 		if (Collision::RectInRect(rc1, rc2))
 		{
 			_monster->SetFlipbook(Resource->GetFlipbook(L"FB_MonsterDie"));
@@ -79,6 +112,14 @@ void Dev1Scene::Release()
 
 void Dev1Scene::LoadResource()
 {
+	//----------------------------------
+	//  ## Background
+	//----------------------------------
+	{
+		Texture* texture = Resource->LoadTexture(L"T_Background", L"CameraStudy/background_supermario.bmp");
+		Resource->CreateSprite(L"S_Background", texture);
+	}
+
 	//----------------------------------
 	//  ## PlayerDown Texture
 	//----------------------------------

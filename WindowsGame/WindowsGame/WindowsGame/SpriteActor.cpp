@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "SpriteActor.h"
 #include "Sprite.h"
+#include "Texture.h"
+#include "Scene.h"
 
 void SpriteActor::Init()
 {
@@ -12,10 +14,17 @@ void SpriteActor::Render(HDC hdc)
 
 	Vector2Int size = _sprite->GetSize();
 
+	Vector2Int cameraPos = CurrentScene->GetCameraPos();
+	Vector2Int screenSizeHalf = Vector2Int(WIN_SIZE_X / 2, WIN_SIZE_Y / 2);
+	Vector2Int renderPos = Vector2Int(
+		static_cast<int>(_body.pos.x - size.x / 2 - cameraPos.x + screenSizeHalf.x),
+		static_cast<int>(_body.pos.y - size.y / 2 - cameraPos.y + screenSizeHalf.y)
+	);
+
 	// 블리트 중 하나
 	::TransparentBlt(hdc,
-		static_cast<int>(_body.pos.x - size.x / 2),
-		static_cast<int>(_body.pos.y - size.y / 2),
+		renderPos.x,
+		renderPos.y,
 		size.x,
 		size.y,
 		_sprite->GetDC(),

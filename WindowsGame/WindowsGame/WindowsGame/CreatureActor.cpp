@@ -186,5 +186,8 @@ void CreatureActor::UpdateMove()
 
 void CreatureActor::UpdateAttack()
 {
-
+	if (_index == this->_flipbook->GetInfo().end)
+	{
+		this->SetState(CreatureState::Idle);
+	}
 }

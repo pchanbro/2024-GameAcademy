@@ -53,28 +53,34 @@ struct Vector2
 	static Vector2 Reflect(Vector2 originVector, Vector2 normal);
 
 	// 많이 쓰는 기능들은 이렇게 만들어주면 가독성도 좋아지고 이후 움직임을 만들어 줄 때 편해진다.
-	static Vector2 Zero()
+	inline static Vector2 Zero()
 	{
 		return Vector2(0, 0);
 	}
 
-	static Vector2 Up()
+	inline static Vector2 Up()
 	{
 		return Vector2(0, -1);
 	}
 
-	static Vector2 Down()
+	inline static Vector2 Down()
 	{
 		return Vector2(0, 1);
 	}
 
-	static Vector2 Right()
+	inline static Vector2 Right()
 	{
 		return Vector2(1, 0);
 	}
 
-	static Vector2 Left()
+	inline static Vector2 Left()
 	{
 		return Vector2(-1, 0);
+	}
+
+	inline static Vector2 Lerp(Vector2 start, Vector2 end, float t)
+	{
+		Vector2 rv = start + (end - start) * t;
+		return rv;
 	}
 };

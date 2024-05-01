@@ -7,6 +7,7 @@ class Scene
 protected:
 	vector<Actor*> _actors; // 몇 개가 추가될지 모르니 vector로 해줘라
 
+	Vector2Int _cameraPosition = {};
 //----------------------------
 //  ## 기본함수
 //----------------------------
@@ -17,7 +18,13 @@ public:
 	virtual void Release();
 
 public:
+	// Actor 조작함수
 	void SpawnActor(Actor* actor);
 	void DespawnActor(Actor* actor);
+
+public:
+	// Camera 조작함수
+	void SetCameraPos(Vector2Int pos) { _cameraPosition = pos; }
+	Vector2Int GetCameraPos() { return _cameraPosition; }
 };
 
