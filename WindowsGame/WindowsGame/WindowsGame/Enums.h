@@ -13,6 +13,7 @@ enum class SceneType
 
 	InGameScene,
 	MoleGameScene,
+	PanelTestScene,
 };
 
 enum class ColliderType

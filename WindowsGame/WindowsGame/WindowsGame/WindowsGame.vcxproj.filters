@@ -41,6 +41,12 @@
     <Filter Include="05.Resources">
       <UniqueIdentifier>{34cf1cff-4666-4046-bb32-7a97cd278194}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06.UI">
+      <UniqueIdentifier>{d06983b4-b9f0-4572-9518-bf3433ebc09d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.UI\Game">
+      <UniqueIdentifier>{7499e7af-9b09-4318-a8d3-cb036a5ff760}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -177,6 +183,33 @@
     </ClInclude>
     <ClInclude Include="CameraComponent.h">
       <Filter>04.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>05.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="DefineContents.h">
+      <Filter>99.Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>04.Components\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelTestScene.h">
+      <Filter>02.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TestPanel.h">
+      <Filter>06.UI\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -348,6 +381,36 @@
     </ClCompile>
     <ClCompile Include="CameraComponent.cpp">
       <Filter>04.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day30.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>05.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>04.Components\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Day31.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Panel.cpp">
+      <Filter>06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelTestScene.cpp">
+      <Filter>02.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TestPanel.cpp">
+      <Filter>06.UI\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

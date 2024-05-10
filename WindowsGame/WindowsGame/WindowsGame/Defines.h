@@ -15,6 +15,12 @@ public:									\
 		return &instance;				\
 	}									\
 
+#define DECLARE_CHILD(ClassName, ParentName)		\
+	using Super = ParentName;						\
+public:												\
+	ClassName() {}									\
+	virtual ~ClassName() {}							\
+
 #define GET_SINGLE(ClassName)	ClassName::GetInstance()
 
 // 이걸 쓰면 앞으로 Input, Time이라는 변수명을 사용할 수 없다.
@@ -26,3 +32,7 @@ public:									\
 
 // (0.000001)
 #define EPSILON 1e-6f
+
+
+// 경고메세지
+#define Alert(title, message) MessageBox(_hWnd, title, message, NULL)

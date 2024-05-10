@@ -4,6 +4,8 @@ class Texture;
 class Sprite;
 class Flipbook;
 struct FlipbookInfo;
+class Sound;
+
 class ResourceManager
 {
 	DECLARE_SINGLE(ResourceManager);
@@ -13,7 +15,8 @@ public:
 	void Init();
 	void Release();
 
-	Texture* LoadTexture(const wstring& key, const wstring& path, uint32 transparent = RGB(255, 0, 255)); // 여기서 값을 미리 넣어준 것을 디폴트 인자라고 한다. 헤더 파일에서는 이렇게 먼저 넣어줘도 되지만 cpp파일에서는 이렇게 미리 넣어주면 오류가 난다.
+	// 여기서 값을 미리 넣어준 것을 디폴트 인자라고 한다. 헤더 파일에서는 이렇게 먼저 넣어줘도 되지만 cpp파일에서는 이렇게 미리 넣어주면 오류가 난다.
+	Texture* LoadTexture(const wstring& key, const wstring& path, uint32 transparent = RGB(255, 0, 255));
 	Texture* GetTexture(const wstring& key);
 
 	Sprite* CreateSprite(const wstring& key, Texture* texture, int x = 0, int y = 0, int cx = 0, int cy = 0);
@@ -21,6 +24,9 @@ public:
 
 	Flipbook* CreateFlipbook(const wstring& key, FlipbookInfo info);
 	Flipbook* GetFlipbook(const wstring& key);
+
+	Sound* GetSound(const wstring& key);
+	Sound* LoadSound(const wstring& key, const wstring& path);
 
 private:
 	wstring _resourcePath;

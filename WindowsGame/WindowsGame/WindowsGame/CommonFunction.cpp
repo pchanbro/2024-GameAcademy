@@ -45,4 +45,50 @@ namespace Collision
 			PtInRect(pt5, rect1) || PtInRect(pt6, rect1) || PtInRect(pt7, rect1) || PtInRect(pt8, rect1);
 	}
 
+	bool CircleInCircle(Vector2 pos1, float radius1, Vector2 pos2, float radius2)
+	{
+		// Circle와 Circle
+		// Circle1과 Circle2의 중심좌표 사이 거리
+		// 중심좌표 사이 거리 <= (Circle1 반지름 + Circle2 반지름)
+		// 이면 접촉했다는 것
+
+		Vector2 lengthVector = pos2 - pos1;
+		float length_sq = lengthVector.LengthSqrt();
+
+		if (length_sq <= (radius1 + radius2) * (radius1 + radius2))
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	bool RectInCircle(CenterRect rect, Vector2 circlePos, float radius)
+	{
+		// 사각형의 중심과 원의 중심 사이의 거리
+		// abs(절댓값)
+		float dx = abs(rect.pos.x - circlePos.x);
+		float dy = abs(rect.pos.y - circlePos.y);
+
+		// 사각형과 원의 중심 사이의 거리를 계산
+		float distX = dx - rect.width / 2;
+		float distY = dy - rect.height / 2;
+
+		// 1. 원의 지름을 모서리로 하여 사각형화 해도 충돌이 되지 않는 경우
+		if (distX > radius || distY > radius)
+		{
+			return false;
+		}
+
+		// 2. 사각형이 원의 중심점을 포함하고 있는 경우
+		if (distX <= 0 || distY <= 0)
+		{
+			return true;
+		}
+
+		// 3. 사각형의 꼭지점과 원의 중심 사이의 거리
+		float cornerDistanceSqrt = (distX * distX) + (distY * distY);
+
+		return cornerDistanceSqrt <= (radius * radius);
+	}
 }

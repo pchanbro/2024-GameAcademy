@@ -8,6 +8,7 @@ Game::Game()
 Game::~Game()
 {
 	GET_SINGLE(ResourceManager)->Release();
+	GET_SINGLE(SoundManager)->Release();
 	
 	// 메모리 누수난거 
 	// 안지워주면
@@ -40,9 +41,9 @@ void Game::Init(HWND hwnd)
 	GET_SINGLE(CollisionManager)->Init();
 	Resource->Init();
 	Random->Init();
+	GET_SINGLE(SoundManager)->Init();
 
-
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::PanelTestScene);
 }
 
 void Game::Updata()
@@ -57,7 +58,6 @@ void Game::Updata()
 void Game::Render()
 {
 
-	GET_SINGLE(SceneManager)->Render(_hdcBack);
 
 
 	//FPS 출력
@@ -77,6 +77,7 @@ void Game::Render()
 		::TextOut(_hdcBack, 0, 20, timeStr.c_str(), timeStr.length());
 	}
 
+	GET_SINGLE(SceneManager)->Render(_hdcBack);
 
 	// 비트블릿 : 고속 복사
 	// 복사 해줬으면 뒤의 화면의 내용은 지워줘야 한다. 그거까지 한 사이클!

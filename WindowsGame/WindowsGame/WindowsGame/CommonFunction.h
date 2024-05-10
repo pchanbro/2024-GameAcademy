@@ -8,6 +8,9 @@ namespace Collision
 	bool ptInRect(int ptX, int ptY, int x1, int y1, int x2, int y2);
 
 	bool RectInRect(RECT rect1, RECT rect2);
+	bool CircleInCircle(Vector2 pos1, float radius1, Vector2 pos2, float radius2);
+	bool RectInCircle(CenterRect rect, Vector2 circlePos, float radius);
+
 }
 
 // 도형에 관한 자료형 만들 때 주로쓰는 namespace

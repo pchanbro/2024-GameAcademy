@@ -24,7 +24,7 @@ void CameraComponent::Update()
 	// 1. 나의 액터를 가져온다.
 	//  if ( 0 < 액터 포지션.x ) (일단 x만 가지고 해보자)
 	// 2. 카메라 좌표를 구성해준다.
-	//	  - newCameraPos = clamp(WIN_SIZE_X / 2 ~ 배경 width - WIN_SIZE_X /2 )
+	//  - newCameraPos = clamp(WIN_SIZE_X / 2 ~ 배경 width - WIN_SIZE_X /2 )
 	// 3. [씬의 카메라 위치를] 내 액터위치로 바꾼다. (카메라는 씬에 존재)
 	// 
 	
@@ -33,6 +33,7 @@ void CameraComponent::Update()
 
 	if (owner)
 	{
+		// 현재 씬의 위치를 가져온다.
 		Vector2 startPos = Vector2(CurrentScene->GetCameraPos().x, CurrentScene->GetCameraPos().y);
 		Vector2 endPos = owner->GetPos();
 
@@ -60,12 +61,14 @@ void CameraComponent::Update()
 		newCameraPos.y = clamp<float>(newCameraPos.y, realMinY, realMaxY);
 
 		// 현재 씬을 가져오는 방법
-		// #define CurrentScene (GET_SINGLE(SceneManager)->GetCurrentScene()) 해줬다
+		
+		// Actor* owner = this->GetOwner();
+		// Vector2 newCameraPos = owner->GetPos();
+		CurrentScene->SetCameraPos(newCameraPos); // #define CurrentScene (GET_SINGLE(SceneManager)->GetCurrentScene());
+		// 했으면 newCameraPos 기준으로 카메라가 변경
 
 		// 이거로 실행중 여기 코드 위치에 마우스를 갖다댐으로 값의 변화 확인 가능
-		//Vector2Int currentScenePos = CurrentScene->GetCameraPos(); 
-		
-		CurrentScene->SetCameraPos(newCameraPos);
+		//Vector2Int currentScenePos = CurrentScene->GetCameraPos(); 	
 	}
 
 }

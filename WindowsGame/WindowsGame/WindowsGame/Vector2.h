@@ -21,6 +21,7 @@ struct Vector2
 	bool operator==(const Vector2 other);
 
 	float Length();
+	float LengthSqrt();
 	Vector2 Normalize(); // 벡터의 길이를 1로 만들어준다.
 
 	Vector2(float x, float y); // 생성자

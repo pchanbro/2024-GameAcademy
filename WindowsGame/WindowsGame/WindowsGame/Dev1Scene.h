@@ -16,6 +16,8 @@ public:
 private:
 	void LoadResource();
 
+protected:
+	Panel* _gamePanel = nullptr;
 	FlipbookActor* _monster;
 	vector<BoxCollider*> _colliders;
 };

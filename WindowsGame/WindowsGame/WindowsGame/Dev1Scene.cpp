@@ -9,13 +9,17 @@
 #include "CreatureActor.h"
 #include "CameraComponent.h"
 #include "Texture.h"
+#include "CircleCollider.h"
+#include "Panel.h"
+#include "Image.h"
 
 void Dev1Scene::Init()
 {
 	Super::Init();
 	LoadResource();
 
-	_monster = new FlipbookActor();
+	GET_SINGLE(SoundManager)->Play(L"BGM_Dev1Scene", true);
+
 
 	SpriteActor* background = nullptr;
 	{
@@ -30,7 +34,7 @@ void Dev1Scene::Init()
 	{
 		CreatureActor* actor = new CreatureActor();
 
-
+		actor->SetName("Player");
 		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
 		actor->SetPos(Vector2(WIN_SIZE_X / 2, WIN_SIZE_Y / 2));
 
@@ -41,20 +45,34 @@ void Dev1Scene::Init()
 			actor->AddComponent(component);
 		}
 
-		BoxCollider* collider = new BoxCollider();
+		{
+			CircleCollider* component = new CircleCollider();
+			component->SetCollision(Vector2::Zero(), 50);
+			component->Init();
+			actor->AddComponent(component);
+		}
+		/*BoxCollider* collider = new BoxCollider();
 		collider->SetCollision(Shape::MakeCenterRect(100, 0, 10, 50));
 		actor->AddComponent(collider);
 
-		_colliders.push_back(collider);
+		_colliders.push_back(collider);*/
 		
 		actor->Init();
 		this->SpawnActor(actor);
+
 	}
 
 
 	{
 		FlipbookActor* actor = new FlipbookActor();
 
+		actor->SetName("Dummy");
+		{
+			BoxCollider* component = new BoxCollider();
+			component->SetCollision(Shape::MakeCenterRect(0,0, 50, 50));
+			component->Init();
+			actor->AddComponent(component);
+		}
 
 		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
 		actor->SetPos(Vector2(WIN_SIZE_X / 2 - 100 , WIN_SIZE_Y / 2));
@@ -62,6 +80,9 @@ void Dev1Scene::Init()
 		actor->Init();
 		this->SpawnActor(actor);
 	}
+
+
+	_monster = new FlipbookActor();
 
 	{
 		_monster->SetFlipbook(Resource->GetFlipbook(L"FB_MonsterIdle"));
@@ -75,6 +96,30 @@ void Dev1Scene::Init()
 
 		_monster->Init();
 		this->SpawnActor(_monster);
+	}
+
+	// Scene에서
+	// 1. Panel을 만들고
+	// 2. Image를 만들고
+	// 3. Image를 Panel에 연결해주고 
+	// 4. Image에게 Sprite를 세팅해주고 
+
+	// Panel을 씬에서 
+	// Init, Render, Update, Release를 실행해준다.
+
+	Panel* gamePanel = new Panel();
+	// 패널은 _uis에 추가해준다(push_back로) , 이미지는 추가 안함
+	{ 
+		_gamePanel = new Panel();
+		_gamePanel->SetRect(Shape::MakeCenterRect(0, 0, WIN_SIZE_X, WIN_SIZE_Y));
+		_gamePanel->Init();
+	}
+	{
+		Image* image = new Image();
+		image->SetRect(Shape::MakeCenterRect(0, 0, WIN_SIZE_X, WIN_SIZE_Y));
+		image->SetSprite(Resource->GetSprite(L"S_VictoryUI"));
+		image->Init();
+		_gamePanel->AddChild(image);
 	}
 }
 
@@ -322,5 +367,15 @@ void Dev1Scene::LoadResource()
 		}
 	}
 
+	//----------------------------------
+	//  ## Sound
+	//----------------------------------
+	Resource->LoadSound(L"BGM_Dev1Scene", L"Sounds/SoundStudy/BGM.wav");
 
+
+	//----------------------------------
+	//  ## UI
+	//----------------------------------
+	Resource->LoadSound(L"T_VictoryUI", L"UIStudy/img_victory.bmp");
+	Resource->CreateSprite(L"S_Victory", Resource->GetTexture(L"T_Victory"));
 }

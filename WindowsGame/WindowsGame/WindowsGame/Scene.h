@@ -2,12 +2,14 @@
 
 #pragma once
 class Actor; // 전방선언
+class UI;
 class Scene
 {
-protected:
+protected: // 씬에는 액터, 카메라, UI 세가지는 있어야 한다.
 	vector<Actor*> _actors; // 몇 개가 추가될지 모르니 vector로 해줘라
-
 	Vector2Int _cameraPosition = {};
+	vector<UI*> _uis;
+
 //----------------------------
 //  ## 기본함수
 //----------------------------

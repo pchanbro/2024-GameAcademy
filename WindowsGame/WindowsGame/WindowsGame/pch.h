@@ -6,6 +6,7 @@
 //		## WindowsGame 커스텀 헤더 ##
 //===========================================
 #include "Defines.h"
+#include "DefineContents.h"
 #include "Types.h"
 #include "Enums.h"
 #include "CommonFunction.h"
@@ -33,6 +34,14 @@
 #include <set>
 
 //===========================================
+//		## Sound 관련 ##
+//===========================================
+#include <mmsystem.h>
+#include <dsound.h>
+#pragma comment(lib, "winmm.lib")
+#pragma comment(lib, "dsound.lib")
+
+//===========================================
 //		## NAMESPACE ##
 //===========================================
 using namespace std;
@@ -46,12 +55,13 @@ using namespace std;
 #include "CollisionManager.h"
 #include "ResourceManager.h"
 #include "RandomManager.h"
+#include "SoundManager.h"
 
 //===========================================
 //		## 윈도우 사이즈 ##
 //===========================================
-#define WIN_SIZE_X 1200
-#define WIN_SIZE_Y 840
+#define WIN_SIZE_X 850
+#define WIN_SIZE_Y 567
 
 //===========================================
 //		## 전역 변수 선언 ##
