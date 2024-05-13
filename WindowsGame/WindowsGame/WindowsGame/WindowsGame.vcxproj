@@ -145,6 +145,7 @@
     <ClInclude Include="BallActor.h" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="BrickActor.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CenterRect.h" />
     <ClInclude Include="CircleCollider.h" />
@@ -201,6 +202,7 @@
     <ClCompile Include="BallActor.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BrickActor.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="CenterRect.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
@@ -252,6 +254,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Day31.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Day32.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Dev1Scene.cpp" />

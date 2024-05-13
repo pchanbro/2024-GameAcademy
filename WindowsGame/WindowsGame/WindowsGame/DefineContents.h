@@ -1,6 +1,6 @@
 #pragma once
 // 스피커가 있으면 실행하면 된다.
-#define USE_SOUND
+//#define USE_SOUND
 
 #ifdef USE_SOUND
 // USE_SOUND를하면 실행되는곳

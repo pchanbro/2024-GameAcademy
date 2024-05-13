@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Image.h"
 #include "Sprite.h"
+#include "Panel.h"
 
 void Image::Init()
 {
@@ -13,9 +14,19 @@ void Image::Render(HDC hdc)
 
 	Vector2Int size = _sprite->GetSize();
 
+	
+	// 프로그래밍 공식 (계층구조를 순환할때 이런식으로 짜는구나)
+	Panel* parent = this->GetParent();
+	Vector2 parentPos = Vector2::Zero();
+	while (parent != nullptr)
+	{
+		parentPos += parent->GetPos();
+		parent = parent->GetParent();
+	}
+
 	Vector2Int renderPos = Vector2Int(
-		static_cast<int>(_pos.x - size.x / 2),
-		static_cast<int>(_pos.y - size.y / 2)
+		static_cast<int>(parentPos.x + _pos.x - size.x / 2),
+		static_cast<int>(parentPos.y + _pos.y - size.y / 2)
 	);
 
 	::TransparentBlt(hdc,

@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "UI.h"
+#include "Panel.h"
 
 void UI::Init()
 {
@@ -32,7 +33,7 @@ void UI::SetRect(CenterRect rect)
 	_pos.x = rect.pos.x;
 	_pos.y = rect.pos.y;
 	_size.x = static_cast<int>(rect.width);
-	_size.y = static_cast<int>(rect.height);
+	_size.y = static_cast<int>(rect.height);		
 }
 CenterRect UI::GetRect()
 {
@@ -52,4 +53,25 @@ bool UI::isInMouse()
 	RECT rect = this->GetRect().ToRect();
 	
 	return Collision::PtInRect(mousePos, rect);
+}
+
+bool UI::IsInMouse()
+{
+	// IsInMouse도 Parent의 좌표를 기준으로 측정해줘야한다.
+	Panel* parent = this->GetParent();
+	Vector2 parentPos = Vector2::Zero();
+	while (parent != nullptr)
+	{
+		parentPos += parent->GetPos();
+		parent = parent->GetParent();
+	}
+
+	return Collision::PtInRect(Input->GetMousePos(),
+		Shape::MakeCenterRect(
+			parentPos.x + this->_pos.x,
+			parentPos.y + this->_pos.y,
+			this->_size.x,
+			this->_size.y
+		)
+		.ToRect());
 }

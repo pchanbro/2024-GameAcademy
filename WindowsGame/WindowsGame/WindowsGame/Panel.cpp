@@ -46,6 +46,7 @@ void Panel::AddChild(UI* ui)
 	if (ui == nullptr) return;
 
 	_children.push_back(ui);
+	ui->SetParent(this);
 }
 bool Panel::RemoveChild(UI* ui)
 {
@@ -55,6 +56,7 @@ bool Panel::RemoveChild(UI* ui)
 
 	if (findIt != _children.end())
 	{
+		(*findIt)->SetParent(nullptr);
 		_children.erase(findIt);
 		return false;
 	}
