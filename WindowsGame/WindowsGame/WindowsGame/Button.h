@@ -35,11 +35,26 @@ public:
 public:
 	void SetState(ButtonState state);
 
+	// 이건 근데 나중에 쓸때 가독성 측면에서 많이 구리다.
+	/*void AddOnClickDelegate()
+	{
+
+	}*/
+
+	template<typename T>
+	void AddOnClickDelegate(T& owner, void(T::* func)())
+	{
+		_onclick = bind(func, owner);
+	}
+
 protected:
 	// 버튼을 구성하는 요소
 	Sprite* _sprites[(int)ButtonState::End] = {};
 	Sprite* _currentSprite = nullptr;
 
 	ButtonState _state = ButtonState::End;
+
+	// 버튼을 눌렀을 때 이벤트
+	function<void()> _onclick = nullptr;
 };
 

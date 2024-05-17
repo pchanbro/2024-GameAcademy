@@ -433,6 +433,9 @@
     <ClCompile Include="Game2048BoardActor.cpp">
       <Filter>03.Objects\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Day33.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Day16.cpp">

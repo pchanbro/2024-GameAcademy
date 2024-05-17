@@ -109,6 +109,10 @@ void Button::Update()
 		{
 			if (_state == ButtonState::Pressed)
 			{
+				if (_onclick != nullptr)
+				{
+					_onclick();
+				}
 				// 딱 지금 클릭했을때 동작
 				this->SetState(ButtonState::Hover);
 				// 새로운 문법 : 함수 포인터
