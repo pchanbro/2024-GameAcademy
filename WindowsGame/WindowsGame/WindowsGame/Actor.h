@@ -11,6 +11,7 @@ protected:
 	vector<Component*> _components;
 
 	bool _isEnable = true;
+	LayerType _layer = LayerType::Object;
 
 public:
 	// 게터(Getter), 세터(Setter)
@@ -31,6 +32,10 @@ public:
 
 	bool GetEnable() { return _isEnable; }
 	void SetEnable(bool isEnable) { _isEnable = isEnable; }
+
+	LayerType GetLayer() { return _layer; }
+	void SetLayer(LayerType layer) { _layer = layer; }
+	int GetLayerInt() { return static_cast<int>(_layer); }
 
 public:
 	// 충돌 시작되었을때.

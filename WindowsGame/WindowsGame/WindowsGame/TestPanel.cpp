@@ -60,6 +60,7 @@ void TestPanel::Init()
 		button->SetSprite(ButtonState::Hover, Resource->GetSprite(L"S_IconUI_Hover"));
 		button->SetSprite(ButtonState::Pressed, Resource->GetSprite(L"S_IconUI_Pressed"));
 		button->SetSprite(ButtonState::Disabled, Resource->GetSprite(L"S_IconUI_Disabled"));
+		button->AddOnClickDelegate(this, &TestPanel::OnClick_GoToDev2Scene);
 		button->Init();
 		iconListPanel->AddChild(button);
 	}
@@ -75,4 +76,9 @@ void TestPanel::Update()
 void TestPanel::Release()
 {
 	Super::Release();
+}
+
+void TestPanel::OnClick_GoToDev2Scene()
+{
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev2Scene);
 }

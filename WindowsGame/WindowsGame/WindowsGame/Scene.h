@@ -6,7 +6,8 @@ class UI;
 class Scene
 {
 protected: // 씬에는 액터, 카메라, UI 세가지는 있어야 한다.
-	vector<Actor*> _actors; // 몇 개가 추가될지 모르니 vector로 해줘라
+	// Layer의 개수만큼 벡터를 배열 형태로 만들어야 한다.
+	vector<Actor*> _actors[static_cast<int>(LayerType::End)]; // 몇 개가 추가될지 모르니 vector로 해줘라
 	Vector2Int _cameraPosition = {};
 	vector<UI*> _uis;
 

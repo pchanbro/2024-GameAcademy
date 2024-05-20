@@ -5,8 +5,13 @@ class Collider : public Component
 protected:
 	ColliderType _colliderType;
 
+	// 나는 누구인지에 대한 변수
+	CollisionLayerType _collisionLayer = CLT_DEFAULT;
+	// 이 오브젝트가 충돌할 layer는 무엇인지?
+	uint32 _collisionFlag = ~0; // 0xFFFFFFFF; (모든 레이어랑 충돌할거다.)
+
 public:
-	unordered_set<Collider*> _collisionMap; 
+	unordered_set<Collider*> _collisionMap;
 	// binary트리 같은 모습에서 수가 지저분하게 추가되도 자동 정렬을 해주진 않겠다. 같은 느낌으로 쓰는 것
 
 public:
@@ -24,6 +29,16 @@ public:
 	virtual bool CheckCollision(Collider* other);
 	ColliderType GetColliderType() { return _colliderType; }
 
+public:
+	uint32 GetCollisionFlag() { return _collisionFlag; }
+	void SetCollisionFlag(uint32 collisionFlag) { _collisionFlag = collisionFlag; }
+
+	void AddCollisionFlagLayer(CollisionLayerType layer);
+	void RemoveCollisionFlagLayer(CollisionLayerType layer);
+	void ResetCollisionFlag() { _collisionFlag = 0; }
+
+	CollisionLayerType GetCollisionLayer() { return _collisionLayer; }
+	void SetCollisionLayer(CollisionLayerType collisionLayer) { _collisionLayer = collisionLayer; }
 public:
 	Collider(ColliderType colliderType) { _colliderType = colliderType; }
 	virtual ~Collider() {}

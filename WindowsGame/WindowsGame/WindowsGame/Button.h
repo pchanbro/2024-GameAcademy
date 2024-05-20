@@ -42,7 +42,7 @@ public:
 	}*/
 
 	template<typename T>
-	void AddOnClickDelegate(T& owner, void(T::* func)())
+	void AddOnClickDelegate(T* owner, void(T::* func)())
 	{
 		_onclick = bind(func, owner);
 	}
