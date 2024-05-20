@@ -1,12 +1,11 @@
 #include "pch.h"
 #include "NumBoxActor.h"
 #include "BoxCollider.h"
+#include "Game2048Scene.h"
 
 void NumBoxActor::Init()
 {
 	Super::Init();
-
-	this->SetName("NumBox");
 
 	BoxCollider* collider = new BoxCollider();
 	collider->SetCollision(Shape::MakeCenterRect(0, 0, 90, 90));
@@ -30,77 +29,90 @@ void NumBoxActor::Release()
 {
 	Super::Release();
 }
-void NumBoxActor::OnTriggerEnter(Collider* collider, Collider* other)
-{
-	Super::OnTriggerEnter(collider, other);
-
-	if (other->GetOwner()->GetName() == "Board")
-	{
-		if (Input->GetKeyDown(KeyCode::Right))
-		{
-			_body.pos.x -= 10;
-		}
-
-		if (Input->GetKeyDown(KeyCode::Left))
-		{
-			_body.pos.x += 10;
-		}
-
-		if (Input->GetKeyDown(KeyCode::Down))
-		{
-			_body.pos.y -= 10;
-		}
-
-		if (Input->GetKeyDown(KeyCode::Up))
-		{
-			_body.pos.y += 10;
-		}
-	}
-
-	if (other->GetOwner()->GetName() == "NumBox")
-	{
-		if (Input->GetKeyDown(KeyCode::Right))
-		{
-			//if(other->GetOwner()->)
-			_body.pos.x -= 10;
-		}
-
-		if (Input->GetKeyDown(KeyCode::Left))
-		{
-			_body.pos.x += 10;
-		}
-
-		if (Input->GetKeyDown(KeyCode::Down))
-		{
-			_body.pos.y -= 10;
-		}
-
-		if (Input->GetKeyDown(KeyCode::Up))
-		{
-			_body.pos.y += 10;
-		}
-	}
-}
 
 void NumBoxActor::Move()
 {
 	if (Input->GetKeyDown(KeyCode::Right))
 	{
-		_body.pos.x += 400;
+		for (int i = 0; i < 3; i++)
+		{
+			if (IsRightMove())
+			{
+				_sectionNum++;
+			}
+		}
 	}
-	
+
 	if (Input->GetKeyDown(KeyCode::Left))
 	{
-		_body.pos.x -= 400;
+		for (int i = 0; i < 3; i++)
+		{
+			if (IsLeftMove())
+			{
+				_sectionNum--;
+			}
+		}
 	}
 
 	if (Input->GetKeyDown(KeyCode::Down))
 	{
-		_body.pos.y += 400;
+		for (int i = 0; i < 3; i++)
+		{
+			if (IsDownMove())
+			{
+				_sectionNum += 4;
+			}
+		}
 	}
 
 	if (Input->GetKeyDown(KeyCode::Up))
 	{
-		_body.pos.y -= 400;
+		for (int i = 0; i < 3; i++)
+		{
+			if (IsUpMove())
+			{
+				_sectionNum -= 4;
+			}
+		}
 	}
+}
+
+bool NumBoxActor::IsRightMove()
+{
+	if ((_sectionNum % 4) < 3)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+bool NumBoxActor::IsLeftMove()
+{
+	if ( 0 < (_sectionNum % 4))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+bool NumBoxActor::IsDownMove()
+{
+	if ((_sectionNum / 4) < 3)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+bool NumBoxActor::IsUpMove()
+{
+	if (0 < (_sectionNum / 4))
+	{
+		return true;
+	}
+
+	return false;
 }

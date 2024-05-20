@@ -14,3 +14,51 @@
 4. 2048 달성 블록이 있으면 게임 클리어
 
 5. 4x4 판이 모두 다 채워지고 주변 숫자들과 합쳐질 수 없으면 게임 오버
+
+240520 
+일단 섹션은 16개로 나눈 뒤 거기에만 위치하도록 만든다
+이제 네모액터가 그 섹션들만 움직이도록 만든다.
+
+{
+	Game2048BoardActor* board = new Game2048BoardActor();
+	BoxCollider* collider = new BoxCollider();
+	collider->SetCollision(Shape::MakeCenterRect(0, 0, 420, 10));
+	board->AddComponent(collider);
+
+	board->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y / 2 + 205, 0, 0));
+	board->Init();
+	this->SpawnActor(board);
+}
+
+{
+	Game2048BoardActor* board = new Game2048BoardActor();
+	BoxCollider* collider = new BoxCollider();
+	collider->SetCollision(Shape::MakeCenterRect(0, 0, 420, 10));
+	board->AddComponent(collider);
+
+	board->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y / 2 - 205, 0, 0));
+	board->Init();
+	this->SpawnActor(board);
+}
+
+{
+	Game2048BoardActor* board = new Game2048BoardActor();
+	BoxCollider* collider = new BoxCollider();
+	collider->SetCollision(Shape::MakeCenterRect(0, 0, 10, 400));
+	board->AddComponent(collider);
+
+	board->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2 + 205, WIN_SIZE_Y / 2, 0, 0));
+	board->Init();
+	this->SpawnActor(board);
+}
+
+{
+	Game2048BoardActor* board = new Game2048BoardActor();
+	BoxCollider* collider = new BoxCollider();
+	collider->SetCollision(Shape::MakeCenterRect(0, 0, 10, 400));
+	board->AddComponent(collider);
+
+	board->SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2 - 205, WIN_SIZE_Y / 2, 0, 0));
+	board->Init();
+	this->SpawnActor(board);
+}

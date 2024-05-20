@@ -10,11 +10,21 @@ public:
 	virtual void Release() override;
 
 public:
-	virtual void OnTriggerEnter(Collider* collider, Collider* other) override;
 	void Move();
+	bool IsRightMove();
+	bool IsLeftMove();
+	bool IsDownMove();
+	bool IsUpMove();
+
+public:
 	int GetNumber() { return _number; }
+	void SetNumber(int num) { _number = num; }
+
+	int GetSectionNum() { return _sectionNum; }
+	void SetSectionNum(int sectionNum) { _sectionNum = sectionNum; }
 
 protected:
 	int _number = 2;
+	int _sectionNum = 0;
 };
 
