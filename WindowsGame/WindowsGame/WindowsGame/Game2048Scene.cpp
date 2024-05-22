@@ -37,7 +37,15 @@ void Game2048Scene::Update()
 	for (NumBoxActor* box : _boxes)
 	{
 		_section[box->GetSectionNum()].Existence = true;
-		box->SetBody(Shape::MakeCenterRect(_section[box->GetSectionNum()].X, _section[box->GetSectionNum()].Y, 0, 0));
+		_targetPos = Vector2(_section[box->GetSectionNum()].X, _section[box->GetSectionNum()].Y);
+		_tempPos = box->GetPos();
+		_playerDir = (_targetPos - _tempPos).Normalize();
+
+		if (0.1 < (_targetPos - _tempPos).Length())
+		{
+			_tempPos += _playerDir * (Time->GetDeltaTime() * 1000);
+			box->SetBody(Shape::MakeCenterRect(_tempPos.x, _tempPos.y, 0, 0));
+		}
 	}
 }
 void Game2048Scene::Release()

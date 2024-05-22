@@ -4,8 +4,8 @@ class BoxCollider;
 class NumBoxActor;
 struct Section {
 	bool Existence = false;
-	int X = 0;
-	int Y = 0;
+	float X = 0;
+	float Y = 0;
 };
 
 class Game2048Scene : public Scene
@@ -23,5 +23,8 @@ public:
 protected:
 	Section _section[16];
 	vector<NumBoxActor*> _boxes;
+	Vector2 _targetPos = { -1, -1 };
+	Vector2 _tempPos;
+	Vector2 _playerDir;
 };
 
