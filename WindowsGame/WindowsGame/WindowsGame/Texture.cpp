@@ -1,15 +1,6 @@
 #include "pch.h"
 #include "Texture.h"
 
-Texture::Texture()
-{
-
-}
-
-Texture::~Texture()
-{
-
-}
 
 Texture* Texture::LoadBmp(const wstring& path)
 {

@@ -3,6 +3,7 @@
 #include "BoxCollider.h"
 #include "Game2048Scene.h"
 
+
 void NumBoxActor::Init()
 {
 	Super::Init();
@@ -32,52 +33,59 @@ void NumBoxActor::Release()
 
 void NumBoxActor::Move()
 {
-	if (Input->GetKeyDown(KeyCode::Right))
+	if (!_moving)
 	{
-		for (int i = 0; i < 3; i++)
+		if (Input->GetKeyDown(KeyCode::Right))
 		{
-			if (IsRightMove())
+			_prevSectionNum = _sectionNum;
+			for (int i = 0; i < 3; i++)
 			{
-				_sectionNum++;
+				if (DoRightMove())
+				{
+					_sectionNum++;
+				}
 			}
 		}
-	}
 
-	if (Input->GetKeyDown(KeyCode::Left))
-	{
-		for (int i = 0; i < 3; i++)
+		if (Input->GetKeyDown(KeyCode::Left))
 		{
-			if (IsLeftMove())
+			_prevSectionNum = _sectionNum;
+			for (int i = 0; i < 3; i++)
 			{
-				_sectionNum--;
+				if (DoLeftMove())
+				{
+					_sectionNum--;
+				}
 			}
 		}
-	}
 
-	if (Input->GetKeyDown(KeyCode::Down))
-	{
-		for (int i = 0; i < 3; i++)
+		if (Input->GetKeyDown(KeyCode::Down))
 		{
-			if (IsDownMove())
+			_prevSectionNum = _sectionNum;
+			for (int i = 0; i < 3; i++)
 			{
-				_sectionNum += 4;
+				if (DoDownMove())
+				{
+					_sectionNum += 4;
+				}
 			}
 		}
-	}
 
-	if (Input->GetKeyDown(KeyCode::Up))
-	{
-		for (int i = 0; i < 3; i++)
+		if (Input->GetKeyDown(KeyCode::Up))
 		{
-			if (IsUpMove())
+			_prevSectionNum = _sectionNum;
+			for (int i = 0; i < 3; i++)
 			{
-				_sectionNum -= 4;
+				if (DoUpMove())
+				{
+					_sectionNum -= 4;
+				}
 			}
 		}
 	}
 }
 
-bool NumBoxActor::IsRightMove()
+bool NumBoxActor::DoRightMove()
 {
 	if ((_sectionNum % 4) < 3)
 	{
@@ -87,7 +95,7 @@ bool NumBoxActor::IsRightMove()
 	return false;
 }
 
-bool NumBoxActor::IsLeftMove()
+bool NumBoxActor::DoLeftMove()
 {
 	if ( 0 < (_sectionNum % 4))
 	{
@@ -97,7 +105,7 @@ bool NumBoxActor::IsLeftMove()
 	return false;
 }
 
-bool NumBoxActor::IsDownMove()
+bool NumBoxActor::DoDownMove()
 {
 	if ((_sectionNum / 4) < 3)
 	{
@@ -107,7 +115,7 @@ bool NumBoxActor::IsDownMove()
 	return false;
 }
 
-bool NumBoxActor::IsUpMove()
+bool NumBoxActor::DoUpMove()
 {
 	if (0 < (_sectionNum / 4))
 	{
@@ -115,4 +123,92 @@ bool NumBoxActor::IsUpMove()
 	}
 
 	return false;
+}
+
+void NumBoxActor::IsAlreadyExist(NumBoxActor* other)
+{
+
+	if (Input->GetKeyDown(KeyCode::Right))
+	{
+		if (_sectionNum == other->GetSectionNum())
+		{
+			if (_prevSectionNum < other->GetPrevSectionNum())
+			{
+				if (_number == other->GetNumber())
+				{
+					other->SetNumber(other->GetNumber() + _number);
+					Scene* scene = CurrentScene;
+					scene->DespawnActor(this);
+				}
+
+				if (DoLeftMove())
+				{
+					_sectionNum--;
+				}
+			}
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Left))
+	{
+		if (_sectionNum == other->GetSectionNum())
+		{
+			if (other->GetPrevSectionNum() < _prevSectionNum)
+			{
+				if (_number == other->GetNumber())
+				{
+					other->SetNumber(other->GetNumber() + _number);
+					Scene* scene = CurrentScene;
+					scene->DespawnActor(this);
+				}
+
+				if (DoRightMove())
+				{
+					_sectionNum++;
+				}
+			}
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Down))
+	{
+		if (_sectionNum == other->GetSectionNum())
+		{
+			if (_prevSectionNum < other->GetPrevSectionNum())
+			{
+				if (_number == other->GetNumber())
+				{
+					other->SetNumber(other->GetNumber() + _number);
+					Scene* scene = CurrentScene;
+					scene->DespawnActor(this);
+				}
+
+				if (DoUpMove())
+				{
+					_sectionNum -= 4;
+				}
+			}
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Up))
+	{
+		if (_sectionNum == other->GetSectionNum())
+		{
+			if (other->GetPrevSectionNum() < _prevSectionNum)
+			{
+				if (_number == other->GetNumber())
+				{
+					other->SetNumber(other->GetNumber() + _number);
+					Scene* scene = CurrentScene;
+					scene->DespawnActor(this);
+				}
+
+				if (DoDownMove())
+				{
+					_sectionNum += 4;
+				}
+			}
+		}
+	}
 }

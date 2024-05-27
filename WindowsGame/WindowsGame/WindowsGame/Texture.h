@@ -2,6 +2,7 @@
 #include "ResourceBase.h"
 class Texture : public ResourceBase
 {
+	DECLARE_CHILD(Texture, ResourceBase)
 	//HDC와
 	// HBITMAP이 있는것
 	// + SIZE (INT형) => Vector2Int
@@ -11,10 +12,6 @@ protected:
 	HBITMAP _bitmap = {};
 	Vector2Int _size = {};
 	uint32 _transparent = RGB(255, 0, 255);	//마젠타 (defalut로 많이 쓰는 색, 이 색이 가장 쓸모없어서 디자이너들이 많이 안써서 그렇다.)
-
-public:
-	Texture();
-	virtual ~Texture();
 
 public:
 	Texture* LoadBmp(const wstring& path);

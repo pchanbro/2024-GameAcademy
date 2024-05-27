@@ -24,6 +24,7 @@
 #include <tchar.h>
 #include <format>
 
+#include <fstream>
 #include <functional>
 
 //===========================================

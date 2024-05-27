@@ -13,6 +13,7 @@
 #include "TestPanel.h"
 #include "Panel.h"
 #include "Image.h"
+#include "TilemapActor.h"
 
 void Dev1Scene::Init()
 {
@@ -49,6 +50,9 @@ void Dev1Scene::Init()
 			CircleCollider* component = new CircleCollider();
 			component->SetCollision(Vector2::Zero(), 50);
 			component->Init();
+			component->SetCollisionLayer(CollisionLayerType::CLT_CREATURE);
+			component->ResetCollisionFlag();
+			component->AddCollisionFlagLayer(CollisionLayerType::CLT_ITEM);
 			actor->AddComponent(component);
 		}
 		/*BoxCollider* collider = new BoxCollider();
@@ -66,26 +70,55 @@ void Dev1Scene::Init()
 	{
 		FlipbookActor* actor = new FlipbookActor();
 
-		actor->SetName("Dummy");
+		actor->SetName("Dummy1");
 		{
 			BoxCollider* component = new BoxCollider();
 			component->SetCollision(Shape::MakeCenterRect(0,0, 50, 50));
 			component->Init();
+			component->SetCollisionLayer(CollisionLayerType::CLT_ITEM);
+			component->ResetCollisionFlag();
+			component->AddCollisionFlagLayer(CollisionLayerType::CLT_CREATURE);
 			actor->AddComponent(component);
 		}
 
 		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
-		actor->SetPos(Vector2(WIN_SIZE_X / 2 - 100 , WIN_SIZE_Y / 2));
+		actor->SetPos(Vector2(WIN_SIZE_X / 2 + 100 , WIN_SIZE_Y / 2));
 
 		actor->Init();
 		this->SpawnActor(actor);
 	}
 
-	// 보통 패널은 _uis에 추가해준다(push_back으로) , 이미지는 추가 안함
 	{
+		FlipbookActor* actor = new FlipbookActor();
+
+		actor->SetName("Dummy2");
+		{
+			BoxCollider* component = new BoxCollider();
+			component->SetCollision(Shape::MakeCenterRect(0, 0, 50, 50));
+			component->Init();
+			component->SetCollisionLayer(CollisionLayerType::CLT_DEFAULT);
+			component->ResetCollisionFlag();
+			actor->AddComponent(component);
+		}
+
+		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
+		actor->SetPos(Vector2(WIN_SIZE_X / 2 - 100, WIN_SIZE_Y / 2));
+
+		actor->Init();
+		this->SpawnActor(actor);
+	}
+
+	{
+		TilemapActor* actor = new TilemapActor();
+		actor->Init();
+		this->SpawnActor(actor);
+	}
+
+	// 보통 패널은 _uis에 추가해준다(push_back으로) , 이미지는 추가 안함
+	/*{
 		TestPanel* testPanel = new TestPanel();
 		_uis.push_back(testPanel);
-	}
+	}*/
 	
 
 	_monster = new FlipbookActor();

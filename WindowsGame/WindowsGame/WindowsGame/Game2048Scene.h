@@ -19,6 +19,8 @@ public:
 
 public:
 	Section GetSection(int num) { return _section[num]; }
+	bool IsBoxesMove();
+	bool IsSectionNotFull();
 
 protected:
 	Section _section[16];

@@ -1,5 +1,6 @@
 #pragma once
 #include "Actor.h"
+
 class NumBoxActor : public Actor
 {
 	DECLARE_CHILD(NumBoxActor, Actor);
@@ -11,10 +12,11 @@ public:
 
 public:
 	void Move();
-	bool IsRightMove();
-	bool IsLeftMove();
-	bool IsDownMove();
-	bool IsUpMove();
+	bool DoRightMove();
+	bool DoLeftMove();
+	bool DoDownMove();
+	bool DoUpMove();
+	void IsAlreadyExist(NumBoxActor* other);
 
 public:
 	int GetNumber() { return _number; }
@@ -23,8 +25,16 @@ public:
 	int GetSectionNum() { return _sectionNum; }
 	void SetSectionNum(int sectionNum) { _sectionNum = sectionNum; }
 
+	int GetPrevSectionNum() { return _prevSectionNum; }
+	void SetPrevSectionNum(bool prevSectionNum) { _prevSectionNum = prevSectionNum; }
+
+	bool GetMoving() { return _moving; }
+	void SetMoving(bool moving) { _moving = moving; }
+
 protected:
 	int _number = 2;
 	int _sectionNum = 0;
+	int _prevSectionNum = -1;
+	bool _moving = false;
 };
 
