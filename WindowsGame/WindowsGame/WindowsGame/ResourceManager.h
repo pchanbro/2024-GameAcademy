@@ -6,6 +6,7 @@ class Flipbook;
 struct FlipbookInfo;
 class Sound;
 class Tilemap;
+class Tile;
 
 class ResourceManager
 {
@@ -31,6 +32,7 @@ public:
 
 	Tilemap* GetTileMap(const wstring& key);
 	Tilemap* LoadTileMap(const wstring& key, const wstring& path);
+	Tilemap* CreateTileMap(const wstring& key, Vector2Int mapSize, int tileSize, vector<vector<Tile>> tiles);
 
 private:
 	wstring _resourcePath;

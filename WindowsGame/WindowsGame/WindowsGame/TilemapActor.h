@@ -1,6 +1,7 @@
 #pragma once
 #include "Actor.h"
 class Tilemap;
+class Sprite;
 class TilemapActor : public Actor
 {
 	DECLARE_CHILD(TilemapActor, Actor);
@@ -14,8 +15,10 @@ public:
 public:
 	Tilemap* GetTileMap() { return _tilemap; }
 	void SetTileMap(Tilemap* tilemap) { _tilemap = tilemap; }
+	void SetTileSprites(vector<Sprite*> sprites) { _sprites = sprites; }
 
 protected:
 	Tilemap* _tilemap = nullptr;
+	vector<Sprite*> _sprites;
 };
 

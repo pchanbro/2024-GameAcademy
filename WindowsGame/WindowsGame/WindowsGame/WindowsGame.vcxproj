@@ -169,6 +169,7 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="InGameScene.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="MapToolTilemapActor.h" />
     <ClInclude Include="MoleActor.h" />
     <ClInclude Include="MoleGameScene.h" />
     <ClInclude Include="NumBoxActor.h" />
@@ -272,6 +273,9 @@
     <ClCompile Include="Day35.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Day36.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Dev1Scene.cpp" />
     <ClCompile Include="Dev2Scene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
@@ -283,6 +287,7 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="InGameScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="MapToolTilemapActor.cpp" />
     <ClCompile Include="MoleActor.cpp" />
     <ClCompile Include="MoleGameScene.cpp" />
     <ClCompile Include="NumBoxActor.cpp" />

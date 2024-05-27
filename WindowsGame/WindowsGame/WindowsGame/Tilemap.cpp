@@ -14,9 +14,12 @@ void Tilemap::LoadFile(const wstring& path)
 		wstring line;
 		ifs >> line;
 
-		for (int x = 0; x < _mapSize.x; x++)
+		for (int x = 0; x < _mapSize.x; x += 2)
 		{
-			_tiles[y][x].value = line[x] -L'0';
+			int value10 = line[x * 2] - L'0';
+			int value1 = line[x * 2 + 1] - L'0';
+
+			_tiles[y][x].value = value10 * 10 + value1;
 		}
 	}
 	ifs.close();
@@ -41,7 +44,8 @@ void Tilemap::SaveFile(const wstring& path)
 	{
 		for (int x = 0; x < _mapSize.x; x++)
 		{
-			ofs << _tiles[y][x].value;
+			ofs << _tiles[y][x].value / 10;
+			ofs << _tiles[y][x].value % 10;
 		}
 		ofs << endl;
 	}

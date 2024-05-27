@@ -20,11 +20,12 @@ public:
 public:
 	Vector2Int GetMapSize() { return _mapSize; }
 	int GetTileSize() { return _tileSize; }
+	void SetTiles(vector<vector<Tile>> tiles) { _tiles = tiles; }
 	vector<vector<Tile>>& GetTiles() { return _tiles; }
 	Tile* GetTileAt(Vector2Int pos);
 
 	void SetMapSize(Vector2Int size) { _mapSize = size; }
-	void SetTileSize(int size) { _tileSize = _tileSize; }
+	void SetTileSize(int size) { _tileSize = size; }
 
 protected:
 	Vector2Int _mapSize = {};

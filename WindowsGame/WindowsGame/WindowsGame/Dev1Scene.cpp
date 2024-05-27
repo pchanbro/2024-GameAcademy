@@ -14,128 +14,151 @@
 #include "Panel.h"
 #include "Image.h"
 #include "TilemapActor.h"
+#include "Tilemap.h"
+#include "MapToolTilemapActor.h"
 
 void Dev1Scene::Init()
 {
 	LoadResource();
 
-	GET_SINGLE(SoundManager)->Play(L"BGM_Dev1Scene", true);
-
-
-	SpriteActor* background = nullptr;
 	{
-		background = new SpriteActor();
-		Sprite* sprite = Resource->GetSprite(L"S_Background");
-		background->SetSprite(sprite);
-		background->SetBody(Shape::MakeCenterRectLTWH(0, 0, sprite->GetSize().x, sprite->GetSize().y));
-		background->Init();
-		this->SpawnActor(background);
+		for (int i = 0; i <= 12; i++)
+		{
+			{
+				wchar_t keyName[128];
+				swprintf_s(keyName, L"T_Pocket%d", i);
+
+				wchar_t valueName[128];
+				swprintf_s(valueName, L"TileStudy/pocket_%d.bmp", i);
+
+				Resource->LoadTexture(keyName, valueName);
+			}
+
+			{
+				wchar_t keyName[128];
+				swprintf_s(keyName, L"S_Pocket%d", i);
+
+				wchar_t textureKeyName[128];
+				swprintf_s(textureKeyName, L"T_Pocket%d", i);
+
+				Resource->CreateSprite(keyName, Resource->GetTexture(textureKeyName));
+			}
+		}
+
 	}
 
 	{
-		CreatureActor* actor = new CreatureActor();
-
-		actor->SetName("Player");
-		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
-		actor->SetPos(Vector2(WIN_SIZE_X / 2, WIN_SIZE_Y / 2));
-
+		Vector2Int mapSize = Vector2Int(10, 10);
+		vector<vector<Tile>> tiles;
+		for (int height = 0; height < mapSize.y; height++)
 		{
-			CameraComponent* component = new CameraComponent();
-			component->SetLTWH(background->GetSprite());
-			component->Init();
-			actor->AddComponent(component);
+			vector<Tile> tilesDummy;
+			for (int width = 0; width < mapSize.x; width++)
+			{
+				Tile tile;
+				tile.value = 0;
+				tilesDummy.push_back(tile);
+			}
+			tiles.push_back(tilesDummy);
 		}
 
-		{
-			CircleCollider* component = new CircleCollider();
-			component->SetCollision(Vector2::Zero(), 50);
-			component->Init();
-			component->SetCollisionLayer(CollisionLayerType::CLT_CREATURE);
-			component->ResetCollisionFlag();
-			component->AddCollisionFlagLayer(CollisionLayerType::CLT_ITEM);
-			actor->AddComponent(component);
-		}
-		/*BoxCollider* collider = new BoxCollider();
-		collider->SetCollision(Shape::MakeCenterRect(100, 0, 10, 50));
-		actor->AddComponent(collider);
-
-		_colliders.push_back(collider);*/
-		
-		actor->Init();
-		this->SpawnActor(actor);
-
+		Resource->CreateTileMap(L"TM_Test", mapSize, 88, tiles);
 	}
 
 
 	{
-		FlipbookActor* actor = new FlipbookActor();
-
-		actor->SetName("Dummy1");
+		MapToolTilemapActor* actor = new MapToolTilemapActor();
+		actor->SetTileMap(Resource->GetTileMap(L"TM_Test"));
 		{
-			BoxCollider* component = new BoxCollider();
-			component->SetCollision(Shape::MakeCenterRect(0,0, 50, 50));
-			component->Init();
-			component->SetCollisionLayer(CollisionLayerType::CLT_ITEM);
-			component->ResetCollisionFlag();
-			component->AddCollisionFlagLayer(CollisionLayerType::CLT_CREATURE);
-			actor->AddComponent(component);
+			vector<Sprite*> sprites;
+			for (int i = 0; i <= 12; i++)
+			{
+				wchar_t keyName[128];
+				swprintf_s(keyName, L"S_Pocket%d", i);
+				sprites.push_back(Resource->GetSprite(keyName));
+			}
+
+			actor->SetTileSprites(sprites);
 		}
-
-		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
-		actor->SetPos(Vector2(WIN_SIZE_X / 2 + 100 , WIN_SIZE_Y / 2));
-
 		actor->Init();
 		this->SpawnActor(actor);
 	}
 
-	{
-		FlipbookActor* actor = new FlipbookActor();
+	//{
+	//	for (int i = 0; i <= 12; i++)
+	//	{
+	//		wchar_t keyName[128];
+	//		swprintf_s(keyName, L"T_Pocket%d",i);
 
-		actor->SetName("Dummy2");
-		{
-			BoxCollider* component = new BoxCollider();
-			component->SetCollision(Shape::MakeCenterRect(0, 0, 50, 50));
-			component->Init();
-			component->SetCollisionLayer(CollisionLayerType::CLT_DEFAULT);
-			component->ResetCollisionFlag();
-			actor->AddComponent(component);
-		}
+	//		wchar_t valueName[128];
+	//		swprintf_s(valueName, L"TileStudy/pocket_%d.bmp",i);
 
-		actor->SetFlipbook(Resource->GetFlipbook(L"FB_PlayerDownIdle"));
-		actor->SetPos(Vector2(WIN_SIZE_X / 2 - 100, WIN_SIZE_Y / 2));
+	//		Resource->LoadTexture(keyName, valueName);
+	//	}
+	//}
 
-		actor->Init();
-		this->SpawnActor(actor);
-	}
+	//{
+	//	Vector2Int mapSize = Vector2Int(10, 10);
+	//	vector<vector<Tile>> tiles;
+	//	{
+	//		vector<Tile> tilesDummy;
+	//		for (int width = 0; width < mapSize.x; width++)
+	//		{
+	//			Tile tile;
+	//			tile.value = GET_SINGLE(RandomManager)->GetRandomInt(0,2);
+	//			tilesDummy.push_back(tile);
+	//		}
+	//		tiles.push_back(tilesDummy);
+	//	}
 
-	{
-		TilemapActor* actor = new TilemapActor();
-		actor->Init();
-		this->SpawnActor(actor);
-	}
+	//	{
+	//		vector<Tile> tilesDummy;
+	//		Tile tile;
+	//		tile.value = 1;
+	//		tilesDummy.push_back(tile);
+	//		tiles.push_back(tilesDummy);
+	//	}
 
-	// 보통 패널은 _uis에 추가해준다(push_back으로) , 이미지는 추가 안함
-	/*{
-		TestPanel* testPanel = new TestPanel();
-		_uis.push_back(testPanel);
-	}*/
-	
+	//	{
+	//		vector<Tile> tilesDummy;
+	//		Tile tile;
+	//		tile.value = 2;
+	//			tilesDummy.push_back(tile);
+	//		tiles.push_back(tilesDummy);
+	//	}
 
-	_monster = new FlipbookActor();
+	//	{
+	//		vector<Tile> tilesDummy;
+	//		for (int i = 0; i < 5; i++)
+	//		{
+	//			Tile tile;
+	//			tile.value = 3;
+	//			tilesDummy.push_back(tile);
+	//		}
+	//		tiles.push_back(tilesDummy);
+	//	}
 
-	{
-		_monster->SetFlipbook(Resource->GetFlipbook(L"FB_MonsterIdle"));
-		_monster->SetPos(Vector2(WIN_SIZE_X / 2 + 300, WIN_SIZE_Y / 2 ));
+	//	{
+	//		vector<Tile> tilesDummy;
+	//		Tile tile;
+	//		tile.value = 4;
+	//		tilesDummy.push_back(tile);
+	//		tiles.push_back(tilesDummy);
+	//	}
 
-		{
-			BoxCollider* collider = new BoxCollider();
-			collider->SetCollision(Shape::MakeCenterRect(0, 0, 68, 80));
-			_monster->AddComponent(collider);
-		}
+	//	Resource->CreateTileMap(L"TM_Test", mapSize, 48, tiles);
+	//}
 
-		_monster->Init();
-		this->SpawnActor(_monster);
-	}
+
+	//{
+	//	TilemapActor* actor = new TilemapActor();
+	//	actor->SetTileMap(Resource->GetTileMap(L"TM_Test"));
+
+	//	actor->Init();
+	//	this->SpawnActor(actor);
+	//}
+
+
 
 	Super::Init();
 }

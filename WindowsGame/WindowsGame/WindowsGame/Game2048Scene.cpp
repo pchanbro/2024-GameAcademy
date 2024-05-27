@@ -13,6 +13,11 @@ void Game2048Scene::Init()
 		_section[i].Y = WIN_SIZE_Y / 2 - 200 + ((i / 4) * 100);
 	}
 
+	//Controller
+	// Controller << _boxes 를 참조
+	// Controller ->
+	// 키보드 입력에따라서
+	// NumBoxActor를 어디로 이동해라!
 
 	{
 		NumBoxActor* box = new NumBoxActor();

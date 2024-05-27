@@ -33,6 +33,7 @@ void NumBoxActor::Release()
 
 void NumBoxActor::Move()
 {
+
 	if (!_moving)
 	{
 		if (Input->GetKeyDown(KeyCode::Right))

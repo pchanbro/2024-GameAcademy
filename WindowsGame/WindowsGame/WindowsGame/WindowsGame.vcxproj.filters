@@ -226,6 +226,9 @@
     <ClInclude Include="Tilemap.h">
       <Filter>05.Resources</Filter>
     </ClInclude>
+    <ClInclude Include="MapToolTilemapActor.h">
+      <Filter>03.Objects\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WindowsGame.rc">
@@ -453,6 +456,12 @@
     </ClCompile>
     <ClCompile Include="Tilemap.cpp">
       <Filter>05.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day36.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="MapToolTilemapActor.cpp">
+      <Filter>03.Objects\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

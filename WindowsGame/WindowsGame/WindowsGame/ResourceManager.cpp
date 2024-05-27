@@ -136,3 +136,19 @@ Tilemap* ResourceManager::LoadTileMap(const wstring& key, const wstring& path)
 
 	return tileMap;
 }
+
+Tilemap* ResourceManager::CreateTileMap(const wstring& key, Vector2Int mapSize, int tileSize, vector<vector<Tile>> tiles)
+{
+	if (_resources.contains(key))
+	{
+		return GetTileMap(key);
+	}
+
+	Tilemap* tileMap = new Tilemap();
+	tileMap->SetMapSize(mapSize);
+	tileMap->SetTileSize(tileSize);
+	tileMap->SetTiles(tiles);
+	_resources[key] = tileMap;
+
+	return tileMap;
+}
