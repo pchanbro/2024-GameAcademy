@@ -14,7 +14,7 @@ void Tilemap::LoadFile(const wstring& path)
 		wstring line;
 		ifs >> line;
 
-		for (int x = 0; x < _mapSize.x; x += 2)
+		for (int x = 0; x < _mapSize.x; x++)
 		{
 			int value10 = line[x * 2] - L'0';
 			int value1 = line[x * 2 + 1] - L'0';

@@ -13,7 +13,8 @@ enum class KeyCode
 	W = 'W',
 	A = 'A',
 	S = 'S',
-	d = 'D',
+	D = 'D',
+	L = 'L',
 
 	Control = VK_CONTROL,
 };

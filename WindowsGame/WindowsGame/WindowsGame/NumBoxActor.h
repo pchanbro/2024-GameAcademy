@@ -16,7 +16,7 @@ public:
 	bool DoLeftMove();
 	bool DoDownMove();
 	bool DoUpMove();
-	void IsAlreadyExist(NumBoxActor* other);
+	//void IsAlreadyExist(NumBoxActor* other);
 
 public:
 	int GetNumber() { return _number; }

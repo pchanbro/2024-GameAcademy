@@ -126,90 +126,90 @@ bool NumBoxActor::DoUpMove()
 	return false;
 }
 
-void NumBoxActor::IsAlreadyExist(NumBoxActor* other)
-{
-
-	if (Input->GetKeyDown(KeyCode::Right))
-	{
-		if (_sectionNum == other->GetSectionNum())
-		{
-			if (_prevSectionNum < other->GetPrevSectionNum())
-			{
-				if (_number == other->GetNumber())
-				{
-					other->SetNumber(other->GetNumber() + _number);
-					Scene* scene = CurrentScene;
-					scene->DespawnActor(this);
-				}
-
-				if (DoLeftMove())
-				{
-					_sectionNum--;
-				}
-			}
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::Left))
-	{
-		if (_sectionNum == other->GetSectionNum())
-		{
-			if (other->GetPrevSectionNum() < _prevSectionNum)
-			{
-				if (_number == other->GetNumber())
-				{
-					other->SetNumber(other->GetNumber() + _number);
-					Scene* scene = CurrentScene;
-					scene->DespawnActor(this);
-				}
-
-				if (DoRightMove())
-				{
-					_sectionNum++;
-				}
-			}
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::Down))
-	{
-		if (_sectionNum == other->GetSectionNum())
-		{
-			if (_prevSectionNum < other->GetPrevSectionNum())
-			{
-				if (_number == other->GetNumber())
-				{
-					other->SetNumber(other->GetNumber() + _number);
-					Scene* scene = CurrentScene;
-					scene->DespawnActor(this);
-				}
-
-				if (DoUpMove())
-				{
-					_sectionNum -= 4;
-				}
-			}
-		}
-	}
-
-	if (Input->GetKeyDown(KeyCode::Up))
-	{
-		if (_sectionNum == other->GetSectionNum())
-		{
-			if (other->GetPrevSectionNum() < _prevSectionNum)
-			{
-				if (_number == other->GetNumber())
-				{
-					other->SetNumber(other->GetNumber() + _number);
-					Scene* scene = CurrentScene;
-					scene->DespawnActor(this);
-				}
-
-				if (DoDownMove())
-				{
-					_sectionNum += 4;
-				}
-			}
-		}
-	}
-}
+//void NumBoxActor::IsAlreadyExist(NumBoxActor* other)
+//{
+//
+//	if (Input->GetKeyDown(KeyCode::Right))
+//	{
+//		if (_sectionNum == other->GetSectionNum())
+//		{
+//			if (_prevSectionNum < other->GetPrevSectionNum())
+//			{
+//				if (_number == other->GetNumber())
+//				{
+//					other->SetNumber(other->GetNumber() + _number);
+//					Scene* scene = CurrentScene;
+//					scene->DespawnActor(this);
+//				}
+//
+//				if (DoLeftMove())
+//				{
+//					_sectionNum--;
+//				}
+//			}
+//		}
+//	}
+//
+//	if (Input->GetKeyDown(KeyCode::Left))
+//	{
+//		if (_sectionNum == other->GetSectionNum())
+//		{
+//			if (other->GetPrevSectionNum() < _prevSectionNum)
+//			{
+//				if (_number == other->GetNumber())
+//				{
+//					other->SetNumber(other->GetNumber() + _number);
+//					Scene* scene = CurrentScene;
+//					scene->DespawnActor(this);
+//				}
+//
+//				if (DoRightMove())
+//				{
+//					_sectionNum++;
+//				}
+//			}
+//		}
+//	}
+//
+//	if (Input->GetKeyDown(KeyCode::Down))
+//	{
+//		if (_sectionNum == other->GetSectionNum())
+//		{
+//			if (_prevSectionNum < other->GetPrevSectionNum())
+//			{
+//				if (_number == other->GetNumber())
+//				{
+//					other->SetNumber(other->GetNumber() + _number);
+//					Scene* scene = CurrentScene;
+//					scene->DespawnActor(this);
+//				}
+//
+//				if (DoUpMove())
+//				{
+//					_sectionNum -= 4;
+//				}
+//			}
+//		}
+//	}
+//
+//	if (Input->GetKeyDown(KeyCode::Up))
+//	{
+//		if (_sectionNum == other->GetSectionNum())
+//		{
+//			if (other->GetPrevSectionNum() < _prevSectionNum)
+//			{
+//				if (_number == other->GetNumber())
+//				{
+//					other->SetNumber(other->GetNumber() + _number);
+//					Scene* scene = CurrentScene;
+//					scene->DespawnActor(this);
+//				}
+//
+//				if (DoDownMove())
+//				{
+//					_sectionNum += 4;
+//				}
+//			}
+//		}
+//	}
+//}

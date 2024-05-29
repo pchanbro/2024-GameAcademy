@@ -17,9 +17,9 @@ void MapToolTilemapActor::Update_Picking()
 
 		Vector2Int mousePos = Input->GetMousePos();
 
-		x = (mousePos.x - static_cast<int>(this->_body.pos.x)) / tileSize;
+		x = (mousePos.x - static_cast<int>(this->_body.pos.x)) / tileSize; // 여기서 this->_body.pos 는 0,0 이다
 		y = (mousePos.y - static_cast<int>(this->_body.pos.y)) / tileSize;
-
+		
 		Tile* tile = tileMap->GetTileAt({ x, y });
 		if (tile)
 		{
@@ -58,6 +58,16 @@ void MapToolTilemapActor::Update()
 	Super::Update();
 
 	Update_Picking();
+
+	if (Input->GetKeyDown(KeyCode::S))
+	{
+		this->Save();
+	}
+
+	if (Input->GetKeyDown(KeyCode::L))
+	{
+		this->Load();
+	}
 }
 void MapToolTilemapActor::Release()
 {

@@ -63,16 +63,128 @@ void Game2048Scene::Update()
 		_section[box->GetSectionNum()].Existence = true;
 		_tempPos = box->GetPos();
 		_playerDir = (_targetPos - _tempPos).Normalize();
-		box->SetMoving(true);
-
+		
 		if (0.1 < (_targetPos - _tempPos).Length())
 		{
+			box->SetMoving(true);
 			_tempPos += _playerDir * (Time->GetDeltaTime() * 1000);
 			box->SetBody(Shape::MakeCenterRect(_tempPos.x, _tempPos.y, 0, 0));
 		}
 		else
 		{
 			box->SetMoving(false);
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Right))
+	{
+		for (NumBoxActor* box1 : _boxes)
+		{
+			for (NumBoxActor* box2 : _boxes)
+			{
+				if (box1->GetSectionNum() == box2->GetSectionNum())
+				{
+					if (box2->GetPrevSectionNum() < box1->GetPrevSectionNum())
+					{
+						if (box1->GetNumber() == box2->GetNumber())
+						{
+							_section[box2->GetSectionNum()].Existence = false;
+							this->DespawnActor(box2);
+							box1->SetNumber(box1->GetNumber() * 2);
+						}
+						else if (box2->DoLeftMove())
+						{
+							box2->SetSectionNum(box2->GetSectionNum() - 1);
+							_section[box2->GetPrevSectionNum()].Existence = false;
+							_section[box2->GetSectionNum()].Existence = true;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Left))
+	{
+		for (NumBoxActor* box1 : _boxes)
+		{
+			for (NumBoxActor* box2 : _boxes)
+			{
+				if (box1->GetSectionNum() == box2->GetSectionNum())
+				{
+					if (box1->GetPrevSectionNum() < box2->GetPrevSectionNum())
+					{
+						if (box1->GetNumber() == box2->GetNumber())
+						{
+							_section[box2->GetSectionNum()].Existence = false;
+							this->DespawnActor(box2);
+							box2->SetNumber(box1->GetNumber() * 2);
+						}
+						else if (box2->DoRightMove())
+						{
+							box2->SetSectionNum(box2->GetSectionNum() + 1);
+							_section[box2->GetPrevSectionNum()].Existence = false;
+							_section[box2->GetSectionNum()].Existence = true;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Down))
+	{
+		for (NumBoxActor* box1 : _boxes)
+		{
+			for (NumBoxActor* box2 : _boxes)
+			{
+				if (box1->GetSectionNum() == box2->GetSectionNum())
+				{
+					if (box2->GetPrevSectionNum() < box1->GetPrevSectionNum())
+					{
+						if (box1->GetNumber() == box2->GetNumber())
+						{
+							_section[box2->GetSectionNum()].Existence = false;
+							this->DespawnActor(box2);
+							box1->SetNumber(box1->GetNumber() * 2);
+						}
+						else if (box2->DoUpMove())
+						{
+							box2->SetSectionNum(box2->GetSectionNum() - 4);
+							_section[box2->GetPrevSectionNum()].Existence = false;
+							_section[box2->GetSectionNum()].Existence = true;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	if (Input->GetKeyDown(KeyCode::Up))
+	{
+		for (NumBoxActor* box1 : _boxes)
+		{
+			for (NumBoxActor* box2 : _boxes)
+			{
+				if (box1->GetSectionNum() == box2->GetSectionNum())
+				{
+					if (box1->GetPrevSectionNum() < box2->GetPrevSectionNum())
+					{
+						if (box1->GetNumber() == box2->GetNumber())
+						{
+							_section[box2->GetSectionNum()].Existence = false;
+							this->DespawnActor(box2);
+							box1->SetNumber(box1->GetNumber() * 2);
+						}
+						else if (box2->DoUpMove())
+						{
+							box2->SetSectionNum(box2->GetSectionNum() + 4);
+							_section[box2->GetPrevSectionNum()].Existence = false;
+							_section[box2->GetSectionNum()].Existence = true;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -92,7 +204,6 @@ void Game2048Scene::Update()
 		_boxes.push_back(box);
 		this->SpawnActor(box);
 	}
-
 }
 void Game2048Scene::Release()
 {

@@ -28,5 +28,6 @@ protected:
 	Vector2 _targetPos = { -1, -1 };
 	Vector2 _tempPos;
 	Vector2 _playerDir;
+	bool _numBoxMoving = false;
 };
 
