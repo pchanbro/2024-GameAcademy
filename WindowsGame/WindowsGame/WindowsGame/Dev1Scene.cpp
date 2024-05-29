@@ -16,6 +16,8 @@
 #include "TilemapActor.h"
 #include "Tilemap.h"
 #include "MapToolTilemapActor.h"
+#include "MapToolController.h"
+#include "CreatureController.h"
 
 void Dev1Scene::Init()
 {
@@ -65,6 +67,7 @@ void Dev1Scene::Init()
 		Resource->CreateTileMap(L"TM_Test", mapSize, 88, tiles);
 	}
 
+	_mapToolController = new MapToolController();
 
 	{
 		MapToolTilemapActor* actor = new MapToolTilemapActor();
@@ -80,85 +83,28 @@ void Dev1Scene::Init()
 
 			actor->SetTileSprites(sprites);
 		}
+		actor->SetLayer(LayerType::BackGround);
 		actor->Init();
+
+		// 이 액터를 조종하겠다.
+		_mapToolController->SetLink(actor);
+
 		this->SpawnActor(actor);
 	}
 
-	//{
-	//	for (int i = 0; i <= 12; i++)
-	//	{
-	//		wchar_t keyName[128];
-	//		swprintf_s(keyName, L"T_Pocket%d",i);
+	_creatureController = new CreatureController();
 
-	//		wchar_t valueName[128];
-	//		swprintf_s(valueName, L"TileStudy/pocket_%d.bmp",i);
+	{
+		CreatureActor* actor = new CreatureActor();
+		actor->SetLayer(LayerType::Character);
+		actor->SetName("Player");
+		actor->SetBody(Shape::MakeCenterRect(300, 300, 0, 0));
+		actor->Init();
+		_creatureController->SetLink(actor);
+		this->SpawnActor(actor);
+	}
 
-	//		Resource->LoadTexture(keyName, valueName);
-	//	}
-	//}
-
-	//{
-	//	Vector2Int mapSize = Vector2Int(10, 10);
-	//	vector<vector<Tile>> tiles;
-	//	{
-	//		vector<Tile> tilesDummy;
-	//		for (int width = 0; width < mapSize.x; width++)
-	//		{
-	//			Tile tile;
-	//			tile.value = GET_SINGLE(RandomManager)->GetRandomInt(0,2);
-	//			tilesDummy.push_back(tile);
-	//		}
-	//		tiles.push_back(tilesDummy);
-	//	}
-
-	//	{
-	//		vector<Tile> tilesDummy;
-	//		Tile tile;
-	//		tile.value = 1;
-	//		tilesDummy.push_back(tile);
-	//		tiles.push_back(tilesDummy);
-	//	}
-
-	//	{
-	//		vector<Tile> tilesDummy;
-	//		Tile tile;
-	//		tile.value = 2;
-	//			tilesDummy.push_back(tile);
-	//		tiles.push_back(tilesDummy);
-	//	}
-
-	//	{
-	//		vector<Tile> tilesDummy;
-	//		for (int i = 0; i < 5; i++)
-	//		{
-	//			Tile tile;
-	//			tile.value = 3;
-	//			tilesDummy.push_back(tile);
-	//		}
-	//		tiles.push_back(tilesDummy);
-	//	}
-
-	//	{
-	//		vector<Tile> tilesDummy;
-	//		Tile tile;
-	//		tile.value = 4;
-	//		tilesDummy.push_back(tile);
-	//		tiles.push_back(tilesDummy);
-	//	}
-
-	//	Resource->CreateTileMap(L"TM_Test", mapSize, 48, tiles);
-	//}
-
-
-	//{
-	//	TilemapActor* actor = new TilemapActor();
-	//	actor->SetTileMap(Resource->GetTileMap(L"TM_Test"));
-
-	//	actor->Init();
-	//	this->SpawnActor(actor);
-	//}
-
-
+	this->SetCameraPos(Vector2(WIN_SIZE_X / 2, WIN_SIZE_Y / 2));
 
 	Super::Init();
 }
@@ -177,18 +123,8 @@ void Dev1Scene::Update()
 {
 	Super::Update();
 
-	//if (!_flipbook) return;
-	for (BoxCollider* collider : _colliders)
-	{
-		RECT rc1 = collider->GetCollision().ToRect();
-		// GetComponent를 통한 GetCollision 받기
-		RECT rc2 = _monster->GetComponent<BoxCollider>()->GetCollision().ToRect();
-		if (Collision::RectInRect(rc1, rc2))
-		{
-			_monster->SetFlipbook(Resource->GetFlipbook(L"FB_MonsterDie"));
-		}
-	}
-
+	_mapToolController->Update();
+	_creatureController->Update();
 }
 void Dev1Scene::Release()
 {

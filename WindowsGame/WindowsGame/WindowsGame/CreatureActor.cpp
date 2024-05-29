@@ -23,10 +23,7 @@ void CreatureActor::Init()
 	_attackFlipbook[eCreatureDirection::LEFT] = Resource->GetFlipbook(L"FB_PlayerLeftAttack");
 	_attackFlipbook[eCreatureDirection::RIGHT] = Resource->GetFlipbook(L"FB_PlayerRightAttack");
 
-	//SetFlipbook(Resource->GetFlipbook(L"FB_Player"));
-	SetBody(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y / 2, 200, 200));
-	/*BoxCollider* collider = new BoxCollider();
-	collider->SetCollision(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y / 2, 200, 200));*/
+	this->SetState(_state);
 }
 void CreatureActor:: Render(HDC hdc)
 {
@@ -35,11 +32,6 @@ void CreatureActor:: Render(HDC hdc)
 void CreatureActor::Update()
 {
 	Super::Update();
-
-	// TODO : Controller로 교체할 것들
-	UpdateInput();
-
-	// XXX : 어떤 위험이 있을때 코멘트
 
 	switch (_state)
 	{
@@ -102,59 +94,6 @@ void CreatureActor::ChangeDirection(eCreatureDirection dir)
 	}
 }
 
-void CreatureActor::UpdateInput()
-{
-	SetIsAttackInput(false);
-	Vector2 newVelocity = this->GetVelocity();
-	bool isMoveKeyInput = false;
-
-
-	if (Input->GetKey(KeyCode::Up))
-	{
-		isMoveKeyInput = true;
-		ChangeDirection(eCreatureDirection::UP);
-		newVelocity.x = 0;
-		newVelocity.y -= Time->GetDeltaTime() * 10.0f;
-		newVelocity.y = clamp(newVelocity.y, -1.0f, 1.0f);
-	}
-	else if (Input->GetKey(KeyCode::Left))
-	{
-		isMoveKeyInput = true;
-		ChangeDirection(eCreatureDirection::LEFT);
-		newVelocity.x -= Time->GetDeltaTime() * 10.0f;
-		newVelocity.x = clamp(newVelocity.x, -1.0f, 1.0f);
-		newVelocity.y = 0;
-	}
-	else if (Input->GetKey(KeyCode::Right))
-	{
-		isMoveKeyInput = true;
-		ChangeDirection(eCreatureDirection::RIGHT);
-		newVelocity.x += Time->GetDeltaTime() * 10.0f;
-		newVelocity.x = clamp(newVelocity.x, -1.0f, 1.0f);
-		newVelocity.y = 0;
-	}
-	else if (Input->GetKey(KeyCode::Down))
-	{
-		isMoveKeyInput = true;
-		ChangeDirection(eCreatureDirection::DOWN);
-		newVelocity.y += Time->GetDeltaTime() * 10.0f;
-		newVelocity.y = clamp(newVelocity.y, -1.0f, 1.0f);
-		newVelocity.x = 0;
-	}
-
-	if (Input->GetKeyDown(KeyCode::Space))
-	{
-		SetIsAttackInput(true);
-	}
-
-
-	if (isMoveKeyInput == false)
-	{
-		newVelocity = { 0,0 };
-	}
-
-	this->SetVelocity(newVelocity);
-}
 
 void CreatureActor::UpdateIdle()
 {

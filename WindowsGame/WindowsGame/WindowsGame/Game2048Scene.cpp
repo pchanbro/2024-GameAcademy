@@ -90,6 +90,11 @@ void Game2048Scene::Update()
 						{
 							_section[box2->GetSectionNum()].Existence = false;
 							this->DespawnActor(box2);
+							auto findIt = find(_boxes.begin(), _boxes.end(), box2); 
+							if (findIt != _boxes.end())
+							{
+								_boxes.erase(findIt);
+							}
 							box1->SetNumber(box1->GetNumber() * 2);
 						}
 						else if (box2->DoLeftMove())
@@ -118,6 +123,11 @@ void Game2048Scene::Update()
 						{
 							_section[box2->GetSectionNum()].Existence = false;
 							this->DespawnActor(box2);
+							auto findIt = find(_boxes.begin(), _boxes.end(), box2);
+							if (findIt != _boxes.end())
+							{
+								_boxes.erase(findIt);
+							}
 							box2->SetNumber(box1->GetNumber() * 2);
 						}
 						else if (box2->DoRightMove())
@@ -146,6 +156,11 @@ void Game2048Scene::Update()
 						{
 							_section[box2->GetSectionNum()].Existence = false;
 							this->DespawnActor(box2);
+							auto findIt = find(_boxes.begin(), _boxes.end(), box2);
+							if (findIt != _boxes.end())
+							{
+								_boxes.erase(findIt);
+							}
 							box1->SetNumber(box1->GetNumber() * 2);
 						}
 						else if (box2->DoUpMove())
@@ -174,6 +189,11 @@ void Game2048Scene::Update()
 						{
 							_section[box2->GetSectionNum()].Existence = false;
 							this->DespawnActor(box2);
+							auto findIt = find(_boxes.begin(), _boxes.end(), box2);
+							if (findIt != _boxes.end())
+							{
+								_boxes.erase(findIt);
+							}
 							box1->SetNumber(box1->GetNumber() * 2);
 						}
 						else if (box2->DoUpMove())

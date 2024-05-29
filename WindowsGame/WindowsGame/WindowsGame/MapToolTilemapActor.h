@@ -6,7 +6,6 @@ class MapToolTilemapActor : public TilemapActor
 
 public:
 	// 타일이 클릭되었을때 반응
-	void Update_Picking();
 	void Save();
 	void Load();
 

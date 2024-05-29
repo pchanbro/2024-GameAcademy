@@ -1,33 +1,6 @@
 #include "pch.h"
 #include "MapToolTilemapActor.h"
 #include "Tilemap.h"
-void MapToolTilemapActor::Update_Picking()
-{
-	if (Input->GetKeyDown(KeyCode::LeftMouse))
-	{
-		// 타일이 클릭되었는지?
-		// 타일이 클릭되었으면
-
-		// 해당 타일의 value + 1
-
-		int x = 0;
-		int y = 0;
-		Tilemap* tileMap = this->GetTileMap();
-		int tileSize = tileMap->GetTileSize();
-
-		Vector2Int mousePos = Input->GetMousePos();
-
-		x = (mousePos.x - static_cast<int>(this->_body.pos.x)) / tileSize; // 여기서 this->_body.pos 는 0,0 이다
-		y = (mousePos.y - static_cast<int>(this->_body.pos.y)) / tileSize;
-		
-		Tile* tile = tileMap->GetTileAt({ x, y });
-		if (tile)
-		{
-			tile->value++;
-			tile->value %= this->_sprites.size();
-		}
-	}
-}
 
 void MapToolTilemapActor::Save()
 {
@@ -56,18 +29,9 @@ void MapToolTilemapActor::Render(HDC hdc)
 void MapToolTilemapActor::Update()
 {
 	Super::Update();
-
-	Update_Picking();
-
-	if (Input->GetKeyDown(KeyCode::S))
-	{
-		this->Save();
-	}
-
-	if (Input->GetKeyDown(KeyCode::L))
-	{
-		this->Load();
-	}
+	// 여기의 키를 눌러서 뭔가 액션을 취하는건
+	// 액터의 몫이 아니라 Controller의 몫이다.
+	
 }
 void MapToolTilemapActor::Release()
 {

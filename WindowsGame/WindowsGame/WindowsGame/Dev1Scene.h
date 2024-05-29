@@ -1,7 +1,10 @@
 #pragma once
 #include "Scene.h" // 헤더 파일에는 왜 include 하지 말라했는데 이건 상속하기 위해 include했다.
+class Panel;
 class BoxCollider;
 class FlipbookActor;
+class MapToolController;
+class CreatureController;
 class Dev1Scene : public Scene
 {
 	using Super = Scene;
@@ -18,5 +21,7 @@ private:
 protected:
 	FlipbookActor* _monster;
 	vector<BoxCollider*> _colliders;
+	MapToolController* _mapToolController = nullptr;
+	CreatureController* _creatureController = nullptr;
 };
 

@@ -38,7 +38,6 @@ public:
 public:
 	void SetState(CreatureState state);
 	void ChangeDirection(eCreatureDirection dir);
-	void UpdateInput();
 
 public:
 	void UpdateIdle();
@@ -58,6 +57,5 @@ protected:
 	Flipbook* _idleFlipbook[eCreatureDirection::END] = {};
 	Flipbook* _moveFlipbook[eCreatureDirection::END] = {};
 	Flipbook* _attackFlipbook[eCreatureDirection::END] = {};
-
 };
 
