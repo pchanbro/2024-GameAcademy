@@ -90,6 +90,7 @@ void Dev1Scene::Init()
 		_mapToolController->SetLink(actor);
 
 		this->SpawnActor(actor);
+		_tilemapActor = actor;
 	}
 
 	_creatureController = new CreatureController();
@@ -102,6 +103,17 @@ void Dev1Scene::Init()
 		actor->Init();
 		_creatureController->SetLink(actor);
 		this->SpawnActor(actor);
+		actor->SetCellPos({ 0,0 }, true);
+	}
+
+	{
+		CreatureActor* actor = new CreatureActor();
+		actor->SetLayer(LayerType::Character);
+		actor->SetName("Friend");
+		actor->SetBody(Shape::MakeCenterRect(300, 300, 0, 0));
+		actor->Init();
+		this->SpawnActor(actor);
+		actor->SetCellPos({ 2,0 }, true);
 	}
 
 	this->SetCameraPos(Vector2(WIN_SIZE_X / 2, WIN_SIZE_Y / 2));
@@ -353,4 +365,96 @@ void Dev1Scene::LoadResource()
 	//  ## UI
 	//----------------------------------
 
+}
+
+Vector2 Dev1Scene::GetTilemapPos(Vector2Int cellPos)
+{
+	// 1. 타일맵을 가져온다.
+	assert(_tilemapActor != nullptr);
+	if (_tilemapActor == nullptr)
+	{
+		return Vector2::Zero();
+	}
+
+	Tilemap* tilemap = _tilemapActor->GetTileMap();
+	assert(tilemap != nullptr);
+	if (tilemap == nullptr)
+	{
+		return Vector2::Zero();
+	}
+
+	int tileSize = tilemap->GetTileSize();
+	Vector2 pos = _tilemapActor->GetPos();
+
+	Vector2 rv;
+
+	rv.x = pos.x + cellPos.x * tileSize/*여기까지 좌상단을 표시함*/ + (tileSize / 2) /* 여기가 중앙으로 가도록 추가로 더해주는 부분*/;
+	rv.y = pos.y + cellPos.y * tileSize + (tileSize / 2);
+
+	return rv;
+}
+
+bool Dev1Scene::CanGo(Actor* actor, Vector2Int cellPos)
+{
+	assert(actor != nullptr);
+	if (actor == nullptr)
+	{
+		return false;
+	}
+
+	assert(_tilemapActor != nullptr);
+	if (_tilemapActor == nullptr)
+	{
+		return false;
+	}
+
+	Tilemap* tilemap = _tilemapActor->GetTileMap();
+	assert(tilemap != nullptr);
+	if (tilemap == nullptr)
+	{
+		return false;
+	}
+
+	Tile* tile = tilemap->GetTileAt(cellPos);
+	if (tile == nullptr)
+	{
+		return false;
+	}
+
+
+	if (tile->value == 0)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+Tilemap* Dev1Scene::GetTilemap()
+{
+	assert(_tilemapActor != nullptr);
+	if (_tilemapActor == nullptr)
+	{
+		return nullptr;
+	}
+
+	Tilemap* tilemap = _tilemapActor->GetTileMap();
+	assert(tilemap != nullptr);
+	if (tilemap == nullptr)
+	{
+		return nullptr;
+	}
+
+	return tilemap;
+}
+
+TilemapActor* Dev1Scene::GetTilemapActor()
+{
+	assert(_tilemapActor != nullptr);
+	if (_tilemapActor == nullptr)
+	{
+		return nullptr;
+	}
+
+	return _tilemapActor;
 }

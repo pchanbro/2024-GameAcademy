@@ -47,6 +47,9 @@
     <Filter Include="06.UI\Game">
       <UniqueIdentifier>{7499e7af-9b09-4318-a8d3-cb036a5ff760}</UniqueIdentifier>
     </Filter>
+    <Filter Include="07.Interfaces">
+      <UniqueIdentifier>{0a907142-7ff3-47d3-9b65-9930a4955355}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -234,6 +237,12 @@
     </ClInclude>
     <ClInclude Include="CreatureController.h">
       <Filter>03.Objects\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ITilemapActor.h">
+      <Filter>07.Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="TilemapScene.h">
+      <Filter>02.Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -477,6 +486,18 @@
     </ClCompile>
     <ClCompile Include="CreatureController.cpp">
       <Filter>03.Objects\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day38.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="ITilemapActor.cpp">
+      <Filter>07.Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="TilemapScene.cpp">
+      <Filter>02.Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Day41.cpp">
+      <Filter>999.Comments</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

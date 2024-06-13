@@ -1,0 +1,7 @@
+{
+  "id": 100001,
+  "name": "Monster1",
+  "hp": 1000,
+  "moveSpeed": 300,
+  "skillId":  200001
+}

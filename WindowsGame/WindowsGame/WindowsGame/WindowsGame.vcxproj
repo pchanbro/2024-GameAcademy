@@ -170,6 +170,7 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="InGameScene.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="ITilemapActor.h" />
     <ClInclude Include="MapToolController.h" />
     <ClInclude Include="MapToolTilemapActor.h" />
     <ClInclude Include="MoleActor.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Tilemap.h" />
     <ClInclude Include="TilemapActor.h" />
+    <ClInclude Include="TilemapScene.h" />
     <ClInclude Include="TimeManager.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="UI.h" />
@@ -282,6 +284,10 @@
     <ClCompile Include="Day37.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Day38.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Day41.cpp" />
     <ClCompile Include="Dev1Scene.cpp" />
     <ClCompile Include="Dev2Scene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
@@ -293,6 +299,7 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="InGameScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="ITilemapActor.cpp" />
     <ClCompile Include="MapToolController.cpp" />
     <ClCompile Include="MapToolTilemapActor.cpp" />
     <ClCompile Include="MoleActor.cpp" />
@@ -321,6 +328,7 @@
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Tilemap.cpp" />
     <ClCompile Include="TilemapActor.cpp" />
+    <ClCompile Include="TilemapScene.cpp" />
     <ClCompile Include="TimeManager.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Vector2.cpp" />

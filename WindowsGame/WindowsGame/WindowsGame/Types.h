@@ -21,3 +21,20 @@ using uint64 = unsigned __int64;
 #include "Vector2.h"
 #include "Vector2Int.h"
 #include "CenterRect.h"
+
+struct PQNode
+{
+	int Cost;
+	Vector2Int Vertex;
+	int G;
+
+	bool operator<(const PQNode& other) const
+	{
+		return Cost > other.Cost;
+	}
+
+	bool operator>(const PQNode& other) const
+	{
+		return Cost > other.Cost;
+	}
+};

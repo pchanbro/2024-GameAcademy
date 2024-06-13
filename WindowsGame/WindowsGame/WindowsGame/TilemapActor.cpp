@@ -92,3 +92,18 @@ void TilemapActor::Release()
 {
 	Super::Release();
 }
+
+Vector2Int TilemapActor::GetTileIndexByPos(Vector2 checkPos)
+{
+	int x = 0;
+	int y = 0;
+	Tilemap* tileMap = this->GetTileMap();
+	int tileSize = tileMap->GetTileSize();
+
+	Vector2 pos = this->GetBody().pos; // 여기서 _mapToolActor의 _body.pos 는 0,0 이다
+	int spriteSize = this->GetTileSprites().size();
+	x = (checkPos.x - static_cast<int>(pos.x)) / tileSize;
+	y = (checkPos.y - static_cast<int>(pos.y)) / tileSize;
+
+	return { x, y };
+}

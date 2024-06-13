@@ -33,6 +33,9 @@ public:												\
 // (0.000001)
 #define EPSILON 1e-6f
 
+#define Deg2Rad(x) 0.0174533 * x
+#define Rad2Deg(x) 57.2958 * x
+
 
 // 경고메세지
 #define Alert(title, message) MessageBox(_hWnd, title, message, NULL)

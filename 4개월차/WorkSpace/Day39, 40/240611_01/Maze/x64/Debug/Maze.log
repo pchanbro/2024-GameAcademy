@@ -1,0 +1,14 @@
+﻿  pch.cpp
+  Board.cpp
+  ConsoleHelper.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\Maze\ConsoleHelper.cpp(7,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\Maze\ConsoleHelper.cpp(7,19): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  Maze.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\Maze\Maze.cpp(9,15): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\Maze\Player.cpp(195,21): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\Maze\Player.cpp(241,30): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Vector2Int.cpp
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\Maze\Vector2Int.cpp(51,21): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  Maze.vcxproj -> C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day39, 40\240611_01\x64\Debug\Maze.exe

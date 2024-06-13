@@ -43,7 +43,7 @@ void Game::Init(HWND hwnd)
 	Random->Init();
 	GET_SINGLE(SoundManager)->Init();
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Game2048Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
 }
 
 void Game::Updata()

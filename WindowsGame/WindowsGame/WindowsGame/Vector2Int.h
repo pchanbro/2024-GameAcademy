@@ -19,5 +19,8 @@ struct Vector2Int
 	float Length();
 	int32 Dot(Vector2Int other);
 
+	bool operator==(const Vector2Int& other);
+	bool operator!=(const Vector2Int& other);
+
 };
 

@@ -1,11 +1,13 @@
 #pragma once
-#include "Scene.h" // 헤더 파일에는 왜 include 하지 말라했는데 이건 상속하기 위해 include했다.
+#include "TilemapScene.h" // 헤더 파일에는 왜 include 하지 말라했는데 이건 상속하기 위해 include했다.
 class Panel;
 class BoxCollider;
 class FlipbookActor;
 class MapToolController;
 class CreatureController;
-class Dev1Scene : public Scene
+class TilemapActor;
+class Tilemap;
+class Dev1Scene : public TilemapScene
 {
 	using Super = Scene;
 public:
@@ -14,13 +16,18 @@ public:
 	virtual void Update() override;
 	virtual void Release() override;
 
+public:
+	virtual Vector2 GetTilemapPos(Vector2Int cellPos) override;
+	virtual Tilemap* GetTilemap() override;
+	virtual TilemapActor* GetTilemapActor() override;
+	virtual bool CanGo(Actor* actor, Vector2Int cellPos) override;
+
 
 private:
 	void LoadResource();
 
 protected:
-	FlipbookActor* _monster;
-	vector<BoxCollider*> _colliders;
+	TilemapActor* _tilemapActor = nullptr;
 	MapToolController* _mapToolController = nullptr;
 	CreatureController* _creatureController = nullptr;
 };
