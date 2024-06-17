@@ -29,6 +29,7 @@ public:												\
 #define Resource GET_SINGLE(ResourceManager)
 #define Random GET_SINGLE(RandomManager)
 #define CurrentScene (GET_SINGLE(SceneManager)->GetCurrentScene())
+#define DATA GET_SINGLE(DataManager)
 
 // (0.000001)
 #define EPSILON 1e-6f

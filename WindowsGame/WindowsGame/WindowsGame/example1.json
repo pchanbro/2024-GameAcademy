@@ -1,0 +1,39 @@
+{
+  "STRING_KEY": "STRING_VALUE",
+  "INT_KEY": 3,
+  "FLOAT_KEY": 1.5,
+  "BOOL_KEY": true,
+  "VECTOR_KEY": [ 0, 1, 2, 3, 4 ],
+  "OBJECT_KEY": {
+    "HP": 100.0,
+    "MP": 30,
+    "NAME": "Monster"
+  },
+  "VECTOR_OBJECT_KEY": [
+    {
+      "HP": 100.0,
+      "MP": 30,
+      "NAME": "Monster"
+    },
+    {
+      "HP": 100.0,
+      "MP": 30,
+      "NAME": "Monster"
+    },
+    {
+      "HP": 100.0,
+      "MP": 30,
+      "NAME": "Monster"
+    }
+  ]
+}
+
+
+
+// JSON 규칙.
+//  - 대괄호(배열)나 중괄호(객체)로 시작과 끝을 맺는다.
+//  - KEY, VALUE 형식이다.
+//  - 다른 KEY, VALUE를 넣고싶으면 앞에거 뒤에 , 를 넣으면 ㅗ딘다.
+//  - 마지막 KEY, VALUE 형식에는 ,가 없어야 한다.
+//  - VECTOR의 value 형태는 [] 대괄호로 표현한다.
+//  - 객체의 VALUE 형태는 {} 중괄호로 표현한다.

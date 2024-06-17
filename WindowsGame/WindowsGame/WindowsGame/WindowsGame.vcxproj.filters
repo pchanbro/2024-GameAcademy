@@ -50,6 +50,15 @@
     <Filter Include="07.Interfaces">
       <UniqueIdentifier>{0a907142-7ff3-47d3-9b65-9930a4955355}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Managers\Game">
+      <UniqueIdentifier>{afd34604-f01d-49f3-b7c4-13e7db9d07fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Data">
+      <UniqueIdentifier>{917b8f9e-de49-4db3-8d46-167930b9dffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Data\Game">
+      <UniqueIdentifier>{6c481984-323b-41b8-b108-d332e92dab32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -243,6 +252,12 @@
     </ClInclude>
     <ClInclude Include="TilemapScene.h">
       <Filter>02.Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>01.Managers\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>08.Data\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -499,9 +514,24 @@
     <ClCompile Include="Day41.cpp">
       <Filter>999.Comments</Filter>
     </ClCompile>
+    <ClCompile Include="Day42.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>01.Managers\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.cpp">
+      <Filter>08.Data\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Day16.cpp">
+      <Filter>999.Comments</Filter>
+    </None>
+    <None Include="example1.json">
+      <Filter>999.Comments</Filter>
+    </None>
+    <None Include="example2.json">
       <Filter>999.Comments</Filter>
     </None>
   </ItemGroup>
