@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\NewITest\\.nuget\\packages\\": {}
+    "C:\\Users\\82102\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\Teacher\\Day43\\20240614_07\\20240614_07.csproj",
+      "projectUniqueName": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\Teacher\\Day43\\20240614_07\\20240614_07.csproj",
       "projectName": "20240614_07",
-      "projectPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\Teacher\\Day43\\20240614_07\\20240614_07.csproj",
-      "packagesPath": "C:\\Users\\NewITest\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\Teacher\\Day43\\20240614_07\\obj\\",
+      "projectPath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\Teacher\\Day43\\20240614_07\\20240614_07.csproj",
+      "packagesPath": "C:\\Users\\82102\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\Teacher\\Day43\\20240614_07\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\NewITest\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\82102\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,11 +45,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -61,12 +61,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

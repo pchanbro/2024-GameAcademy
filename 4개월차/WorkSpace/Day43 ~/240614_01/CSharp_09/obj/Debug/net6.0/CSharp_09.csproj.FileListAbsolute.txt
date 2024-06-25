@@ -1,0 +1,14 @@
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\bin\Debug\net6.0\CSharp_09.exe
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\bin\Debug\net6.0\CSharp_09.deps.json
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\bin\Debug\net6.0\CSharp_09.runtimeconfig.json
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\bin\Debug\net6.0\CSharp_09.dll
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\bin\Debug\net6.0\CSharp_09.pdb
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.AssemblyInfoInputs.cache
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.AssemblyInfo.cs
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.csproj.CoreCompileInputs.cache
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.dll
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\refint\CSharp_09.dll
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.pdb
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\CSharp_09.genruntimeconfig.cache
+C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day43 ~\240614_01\CSharp_09\obj\Debug\net6.0\ref\CSharp_09.dll

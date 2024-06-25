@@ -1,0 +1,79 @@
+C#에는 크게 두 가지 버전이 있다.
+
+1) .NET (.NET CORE) (DOT NET)
+2) .NET FRAMEWORK
+
+
+C#의 역사(상식, 재밌는 지식 정도)
+ - C#은 Microsoft 에서 만든 언어
+
+Microsoft
+ - Windows를 개발한 회사
+
+C#이라는 언어는 Windows에 특화한 언어로 개발됐었다.
+
+.NET FRAMEWORK 라는 C#버전이 처음 만들어졌음
+
+.NET FRAMEWORK => Windows 특화이기 때문에
+Linux나 안드로이드, Mac 이런데에서 코드실행 자체가 안된다.
+(다양한 OS로 빌드가 안된다.)
+
+그래서 한 때 C# => Windows의 전용 언어다 라는 인식이 있었음
+
+이후 Microsoft가 사업을 확장
+평생 Windows밖에 안할 것 같은 이 회사가 Azure라는 사업을 하게 됨
+
+Azure 가 무엇인가?
+ - 엔디비아 주식이 치솟고 있다. 
+  - 인공지능이 GPU를 사용 많이하는데, 이 GPU가 비싸서 엔비디아 주식이 치솟고 있다.
+  - 그래픽카드를 AI회사에서 일일이 다 사는가?
+  - 그러면 그래픽 카드 튜닝하는 회사도 같이 올라야 하는거 아닌가?(gigabyte, zotac 등) 그렇진 않다
+
+  - 엔비디아에서 AWS, Azure 같이 가상컴퓨터를 만들고 다른 사용자들한테 컴퓨터를 빌려주고 비용을 받기 때문(서버비, 임대비)
+
+여기서 나온 가상 컴퓨터를 만들어 빌려주고 임대비(서버비)를 받는게 Azure 사업
+
+Azure (Microsoft)
+
+이와 비슷한 사업들로
+AWS (amazon web service)
+GCP (Google Cloud Platform)
+NCP (Naver Cloud Platform)
+등이 존재한다
+
+이 사업의 특징은 
+ - 가상 컴퓨터를 빌려줌
+ - Microsoft [Windows]
+
+보통 서버는 Linux로 많이 사용 (돈 많은 회사는 Window 사용함, 주로 게임회사들은 C#을 많이 써서 Window 사용)
+ - 그럼 Azure(Microsoft)는 Linux지원 안하는가? -> 당연히 지원 해야함(다른 데에선 다 지원하니까..)
+
+근데 Azure는 C#이랑 콜라보 하려고 만든 사업인데 뭔가 이상해진다.
+ - 그래서 C#을 다른 OS에서도 돌아갈 수 있게 만든 버전이 .NET CORE 
+
+근데 .NET CORE 가 갑자기 나온건 아니다.
+Azure 사업을 하기 전부터
+세상의 어느 독특한 팀이 C#으로 만든 언어를 다른 OS에서도 돌아가게 하면 편리하겠다 라는 생각을 함(microsoft는 아님)
+ - 그럼 Linux, Android에서도 사용할 수 있지 않을까?
+ - 그걸 위해 만든 라이브러리가 Mono Library
+
+ - Unity Engine (C#) (.net framework)
+  (다양한 플랫폼 지원 [모바일게임 포함]) -> .net framework는 windows에서만 사용 가능한데..?
+
+ - 유명한 라이브러리 Mono Library를 Unity에서 사용해서 가능하게 만듦
+
+그래서 .net core를 만들 때 mono library를 인수해서 만들었다.
+
+근데 C#이 .net core가 나왔는데 왜 아직도 .net framework를 사용하나? 그건 기업간 계약의 문제가 있다.
+
+.net core => (.net framework + mono library) 
+ (없던 신규문법도 생기고 계속 많이 발전함, 매년 공부해줘야함)
+
+
+한편
+.net core엔 버전이 여러가지 있다. 
+6.0 7.0 8.0
+주기적으로 발전한다.
+
+비슷하게 C++도 언어의 버전이 있다.
+C++11 ~ C++14  C++17 C++20 C++23

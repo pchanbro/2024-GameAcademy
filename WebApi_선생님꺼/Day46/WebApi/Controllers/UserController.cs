@@ -2,27 +2,13 @@
 
 namespace WebApi.Controllers
 {
-    // 제대로된 프레임워크나
-    // 제대로된 엔진
-    // 블랙박스
-    // => 우리가 실제로 코드를 볼 순 없지만,
-    //  우리가 못보는곳에서 무언가를 하는...
-
-    // builder.Services.AddControllers();
-    // => 컨트롤러를 쓰겠다.
-
-    // 모든 컨트롤러는 종속성이 생성됩니다.
-    // builder안에 내가 원하는 서비스를 집어넣으면
-    // 생성자에서 다 받을 수 있다.
-    // builder => 모든 서비스를 알아서 잘 딱 맞게 생성자에 원하는 내용을 넣어준다.
-
-    // ILogger<객체> 가장 기본적인 ASP .NET 서버의 logger 형태이다.
-
     [ApiController]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private List<User> _users = new List<User>();
+        private static int _newUserId = 1;
+        private static List<User> _users = new List<User>();
+
         //Get Method
         //id를 통해서 User정보 조회
 
@@ -44,66 +30,82 @@ namespace WebApi.Controllers
         }
 
         [HttpGet()]
-        public List<int> Test1([FromQuery]int id, string name)
+        public User Get([FromQuery]int id)
         {
-            return new List<int>() { id, 9,8,7,6,5,4,3,2,1,0 };
+            //foreach(var user in _users)
+            //{
+            //    if(user.Id == id)
+            //    {
+            //        return user;
+            //    }
+            //}
+
+            //linq
+
+            //users 안에 있는 리스트를
+            //u라는 이름으로 순회하면서
+            //u.Id == id 이면
+            //배열이 나오는데,
+            //그중에서 첫번째 요소를 가져오겠다.
+            //첫번째요소 조차없으면 Default 값으로 가져오겠다.
+            var rv = _users.Where(u => u.Id == id).FirstOrDefault();
+
+            if (rv == null)
+            {
+                throw new Exception("Bad Request");
+            }
+
+            return rv;
         }
 
         [HttpPost()]
-        public List<int> Test2()
+        public bool Create([FromQuery] string name, string email, string password)
         {
-            return new List<int>() { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+            User newUser = new User()
+            {
+                Id = _newUserId,
+                Email = email,
+                Password = password,
+                Name = name
+            };
+
+            _users.Add(newUser);
+
+            _newUserId++;
+
+            return true;
         }
 
         [HttpPut()]
-        public List<int> Test3()
+        public bool Update([FromQuery] int id, string email)
         {
-            return new List<int>() { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+            var user = _users.Where(u => u.Id == id).FirstOrDefault();
+
+            if (user == null)
+            {
+                return false;
+            }
+
+            user.Email = email;
+
+            return true;
         }
 
         [HttpDelete()]
-        public List<int> Test4()
+        public bool Delete([FromQuery]int id)
         {
-            return new List<int>() { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+            User deleteUser = _users.Where(u => u.Id == id).FirstOrDefault();
+
+            if (deleteUser == null)
+            {
+                return false;
+            }
+
+            _users.Remove(deleteUser);
+            return true;
+
         }
 
-        // HTTP 통신 특징
-        // Method를 같이 보내게 되어있다.
-        // URL + Method를 통해서 어떤 Controller의 어떤 함수로 접근할건지 
-        // Method 중에 하나가 GET
-        // GET, POST
-        // PUT, DELETE
 
-        // 좋은 코드는 함수명만봐도 대충 뭐하는앤지 알아야한다.
-        // GetUserData
-        // UpdateUserData
-        // 특정 데이터를 진짜 극도로 아껴야하는 프로젝트에서는
-        // 저 글자수마저 데이터가 아깝다라는 생각을 하게된다.
-
-        // Method에 의미를 담자
-
-        // Method Get에 User Controller 함수를 호출하면
-        // User를 Get 해주는
-
-        // Method POST에 User Controller 함수를 호출하면
-        // User를 Create 해주는
-
-        // Method PUT에 User Controller 함수를 호출하면
-        // User를 Update 해주는
-
-        // Method DELETE에 User Controller 함수를 호출하면
-        // User를 DELETE 해주는
-
-        // API로 만들자 (REST Api 규약)
-
-        //-----------------------------------------------
-        // 축약버전
-        //-----------------------------------------------
-
-        // Method Get에 User Controller 함수를 호출하면
-        // User를 Get 해주는
-
-        // Method POST에 User Controller 함수를 호출하면
-        // User의 정보가 변하게 해주는
     }
 }
