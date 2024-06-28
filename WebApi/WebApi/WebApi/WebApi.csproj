@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="Comment\Day47\" />
+    <Folder Include="Comment\Day48\" />
   </ItemGroup>
 
 </Project>

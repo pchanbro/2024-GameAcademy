@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "j/2o5oPKZ+4=",
+  "dgSpecHash": "3ocoh/RSW8sUy6nGrzG427kgF0lfHkCwkg40A17aCwVlZiTYQDUEIPmS9RSb2pr9EXqoe3jNx2jhYsG/785xyg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\240614_02\\CSharp_02.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\240614_02\\CSharp_02.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NewITest\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\NewITest\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\NewITest\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\NewITest\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+  ],
   "logs": []
 }

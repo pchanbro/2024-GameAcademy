@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj": {}
+    "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj": {}
   },
   "projects": {
-    "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj": {
+    "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj",
+        "projectUniqueName": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj",
         "projectName": "CSharp_10",
-        "projectPath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj",
-        "packagesPath": "C:\\Users\\82102\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\obj\\",
+        "projectPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\CSharp_10.csproj",
+        "packagesPath": "C:\\Users\\NewITest\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NewITest\\Desktop\\2024-GameAcademy\\4개월차\\WorkSpace\\Day43 ~\\240614_01\\CSharp_10\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\82102\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\NewITest\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,12 +55,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
