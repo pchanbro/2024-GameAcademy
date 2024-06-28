@@ -86,7 +86,7 @@ namespace CSharp_14
                 {
                     //as 연산자는 형변환입니다. (부모 => 자식으로가는..)
                     //like dynamic_cast
-                    //IAttacker attacker = creatures[0] as IAttacker;
+                    //IAttacker attacker = creatures[0] as IAttacker; 아랫줄이랑 같은 효과를 준다
                     IAttacker attacker = (IAttacker)creatures[0];
 
                     if (attacker != null)
