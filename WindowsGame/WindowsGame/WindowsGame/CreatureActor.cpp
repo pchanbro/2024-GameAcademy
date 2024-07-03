@@ -4,6 +4,8 @@
 #include "Texture.h"
 #include "BoxCollider.h"
 #include "Dev1Scene.h"
+#include "GameEvent.h"
+#include "GameEvent_CreatureChangeDir.h"
 
 void CreatureActor::Init()
 {
@@ -79,6 +81,17 @@ void CreatureActor::ChangeDirection(eCreatureDirection dir)
 	// 만약에 방향이 바뀌었으면, SetFlipbook을 해준다.
 
 	if (_dir == dir) return;
+
+	//printf("방향이 바뀌었다. %d => %d\n", _dir, dir);
+	//GET_SINGLE(GameEventManager)->Invoke("PlayerChangeDir");
+	GameEvent_CreatureChangeDir* gameEvent = dynamic_cast<GameEvent_CreatureChangeDir*>(GET_SINGLE(GameEventManager)->GetEvent("PlayerChangeDir"));
+
+	if (gameEvent != nullptr)
+	{
+		gameEvent->FromDir = _dir;
+		gameEvent->ToDir = dir;
+		gameEvent->Invoke();
+	}
 
 	_dir = dir;
 	switch (_state)

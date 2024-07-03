@@ -17,11 +17,13 @@ public:
 	virtual void Release() override;
 
 public:
+	void WriteLog(GameEvent* gameEvent);
+
+public:
 	virtual Vector2 GetTilemapPos(Vector2Int cellPos) override;
 	virtual Tilemap* GetTilemap() override;
 	virtual TilemapActor* GetTilemapActor() override;
 	virtual bool CanGo(Actor* actor, Vector2Int cellPos) override;
-
 
 private:
 	void LoadResource();

@@ -10,7 +10,8 @@ Game::~Game()
 	DATA->Release();
 	GET_SINGLE(ResourceManager)->Release();
 	GET_SINGLE(SoundManager)->Release();
-	
+	GET_SINGLE(GameEventManager)->Release();
+
 	// 메모리 누수난거 
 	// 안지워주면
 	// PC에 계속 남아있는 경우가 있다.
@@ -36,6 +37,7 @@ void Game::Init(HWND hwnd)
 
 
 	// 싱글톤 초기화
+	GET_SINGLE(GameEventManager)->Init();
 	Time->Init();
 	Input->Init(_hwnd);
 	GET_SINGLE(SceneManager)->Init();
@@ -51,6 +53,7 @@ void Game::Init(HWND hwnd)
 void Game::Updata()
 {
 	// 싱글톤 업데이트
+	GET_SINGLE(GameEventManager)->Init();
 	Time->Updata();
 	Input->Updata();
 	GET_SINGLE(SceneManager)->Update();

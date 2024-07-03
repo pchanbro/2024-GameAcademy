@@ -172,6 +172,9 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Game2048BoardActor.h" />
     <ClInclude Include="Game2048Scene.h" />
+    <ClInclude Include="GameEvent.h" />
+    <ClInclude Include="GameEventManager.h" />
+    <ClInclude Include="GameEvent_CreatureChangeDir.h" />
     <ClInclude Include="HammerActor.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="InGameScene.h" />
@@ -208,6 +211,7 @@
     <ClInclude Include="TimeManager.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="UI.h" />
+    <ClInclude Include="UISpriteNumber.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Vector2Int.h" />
     <ClInclude Include="WindowsGame.h" />
@@ -307,6 +311,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Day50.cpp" />
     <ClCompile Include="Dev1Scene.cpp" />
     <ClCompile Include="Dev2Scene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
@@ -314,6 +319,9 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Game2048BoardActor.cpp" />
     <ClCompile Include="Game2048Scene.cpp" />
+    <ClCompile Include="GameEvent.cpp" />
+    <ClCompile Include="GameEventManager.cpp" />
+    <ClCompile Include="GameEvent_CreatureChangeDir.cpp" />
     <ClCompile Include="HammerActor.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="InGameScene.cpp" />
@@ -350,6 +358,7 @@
     <ClCompile Include="TilemapScene.cpp" />
     <ClCompile Include="TimeManager.cpp" />
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UISpriteNumber.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="Vector2Int.cpp" />
     <ClCompile Include="WindowsGame.cpp" />

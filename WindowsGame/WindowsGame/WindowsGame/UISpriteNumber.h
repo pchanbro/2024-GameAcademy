@@ -1,0 +1,28 @@
+#pragma once
+#include "UI.h"
+
+class Sprite;
+// _number를 TextOut이 아니라, Sprite 이미지로 이쁘게 출력할 수 있는 클래스
+class UISpriteNumber : public UI
+{
+	DECLARE_CHILD(UISpriteNumber, UI);
+
+protected:
+	int _number = 0;
+
+	// 숫자 스프라이트 0 ~ 9, 이미지 10장 들어가기위한 변수
+	Sprite* _sprites[10] = {};
+
+public:
+	void SetNumber(int number);
+	void SetSprites(wstring resourceName);
+	void SetSprite(Sprite* sprite, int number);
+
+public:
+	virtual void Init();
+	virtual void Render(HDC hdc);
+	virtual void Update();
+	virtual void Release();
+
+};
+

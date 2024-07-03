@@ -18,6 +18,9 @@
 #include "MapToolTilemapActor.h"
 #include "MapToolController.h"
 #include "CreatureController.h"
+#include "GameEvent.h"
+#include "GameEvent_CreatureChangeDir.h"
+#include "UISpriteNumber.h"
 
 void Dev1Scene::Init()
 {
@@ -117,6 +120,28 @@ void Dev1Scene::Init()
 	}
 
 	this->SetCameraPos(Vector2(WIN_SIZE_X / 2, WIN_SIZE_Y / 2));
+
+	{
+		UISpriteNumber* ui = new UISpriteNumber();
+		ui->SetNumber(123456789);
+		ui->SetSprites(L"S_DefaultNumber");
+		ui->SetRect(Shape::MakeCenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y / 2, 0, 0));
+
+		_uis.push_back(ui);
+	}
+
+	//-------------------------------------------
+	//  이벤트 세팅
+	//-------------------------------------------
+	{
+		GameEvent* gameEvent = new GameEvent_CreatureChangeDir();
+
+		// 이벤트 등록
+		GET_SINGLE(GameEventManager)->AddEvent("PlayerChangeDir", gameEvent);
+
+		gameEvent->AddListen(this, &Dev1Scene::WriteLog);
+	}
+
 
 	Super::Init();
 }
@@ -364,6 +389,16 @@ void Dev1Scene::LoadResource()
 	//----------------------------------
 	//  ## UI
 	//----------------------------------
+	{
+		Texture* texture = Resource->LoadTexture(L"T_DefaultNumber", L"SpriteNumber/number.bmp");
+		for (int i = 0; i < 10; i++)
+		{
+			wchar_t spriteName[256];
+			wsprintf(spriteName, L"S_DefaultNumber_%d", i);
+
+			Resource->CreateSprite(spriteName, texture, 25 * i, 0, 25, 49);
+		}
+	}
 
 }
 
@@ -457,4 +492,12 @@ TilemapActor* Dev1Scene::GetTilemapActor()
 	}
 
 	return _tilemapActor;
+}
+
+void Dev1Scene::WriteLog(GameEvent* gameEvent)
+{
+	GameEvent_CreatureChangeDir* changeEvent = dynamic_cast<GameEvent_CreatureChangeDir*>(gameEvent);
+	assert(changeEvent != nullptr);
+
+	printf("캐릭터가 방향전환하였습니다. %d => %d\n", changeEvent->FromDir, changeEvent->ToDir);
 }

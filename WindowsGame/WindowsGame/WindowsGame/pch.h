@@ -68,6 +68,7 @@ using namespace std;
 //===========================================
 //		## 싱글톤 ##
 //===========================================
+#include "GameEventManager.h"
 #include "TimeManager.h"	// Time
 #include "InputManager.h"	// Input
 #include "SceneManager.h"	// 얘는 위의 2개처럼 define을 만들진 않았다.
@@ -76,6 +77,7 @@ using namespace std;
 #include "RandomManager.h"
 #include "SoundManager.h"
 #include "DataManager.h"
+
 
 //===========================================
 //		## 윈도우 사이즈 ##

@@ -59,6 +59,12 @@
     <Filter Include="08.Data\Game">
       <UniqueIdentifier>{6c481984-323b-41b8-b108-d332e92dab32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="09.Events">
+      <UniqueIdentifier>{4387bd55-807c-40de-a2d4-7c5a3a293001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="09.Events\Game">
+      <UniqueIdentifier>{9a3f6fdf-eaaa-4937-aae0-feb2a6e613e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -258,6 +264,18 @@
     </ClInclude>
     <ClInclude Include="Data.h">
       <Filter>08.Data\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEvent.h">
+      <Filter>09.Events</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEventManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEvent_CreatureChangeDir.h">
+      <Filter>09.Events\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="UISpriteNumber.h">
+      <Filter>06.UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -522,6 +540,21 @@
     </ClCompile>
     <ClCompile Include="Data.cpp">
       <Filter>08.Data\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day50.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEvent.cpp">
+      <Filter>09.Events</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEventManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEvent_CreatureChangeDir.cpp">
+      <Filter>09.Events\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="UISpriteNumber.cpp">
+      <Filter>06.UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
