@@ -7,6 +7,10 @@
    1. Client입장에서 서버에 요청 
    2. (Client => Server)
    3. (Server => Client)
+
+ - 동기 비동기를 쓰는 이유 
+  -  서버에서 얼마나 시간이 걸릴지 모르고 서버가 지금 반환을 해주냐 안해주냐 그거를 기다리기 위해서 사용
+   - 서버 때문에 쓰는건 아니고 파일을 읽는데 시간이 걸릴 수 있으니 렉걸릴거 같은 애들은 Async 사용 하는것이다.
 ``` C#
 // Client Code 
 
@@ -55,6 +59,8 @@ response.EnsureSuccessStatusCode();
 #### 관계형 DB
 쉽게 말하면 Excel 
 
+가장 기본적인 형태
+
 Students Table
 |학생ID|학생이름|수강과목|학점|
 |---|---|---|---|
@@ -66,6 +72,8 @@ Students Table
 
 #### Document DB
 객체를 저장하는 DB
+
+간단하게 쓰기 좋지만 마스터하기엔 정말 어려움
 
 JSON 형태로 저장합니다.
 Students Table 통으로 저장

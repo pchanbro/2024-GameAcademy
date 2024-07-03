@@ -1,0 +1,14 @@
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\bin\Debug\net8.0\CSharp_16.exe
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\bin\Debug\net8.0\CSharp_16.deps.json
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\bin\Debug\net8.0\CSharp_16.runtimeconfig.json
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\bin\Debug\net8.0\CSharp_16.dll
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\bin\Debug\net8.0\CSharp_16.pdb
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.GeneratedMSBuildEditorConfig.editorconfig
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.AssemblyInfoInputs.cache
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.AssemblyInfo.cs
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.csproj.CoreCompileInputs.cache
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.dll
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\refint\CSharp_16.dll
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.pdb
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\CSharp_16.genruntimeconfig.cache
+C:\Works\SuyoungBaek\Day43\20240614_01\CSharp_16\obj\Debug\net8.0\ref\CSharp_16.dll
