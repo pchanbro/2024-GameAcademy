@@ -1,0 +1,208 @@
+
+USE SBS_Study_20240701;
+
+
+-- TABLE 생성 명령어
+-- 이거하면 주석인가 본데
+-- DB는 대소문자 구분이 없다.
+-- 그래도 DB 명렁어는 대문자로 써주는게 약속이다.
+
+DROP TABLE IF EXISTS PCH_TblChampion;
+CREATE TABLE PCH_TblChampion
+(
+	-- 컬럼명 자료형 (기존 c++이랑은 다르게 순서가 바뀜) 
+	_key	INT			PRIMARY KEY		AUTO_INCREMENT
+	,_name	NVARCHAR(30) -- 여긴 string 없다. 
+); 
+
+INSERT INTO PCH_TblChampion (_name)
+	VALUES 	('가렌'),
+			('티모');
+
+-- 자료형 종류
+-- 정수 : INT (int32), BIGINT (int64)
+-- 실수 : 되도록 사용하지 말것
+-- 문자 : VARCHAR(길이) , TEXT
+
+DROP TABLE IF EXISTS PCH_TblItem;
+CREATE TABLE PCH_TblItem
+(
+	_key	INT			PRIMARY KEY		AUTO_INCREMENT
+	,_name	NVARCHAR(30)
+);
+
+INSERT INTO PCH_TblItem(_name)
+	VALUES	('신발'),
+			('단검'),
+			('롱소드')
+
+			
+DROP TABLE IF EXISTS PCH_TblSkill;
+CREATE TABLE PCH_TblSkill
+(
+	_key	INT			PRIMARY KEY		AUTO_INCREMENT
+	,_name	NVARCHAR(30)
+);
+
+INSERT INTO PCH_TblSkill(_name)
+	VALUES	('실명'),
+			('이속증가'),
+			('침묵')
+			
+
+DROP TABLE IF EXISTS PCH_TblUser;
+CREATE TABLE PCH_TblUser
+(
+	_key			INT			PRIMARY KEY		AUTO_INCREMENT
+	,_championKey	INT
+	,_level			INT
+	,FOREIGN KEY (_championKey) REFERENCES PCH_TblChampion(_key)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+INSERT INTO PCH_TblUser(_championKey, _level)
+	VALUES	(1, 2),
+			(2, 1)
+
+
+
+DROP TABLE IF EXISTS PCH_TblUserItem;
+CREATE TABLE PCH_TblUserItem
+(
+	_key		INT			PRIMARY KEY		AUTO_INCREMENT
+	,_userKey	INT
+	,_itemKey	INT
+	,FOREIGN KEY (_userKey) REFERENCES PCH_TblUser(_key)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+	,FOREIGN KEY (_itemKey) REFERENCES PCH_TblItem(_key)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+);
+
+INSERT INTO PCH_TblUserItem(_userKey, _itemKey)
+	VALUES	(1, 1),
+			(1, 2),
+			(2, 2),
+			(2, 3)
+
+DROP TABLE IF EXISTS PCH_TblUserSkill;
+CREATE TABLE PCH_TblUserSkill
+(
+	_key		INT			PRIMARY KEY		AUTO_INCREMENT
+	,_userKey	INT
+	,_skillKey	INT
+	,FOREIGN KEY(_userKey) REFERENCES PCH_TblUser(_key)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+	,FOREIGN KEY(_skillKey) REFERENCES PCH_TblSkill(_key)
+		ON UPDATE CASCADE
+		ON DELETE CASCADE
+	
+);
+
+INSERT INTO PCH_TblUserSkill(_userKey, _skillKey)
+	VALUES	(1, 1),
+			(1, 2),
+			(2, 3)
+
+
+-- 2. 테이블에 PRIMARY KEY (고유키) 
+-- 설정해주면 조회할 때 빠름
+-- 웬만하면 설정해주는게 좋다.
+
+
+-- 3. 테이블 정의 수정하기
+-- ALTER TABLE [테이블명]
+--	 ADD COLUMN 컬럼명 자료형;
+
+-- ALTER TABLE [테이블명]
+--	 DROP COLUMN 컬럼명 자료형;
+
+-- ALTER TABLE [테이블명]
+--	 ADD PRIMARY KEY (컬럼명);
+
+-- ALTER TABLE [테이블명]
+--	 DROP PRIMARY KEY ;
+
+-- ALTER TABLE [테이블명]
+-- 	 ADD CONSTRAINT 제약사항이름
+--	 FOREIGN KEY (child_column)
+--	 REFERENCES parent_table(parent_column)
+
+-- 4. 테이블 삭제하기
+-- DROP TABLE [테이블명]
+
+-- 5. 테이블에 외래키 설정하기
+-- CREATE TABLE 테이블명
+-- (
+-- 		컬럼명	자료형	PRIMARY KEY
+--		,컬럼명	자료형
+--		,FOREIGN KEY (child_column) REFERENCES [부모테이블명](부모컬럼명)
+-- );
+
+-- 6. 테이블에 데이터 넣기
+INSERT INTO 테이블명 (컬럼명, 컬럼명 ...)
+	VALUES (데이터, 데이터 ...)
+
+
+
+
+
+-- 외래키에 대해 - 면접에서 물어보진 않음
+-- 말이 많은 이유
+-- 1. 테이블 삭제조차 맘대로 하지 못하게 된다.
+-- (이 테이블은 다른테이블과 제약사항이 있습니다... 그 테이블의 제약사항을 끊고 와주세요.. 등의 메세지 발생)
+
+-- DB를 잘하시는 분들은 비선호
+-- 왜냐면 그 정도일은 자기자신이 책임질 수 이기 때문
+
+-- [반박 의견 - 외래키를 써야한다]
+-- DB는 회사자산 중에서 가장 중요한 자산.
+-- 그런데 너가 실수안할거라는 단순한 믿음/ 조금의 편리함 떄문에 외래키를 안쓴다면 그건 잘못됐다.
+-- 그러니 외래키를 써야한다.
+
+-- 2. DB에서 가장 주요한거 (데이터 적합성)
+-- 얼마나 DB의 데이터가 정확도가 높은지.
+-- 외래키가 설정 안되어 있으면, 특정테이블 하나만 지웠을때, 문제를 놓칠수 있다.
+-- 데이터 정합성에서 문제가 생길 수 있다는 이슈가 있다.
+-- 그러니 외래키를 써야 한다.
+
+-- [반박의견 - 외래키를 안써야한다] 넥슨, 엔씨, 넷마블은 안씀
+-- 그정도도 관리 못하면 프로그래머가 아니다.
+
+-- 3. 퍼포먼스 이슈.
+-- 외래키를 쓰면 속도가 느려진다 라는 주제로 싸움
+-- 데이터를 추가할 때. 외래키를 쓰면 '조금' 느리다.
+-- 대신, 데이터를 조회할 때 외래키를 쓰면 '조금' 빠르다
+
+-- 꼭 기억해야할 생활상식
+-- PRIMARY KEY
+-- FOREIGN KEY
+
+-- 실제 [DB] 구현한다고 해보자
+-- 이 때 키를 순서대로 저장을 시켜 놔야
+-- binary tree 에서 찾는 방법에 따라 key가 1000개면 10번 안에 찾을 수 있다.
+
+-- PRIMARY KEY는 DB에 저장할 때 저장하는 순서대로 저장시키는 장점이 있다.
+-- 그래서 조회할 때 아주 빠르다.
+
+-- FOREIGN KEY
+-- 다른 메모장을 켠다.
+-- 거기에 저장을 한다.
+-- 데이터를 저장할 때,
+
+-- 주소값을 저장해둔거라 메모장을 키고 메모장의 몇번째줄 까지 가는 탐색을 해줘야한다.
+-- 그래서 PRIMARY KEY 만큼 빠르지 않다.
+-- 다만, 설정을 안해둔것보단 빠르다.
+
+-- 반대로 데이터를 넣을 때는
+-- 포린키
+-- 1. 어떤 메모장의 몇번째 줄
+-- 2. 어떤 메모장의 몇번쨰 줄
+-- 이거를 적어야하기 때문에 그만큼 느려진다.
+
+-- 결론 : FOREIGN KEY를 쓰면, 입력은 살짝 느려지고, 조회는 살짝 빨라진다
+
+-- 4. 
