@@ -30,6 +30,7 @@ public:
 	}
 	void InputOperator()
 	{
+		cout << "(0 : +, 1 : -, 2 : *, 3 : /)";
 		cin >> _oper;
 	}
 	void PrintResult()
@@ -72,6 +73,9 @@ public:
 		case 2:
 			calcFunction = &Calculator::Multiply;
 			break;
+		case 3:
+			calcFunction = &Calculator::Divide;
+			break;
 		default:
 			break;
 		}
@@ -80,7 +84,10 @@ public:
 		// 
 		//어? this를 써야하는데?
 		//(calc.*calcFunction)();
+		cout << "이거 쓰냐?" << endl;
 		((*this).*calcFunction)();
+		cout << this->calcFunction << endl; // 이거 하면 1 출력됨
+		cout << "이거 썼냐??" << endl;
 		//생김새부터가 완전 기괴합니다.
 	}
 
@@ -105,13 +112,13 @@ void main()
 	Calculator calc2;
 	Calculator calc3;
 
-	cout << "첫번째 숫자를 입력해주세요 : " << endl;
+	cout << "첫번째 숫자를 입력해주세요 : ";
 	calc.InputNumber1();
 
-	cout << "두번째 숫자를 입력해주세요 : " << endl;
+	cout << "두번째 숫자를 입력해주세요 : ";
 	calc.InputNumber2();
 
-	cout << "연산자를 입력해주세요 : " << endl;
+	cout << "연산자를 입력해주세요 : " ;
 	calc.InputOperator();
 
 	calc.PrintResult();
