@@ -16,7 +16,7 @@ void FlipbookActor::Render(HDC hdc)
 
 	// 지금 아래 코드에서 
 	// static_cast<int>(_body.pos.x - info.size.x / 2)
-	// static_cast<int>(_body.pos.y - info.size.y / 2
+	// static_cast<int>(_body.pos.y - info.size.y / 2)
 	// 요 위치에 그림을 그리겠습니다. 이 값을 고정시키면 캐릭터 안움직임
 
 	// 카메라 = 눈속임

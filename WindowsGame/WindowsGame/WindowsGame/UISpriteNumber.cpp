@@ -21,7 +21,7 @@ void UISpriteNumber::SetSprites(wstring resourceName)
 		_sprites[i] = GET_SINGLE(ResourceManager)->GetSprite(spriteName);
 
 		//assert(_sprites[i] != nullptr);
-		printf("Error : UISpriteNumber::");
+		printf("Error: UISpriteNumber::SetSprites(wstring resourceName) Not Found Resource");
 	}
 }
 void UISpriteNumber::SetSprite(Sprite* sprite, int number)

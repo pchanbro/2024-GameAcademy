@@ -6,6 +6,7 @@
 #include "InGameScene.h"
 #include "MoleGameScene.h"
 #include "Game2048Scene.h"
+#include "TowerDefenseScene.h"
 
 void SceneManager::Init()
 {
@@ -67,6 +68,9 @@ void SceneManager::Update()
 		break;
 	case SceneType::Game2048Scene:
 		newScene = new Game2048Scene();
+		break;
+	case SceneType::TowerDefenseScene:
+		newScene = new TowerDefenseScene();
 		break;
 	default:
 		break;

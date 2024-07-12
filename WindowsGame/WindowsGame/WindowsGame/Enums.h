@@ -14,6 +14,7 @@ enum class SceneType
 	InGameScene,
 	MoleGameScene,
 	Game2048Scene,
+	TowerDefenseScene,
 };
 
 enum class ColliderType

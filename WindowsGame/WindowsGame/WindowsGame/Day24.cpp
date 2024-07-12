@@ -19,6 +19,7 @@ void Comment1()
 	
 	// Mac, IOS, Android 등
 	// OS마다 리소스를 로딩하는 방식이 다 다름
+	
 	// Windows API에서 제공해주는 이미지 로딩
 
 	// Android(무조건 JAVA)

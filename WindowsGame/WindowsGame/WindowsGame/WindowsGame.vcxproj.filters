@@ -65,6 +65,12 @@
     <Filter Include="09.Events\Game">
       <UniqueIdentifier>{9a3f6fdf-eaaa-4937-aae0-feb2a6e613e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Scenes\TowerDefense">
+      <UniqueIdentifier>{7a614073-b799-4634-a267-022f8af1b917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Objects\TowerDefense">
+      <UniqueIdentifier>{fa677a2b-81e8-4ab4-8ae5-abf44c212665}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -276,6 +282,9 @@
     </ClInclude>
     <ClInclude Include="UISpriteNumber.h">
       <Filter>06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerDefenseScene.h">
+      <Filter>02.Scenes\TowerDefense</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -555,6 +564,9 @@
     </ClCompile>
     <ClCompile Include="UISpriteNumber.cpp">
       <Filter>06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerDefenseScene.cpp">
+      <Filter>02.Scenes\TowerDefense</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

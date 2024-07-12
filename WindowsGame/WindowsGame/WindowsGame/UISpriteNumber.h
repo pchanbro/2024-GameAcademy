@@ -15,6 +15,11 @@ protected:
 
 public:
 	void SetNumber(int number);
+
+	//resourceName : S_SpriteNumber
+	//_sprites[0] : S_SpriteNumber_0
+	//_sprites[1] : S_SpriteNumber_1
+	// ...
 	void SetSprites(wstring resourceName);
 	void SetSprite(Sprite* sprite, int number);
 

@@ -76,7 +76,8 @@ void Comment1()
 
 	// 거기에서 이제 따르는 것이 바로 SRP
 	
-	// SRP (단일책임원칙)
+	// SRP (single responsibility principle) (단일책임원칙)
+	
 	// 하나의클래스에는 하나의 기능만하게하는것이 좋다.
 
 }

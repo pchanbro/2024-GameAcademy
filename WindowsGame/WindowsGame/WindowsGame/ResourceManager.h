@@ -41,10 +41,10 @@ private:
 
 // 경로 
 // ../Resources/Mole/bg_mole.bmp 이 파일을 찾으려 하는데 파일이 없다더라.
-// ../ 이니까 WindowsGame.vcxproj 기준으로 폴더 하나 앞으로 나가야 한다는 것
+// ../ 이니까 WindowsGame.vcxproj 기준으로 폴더 하나 이전으로 나가야 한다는 것
 
 // 디버깅할때는 상대경로 기준을
-//		.vcxproj 파일 기주으로 하고
+//		.vcxproj 파일 기준으로 하고
 // 배포할떄는
 //		.exe 파일 기준으로 상대경로를 정한다.
 // ../ => 폴더를 하나 밖으로 나간다.

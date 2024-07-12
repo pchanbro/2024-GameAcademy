@@ -209,6 +209,7 @@
     <ClInclude Include="TilemapActor.h" />
     <ClInclude Include="TilemapScene.h" />
     <ClInclude Include="TimeManager.h" />
+    <ClInclude Include="TowerDefenseScene.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UISpriteNumber.h" />
@@ -357,6 +358,7 @@
     <ClCompile Include="TilemapActor.cpp" />
     <ClCompile Include="TilemapScene.cpp" />
     <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="TowerDefenseScene.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="UISpriteNumber.cpp" />
     <ClCompile Include="Vector2.cpp" />

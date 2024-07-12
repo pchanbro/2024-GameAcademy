@@ -33,7 +33,7 @@ void GameEventManager::AddEvent(string key, GameEvent* gameEvent)
 	// push_back 해주기 전에 해주면 좋은 것
 	assert(gameEvent != nullptr);
 
-	if (_gameEvents.contains(key) == false)
+	if (_gameEvents.contains(key) == true)
 	{
 		return;
 	}
