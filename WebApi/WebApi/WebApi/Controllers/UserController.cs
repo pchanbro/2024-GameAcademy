@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebApi.Data;
+using WebApi.Models.DB;
 
 namespace WebApi.Controllers
 {
@@ -28,6 +31,7 @@ namespace WebApi.Controllers
         private static int _newUserId = 1;
         private static List<User> _users = new List<User>();
         // 사실 이 List가 DB에 있기 떄문에 이걸 DB에서 가져오고 갔다놓고 하는걸 할 수 있으면 된다.
+        private readonly Context _context;
 
         //Get Method
         //id를 통해서 User정보 조회
@@ -44,9 +48,23 @@ namespace WebApi.Controllers
         //해당 유저가 삭제되게 수정
 
         private readonly ILogger<UserController> _logger;
-        public UserController(ILogger<UserController> logger)
+        public UserController(ILogger<UserController> logger, Context context)
         {
             _logger = logger;
+            _context = context;
+        }
+
+        [HttpGet("TestGet")]
+        public async Task<List<PchTblUser>> GetPchTblUsers()
+        {
+            // 클라이언트 <-> 서버 <-> DB
+            //
+            // 클라이언트 => 서버에 요청보낼때, 로딩바를 보통 띄워둡니다.
+            // 로그인할때.
+            // indicator (삥글뻉글 돌아감)
+            // 서버 <-> DB
+
+            return await _context.PchTblUsers.ToListAsync();
         }
 
         [HttpGet()]

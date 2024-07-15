@@ -39,5 +39,6 @@ void main()
 
 		cout << "a : " << a << endl;
 		cout << "b : " << b << endl;
+		cout << "line : " << line << endl;
 	}
 }

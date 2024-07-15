@@ -1,0 +1,7 @@
+1. EntityFramework 를 사용하기 위한 절차
+2. C#에는 라이브러리를 설치하기위한 툴이 존재함
+ - Nuget Package
+   - 사용법 : 도구 - Nuget 패키지 관리자 - 솔루션용 Nuget 패키지 관리 - 찾아보기에서 3가지 WEPAPI용으로 받아줌
+   1. Microsoft.EntityFrameworkCore
+   2. Microsoft.EntityFrameworkCore.Design
+   3. Pomelo.EntityFrameworkCore.MySql(MySql 드라이버)

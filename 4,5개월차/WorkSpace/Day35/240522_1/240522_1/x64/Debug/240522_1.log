@@ -1,3 +1,3 @@
 ﻿  main02.cpp
-C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day35\240522_1\240522_1\main02.cpp(6,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-  240522_1.vcxproj -> C:\Users\82102\Desktop\git\2024-GameAcademy\4개월차\WorkSpace\Day35\240522_1\x64\Debug\240522_1.exe
+C:\Users\82102\Desktop\git\2024-GameAcademy\4,5개월차\WorkSpace\Day35\240522_1\240522_1\main02.cpp(5,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  240522_1.vcxproj -> C:\Users\82102\Desktop\git\2024-GameAcademy\4,5개월차\WorkSpace\Day35\240522_1\x64\Debug\240522_1.exe

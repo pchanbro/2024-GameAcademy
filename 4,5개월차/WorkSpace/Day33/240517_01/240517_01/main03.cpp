@@ -45,8 +45,8 @@ public:
 
 	}
 
-private:
-	// 사용자에게 노출할 필요가 없는 함수들
+public:
+	// 사용자에게 노출할 필요가 없는 함수들 지금은 밑에서 쓰려고 public로 해놨음
 	void Add()
 	{
 		_result = _num1 + _num2;
@@ -124,11 +124,11 @@ void main()
 	calc.PrintResult();
 
 	void (Calculator:: * calcFunction)(void) = nullptr;
-
+	
 	calcFunction = &(Calculator::Add);
 
 	// 얘를 실행시킬때 calc, calc2, calc3 중에서 어떤 객체의 Add 함수를 호출시킬거냐??
-	// calcFunction();
+	//calcFunction();
 
 	// 멤버함수를 포인터로 쓸 때는 어떤 객체에서 쓸건지까지 확실하게 지정해줘야함.
 
@@ -140,6 +140,6 @@ void main()
 	// calc 이 객체의
 	// calcFunction 여기에 저장된 주소로 가서 실행시켜라.
 	// *calcFunction
-	// (calc.*calcFunction)();
+	(calc.*calcFunction)(); // 이렇게 쓰면 된다.
 	// ((*this).*calcFunction)();
 }
