@@ -15,13 +15,15 @@ public:
 	virtual void Update() override;
 	virtual void Release() override;
 
+	void LoadResource();
+
 public:
 	virtual Vector2 GetTilemapPos(Vector2Int cellPos) override;
 	virtual Tilemap* GetTilemap() override;
 	virtual TilemapActor* GetTilemapActor() override;
 	virtual bool CanGo(Actor* actor, Vector2Int cellPos) override;
 
-protected:
+private:
 	TilemapActor* _tilemapActor = nullptr;
 	MapToolController* _mapToolController = nullptr;
 	CreatureController* _creatureController = nullptr;

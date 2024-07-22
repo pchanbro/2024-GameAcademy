@@ -16,8 +16,9 @@
   {
     "id": 100003,
     "name": "Monster3",
-    "hp": 3000,
+    "hp": 300,
     "moveSpeed": 500,
     "skillId": 200003
   }
+
 ]

@@ -1,0 +1,9 @@
+[
+  {
+    "id": 100001,
+    "name": "Tower1",
+    "damage": 50,
+    "attackSpeed": 300,
+	"attackRange" : 200
+  }
+]

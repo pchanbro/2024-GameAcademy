@@ -47,7 +47,7 @@ void Game::Init(HWND hwnd)
 	DATA->Init();
 	GET_SINGLE(SoundManager)->Init();
 
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Dev1Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::TowerDefenseScene);
 }
 
 void Game::Updata()
