@@ -1,0 +1,107 @@
+﻿
+저번시간 내용 정리
+
+ - SQL 완료.
+ - 코드에서 DB를 직접 컨트롤 하는 방법
+ (ORM 기법)
+
+ - ORM에서도 방법이 2가지 존재.
+  - 1) 완성된 DB(테이블 정의)를 코드로 그대로 가져와서, 사용하는 방법 - 우리가 수업에서 한 방식
+  - 2) 완성된 코드를 DB로 그대로 만들어서 사용하는 방법 
+     - 2번은 조금 위험한게, 이미 테이블이 구성되어 있거나, 조금 다른 테이블이 있으면, 모두 삭제시키고 다시 생성한다.
+  (자세한 내용은 Entity Framework Core 홈페이지 사용방법 찾아보기)
+
+ - 마지막으로 Controller에서 유저 요청에 따라, 값을 return 해주는데
+ - 이 return 값을 이용해 TblChampion을 조회하는 방법
+
+Client - Server - DB
+
+
+ - 1. PchTblUserItems, BsyTblUserSkills, ChampionKeyNavigation virtual 로 이루어진 변수들이 null로 뜨는 이유
+  - ForeignKey를 설정해줬기 때문에 해당 변수들이 자동으로 설정이 됐음
+
+ - 2. 조회를 할 때, 어떻게 조회를 할 것인가. (ORM에서의 방식)
+  - ORM에서는 기본적으로 기능을 사용할 때, DB에 SQL문을 날리게 된다.
+
+```
+    return await _context.PchTblUsers.ToListAsync();
+```
+ ==> DB에 SQL문을 하나 동작이키면
+(SELECT b._key, b.championKey, b._level
+    From Pch_TblUser AS b)  
+ ==> 그렇기 때문에 virtual 변수는 나타나지 않는다.
+
+(
+SELECT b._key, b._championKey, b._level
+    FROM BSY_TblUser AS b
+    JOIN BSY_TblChampion AS Champion
+    ON b._championKey = Champion._key
+-- LEFT JOIN `Pch_TblChampion` AS `b0` ON `b`.`_championKey` = `b0`.`_key`
+)
+
+ ==> _context.PchTblUser.Join() 을 하면 되나?
+ 이렇게해도 당연히 됩니다.
+ 
+ ==> Include를 하면 포함이 된다.
+
+ 에러내용 : 
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: 
+
+JSON이 너무 깊어요. Depth가 32를 넘으면 조회를 못해줍니다.
+(보통 이에러는 보통 데이터의 무한 루프)
+
+
+SELECT `b`.`_key` AS `UserKey`, `b0`.`_name` AS `ChampionName`, `b`.`_level` AS `UserLevel`, 
+(
+    SELECT COUNT(*)
+    FROM `BSY_TblUserItem` AS `b1`
+    WHERE `b`.`_key` = `b1`.`_userKey`
+) AS `ItemCount`
+FROM `BSY_TblUser` AS `b`
+LEFT JOIN `Pch_TblChampion` AS `b0` ON `b`.`_championKey` = `b0`.`_key`
+
+
+==> 나중에 이슈생겼을때, 가장 먼저 봐야할곳이기 때문에..
+
+==> 이슈 수정은 개발이랑 다릅니다.
+
+
+실습.
+ 1. GetChampionInfoByUserKey 만들기
+  parameter로 id를 받아서, 
+  유저키, 챔피언이름 뿌려주기
+
+ 2. GetItemListByUserKey 만들기
+  parameter로 id를 받아서, 
+  어떤 아이템이 있는지 뿌려주는거.
+
+ 3. GetSkillListByUserKey 만들기
+  parameter로 id를 받아서, 
+  어떤 아이템이 있는지 뿌려주는거.
+ 
+
+DTO란?
+
+Data transfer object
+
+클라이언트 <-> 서버
+
+둘다 Sync되어야하는 클래스
+
+
+
+네트워크에러, 인증에러, 라우트에러
+-- 보통 웹기능이 알아서 해줍니다.
+-- 20으로시작하면 기본적으로 통신은 성공
+
+--> 기본기능에 문제가 있는건 웹사이트 에러로 대체해줍니다.
+
+
+코드를 타다가 문제가 생긴건
+ 에러핸들링을 따로해줍니다.
+
+모든 리턴에는
+1. 성공유무
+2. Return 데이터
+3. Message
+4. StatusCode  (0x71 통신중에 오류가 발생했습니다.)

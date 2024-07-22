@@ -16,10 +16,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Comment\Day47\" />
-    <Folder Include="Comment\Day48\" />
-    <Folder Include="Comment\Day52\" />
-  </ItemGroup>
-
 </Project>

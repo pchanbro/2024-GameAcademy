@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Data;
 using WebApi.Models.DB;
+using WebApi.Models.DTO;
 
 namespace WebApi.Controllers
 {
@@ -55,7 +56,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("TestGet")]
-        public async Task<List<PchTblUser>> GetPchTblUsers()
+        public async Task<object> GetPchTblUsers() // async는 비동기
         {
             // 클라이언트 <-> 서버 <-> DB
             //
@@ -64,7 +65,149 @@ namespace WebApi.Controllers
             // indicator (삥글뻉글 돌아감)
             // 서버 <-> DB
 
-            return await _context.PchTblUsers.ToListAsync();
+            object rv;
+
+            rv = await _context.PchTblUsers
+                .Include(user => user.ChampionKeyNavigation)
+                .Include(user => user.PchTblUserItems)
+                .Select(user => new
+                {
+                    UserKey = user.Key,
+                    ChampionName = user.ChampionKeyNavigation.Name,
+                    UserLevel = user.Level,
+                    ItemCount = user.PchTblUserItems.Count
+                })
+                .ToListAsync();
+
+            // 이 방법으로도 된다. 선생님은 이걸 더 선호하고 대부분 이걸 많이 쓴다.
+            var query = await (
+                from user in _context.PchTblUsers
+                where user.Key == 1
+                select new
+                {
+                    UserKey = user.Key,
+                    ChampionName = user.ChampionKeyNavigation.Name,
+                    UserLevel = user.Level,
+                    ItemCount = user.PchTblUserItems.Count
+                })
+                .ToListAsync();
+
+            return query; // return rv; 해도 됨
+        }
+
+        [HttpGet("GetChampionInfoByUserKey")]
+        public async Task<CommonResult<ResponseDtoGetChampionInfoByUserKey>> GetChampionInfoByUserKey([FromQuery] RequestDtoGetChampionInfoByUserKey requestDto)
+        {
+            CommonResult<ResponseDtoGetChampionInfoByUserKey> rv = new ();
+
+            try
+            {
+                _context.BsyTblUsers.Include(user => user.ChampionKeyNavigation);
+
+                var query = await (
+                   from user in _context.BsyTblUsers
+                   where user.Key == requestDto.UserKey
+                   select new ResponseDtoGetChampionInfoByUserKey
+                   {
+                       UserKey = user.Key,
+                       ChampionLevel = user.Level ?? 0,
+                       ChampionName = user.ChampionKeyNavigation.Name
+                   }).ToListAsync();
+
+                /*
+                 * SELECT `b`.`_key` AS `UserKey`, `b`.`_level` AS `ChampionLevel`, `b0`.`_name` AS `ChampionName`
+                 * FROM `BSY_TblUser` AS `b`
+                 * LEFT JOIN `BSY_TblChampion` AS `b0` ON `b`.`_championKey` = `b0`.`_key`
+                 * WHERE `b`.`_key` = @__userKey_0
+                 */
+
+                if (query.Count < 1)
+                {
+                    throw new CommonException(EStatusCode.NotFoundEntity, "해당 키를 가진 유저가 없습니다.");
+                }
+
+                var selectUser = query.First();
+
+                rv.StatusCode = EStatusCode.OK;
+                rv.Message = "";
+                rv.IsSuccess = true;
+                rv.Data = selectUser;
+
+            }
+            catch (CommonException ex)
+            {
+                rv.StatusCode = (EStatusCode)ex.StatusCode;
+                rv.Message = ex.ToString();
+                rv.IsSuccess = false;
+                rv.Data = (ResponseDtoGetChampionInfoByUserKey)ex.Data;
+            }
+            catch (Exception ex)
+            {
+                rv.StatusCode = EStatusCode.ServerException;
+                rv.Message = ex.ToString();
+                rv.IsSuccess = false;
+                rv.Data = null;
+            }
+            return rv;
+        }
+
+        [HttpGet("GetItemListByUserKey")]
+        public async Task<ResponseDtoGetItemListByUserKey> GetItemListByUserKey([FromQuery] RequestDtoGetItemListByUserKey requestDto)
+        {
+            ResponseDtoGetItemListByUserKey rv = new();
+
+            // [itemKey, itemName]의 List형태로 리턴
+            rv.List = await (
+              from userItem in _context.BsyTblUserItems
+              where userItem.UserKey == requestDto.UserKey
+              select new ResponseDtoGetItemListByUserKeyElement
+              {
+                  ItemKey = userItem.Key,
+                  ItemName = userItem.ItemKeyNavigation.Name
+              }).ToListAsync();
+
+            /*
+             * SELECT `b`.`_itemKey` AS `ItemKey`, `b0`.`_name` AS `ItemName`
+             * FROM `BSY_TblUserItem` AS `b`
+             * LEFT JOIN `BSY_TblItem` AS `b0` ON `b`.`_itemKey` = `b0`.`_key`
+             * WHERE `b`.`_userKey` = @__userKey_0
+             */
+
+            //1. List<Dto> 형태로 리턴한다.
+            //  서버, 클라이언트 둘다하는 사람이 많이 적습니다.
+            //  서버입장에서는 List<Dto>로 리턴하는게 상당히 많이 편합니다.
+            //  클라이언트 입장에서는 저렇게 Return해줬을때 코드로 파싱하는 경우에서 많이 까다로울떄가 많아요.
+
+            //2. Dto에 리스트를 포함한다.
+
+
+            return rv;
+        }
+
+        [HttpGet("GetSkillListByUserKey")]
+        public async Task<ResponseDtoGetSkillListByUserKey> GetSkillListByUserKey([FromQuery] RequestDtoGetSkillListByUserKey requestDto)
+        {
+            ResponseDtoGetSkillListByUserKey rv = new();
+
+            // [skillKey, skillName]의 List형태로 리턴
+            rv.List = await (
+              from userSkill in _context.BsyTblUserSkills
+              where userSkill.UserKey == requestDto.UserKey
+              select new ResponseDtoGetSkillListByUserKeyElement
+              {
+                  SkillKey = userSkill.Key,
+                  SkillName = userSkill.SkillKeyNavigation.Name
+              }).ToListAsync();
+
+
+            /*
+             * SELECT `b`.`_key` AS `SkillKey`, `b0`.`_name` AS `SkillName`
+             * FROM `BSY_TblUserSkill` AS `b`
+             * LEFT JOIN `BSY_TblSkill` AS `b0` ON `b`.`_skillKey` = `b0`.`_key`
+             * WHERE `b`.`_userKey` = @__requestDto_UserKey_0
+             */
+
+            return rv;
         }
 
         [HttpGet()]

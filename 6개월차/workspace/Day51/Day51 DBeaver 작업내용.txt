@@ -1,11 +1,36 @@
 
 USE SBS_Study_20240701;
 
+Table
+
+ => 관계형 데이터
+ 
+ => 실제로 데이터가 있는곳
+ 
+ => 데이터 세트 1개당, 1줄(row) 을 차지합니다.
+ => 데이터 정보 1개당, 1열(column)을 차지합니다.
 
 -- TABLE 생성 명령어
 -- 이거하면 주석인가 본데
 -- DB는 대소문자 구분이 없다.
 -- 그래도 DB 명렁어는 대문자로 써주는게 약속이다.
+
+1. 테이블 생성하는방법
+CREATE TABLE 테이블명
+(
+	컬럼명		자료형
+	,컬럼명		자료형
+	,PRIMARY KEY (컬럼명)
+);
+
+or
+
+CREATE TABLE 테이블명
+(
+	컬럼명		자료형 	PRIMARY KEY
+	,컬럼명		자료형
+);
+
 
 DROP TABLE IF EXISTS PCH_TblChampion;
 CREATE TABLE PCH_TblChampion
@@ -19,10 +44,12 @@ INSERT INTO PCH_TblChampion (_name)
 	VALUES 	('가렌'),
 			('티모');
 
+
 -- 자료형 종류
 -- 정수 : INT (int32), BIGINT (int64)
--- 실수 : 되도록 사용하지 말것
+-- 실수 : 되도록 사용하지 말것, 굳이 해야한다면 DECIMAL (고정소수점으로 사용)
 -- 문자 : VARCHAR(길이) , TEXT
+
 
 DROP TABLE IF EXISTS PCH_TblItem;
 CREATE TABLE PCH_TblItem
