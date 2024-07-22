@@ -3,12 +3,17 @@
 #include "assert.h"
 #include "Tilemap.h"
 #include "TilemapActor.h"
+#include "Flipbook.h"
 
 void TowerDefenseScene::Init()
 {
-
-
 	Super::Init();
+
+	this->LoadResource();
+
+	{
+		_tilemapActor = new TilemapActor();
+	}
 }
 void TowerDefenseScene::Render(HDC hdc)
 {
@@ -113,4 +118,14 @@ TilemapActor* TowerDefenseScene::GetTilemapActor()
 	}
 
 	return _tilemapActor;
+}
+
+void TowerDefenseScene::LoadResource()
+{
+	//------------------------------
+	// Enemy
+	//------------------------------
+	{
+
+	}
 }

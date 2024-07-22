@@ -568,6 +568,9 @@
     <ClCompile Include="TowerDefenseScene.cpp">
       <Filter>02.Scenes\TowerDefense</Filter>
     </ClCompile>
+    <ClCompile Include="Day54.cpp">
+      <Filter>999.Comments</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Day16.cpp">
