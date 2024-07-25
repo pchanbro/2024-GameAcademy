@@ -210,6 +210,59 @@ namespace WebApi.Controllers
             return rv;
         }
 
+        [HttpPost("InsertUserSkill")]
+        public async Task<CommonResult<ResponseDtoInsertUserSkill>> InsertUserSkill([FromBody] RequestDtoInsertUserSkill requestDto)
+        {
+            CommonResult<ResponseDtoInsertUserSkill> rv = new();
+
+            // GET으로 해도 할 수는 있는데 GET은 조회하는 것이기 때문에
+            // 의미가 안맞다
+
+            // 함수명을 GetSkill이라고 해놓고
+            // 본문내용은 InsertSkill 이라고 하는 행동이랑 크게 다를게 없다.
+
+            // 그러니 Post로 써주겠다.
+
+            try
+            {
+                _context.PchTblUserSkills.Add(new PchTblUserSkill()
+                {
+                    SkillKey = requestDto.SkillKey,
+                    UserKey = requestDto.UserKey
+                });
+
+                var IsSuccess = await _context.SaveChangesAsync();
+
+                if(IsSuccess ==0)
+                {
+                    throw new CommonException(EStatusCode.ChangedRowsIsZero, $"SkillKey : {requestDto.SkillKey},  UserKey: {requestDto.UserKey}");
+                }
+
+                rv.IsSuccess = true;
+                rv.StatusCode = EStatusCode.OK;
+                rv.Data = null;
+            }
+            catch(CommonException ex)
+            {
+                rv.IsSuccess = false;
+                rv.StatusCode =  (EStatusCode)ex.StatusCode;
+                rv.Message = ex.Message;
+                rv.Data = null;
+            }
+            catch (Exception ex)
+            {
+                rv.IsSuccess = false;
+                rv.StatusCode = EStatusCode.ServerException;
+                rv.Message = ex.Message;
+                rv.Data = null;
+            }
+
+
+
+            return rv;
+        }
+
+
         [HttpGet()]
         public User Get([FromQuery]int id)
         {

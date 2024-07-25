@@ -13,7 +13,9 @@
     { 
         OK,
         NotFoundEntity,
-        ServerException
+        ServerException,
+        ChangedRowsIsZero,   // 변경된 DB 줄 수 0
+
     }
 
     public class CommonException : Exception 
