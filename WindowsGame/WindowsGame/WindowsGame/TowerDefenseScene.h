@@ -15,7 +15,8 @@ public:
 	virtual void Update() override;
 	virtual void Release() override;
 
-	void LoadResource();
+public:
+	void LoadResource ();
 
 public:
 	virtual Vector2 GetTilemapPos(Vector2Int cellPos) override;

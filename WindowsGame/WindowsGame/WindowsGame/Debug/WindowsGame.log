@@ -1,0 +1,778 @@
+﻿  Actor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  BallActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  BoxCollider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  BrickActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(14,26): error C2039: 'format': '`global namespace''의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(14,26): error C3861: 'format': 식별자를 찾을 수 없습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(15,27): error C2039: 'format': '`global namespace''의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(15,27): error C3861: 'format': 식별자를 찾을 수 없습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(16,25): error C2039: 'format': '`global namespace''의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(16,25): error C3861: 'format': 식별자를 찾을 수 없습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(21,24): error C2039: 'format': '`global namespace''의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\BrickActor.cpp(21,24): error C3861: 'format': 식별자를 찾을 수 없습니다.
+  Button.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  CameraComponent.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.h(4,7): warning C4099: 'CenterRect': 처음에는 'struct'을(를) 사용하여 형식 이름을 표시했는데 이제는 'class'을(를) 사용하여 표시합니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(37,90): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(37,58): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(51,24): error C2065: 'clamp': 선언되지 않은 식별자입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(51,30): error C2062: 예기치 않은 'float' 형식입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(61,20): error C2065: 'clamp': 선언되지 않은 식별자입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(61,26): error C2062: 예기치 않은 'float' 형식입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(62,20): error C2065: 'clamp': 선언되지 않은 식별자입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.cpp(62,26): error C2062: 예기치 않은 'float' 형식입니다.
+  CenterRect.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  CircleCollider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CircleCollider.cpp(44,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CircleCollider.cpp(43,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CircleCollider.cpp(42,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CircleCollider.cpp(41,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Collider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  CollisionManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CollisionManager.cpp(26,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CollisionManager.cpp(29,25): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CollisionManager.cpp(37,36): error C2039: 'contains': 'std::unordered_set<Collider *,std::hash<Collider *>,std::equal_to<Collider *>,std::allocator<Collider *>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CollisionManager.cpp(52,35): error C2039: 'contains': 'std::unordered_set<Collider *,std::hash<Collider *>,std::equal_to<Collider *>,std::allocator<Collider *>>'의 멤버가 아닙니다.
+  CommonFunction.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Component.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  CreatureActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CreatureActor.cpp(167,15): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CreatureController.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CreatureController.cpp(178,21): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CreatureController.cpp(225,30): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CreatureController.cpp(244,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Data.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  DataManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\DataManager.cpp(12,15): error C2079: 'buffer'은(는) 정의되지 않은 class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>'을(를) 사용합니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\DataManager.cpp(13,9): error C2297: '<<': 오른쪽 피연산자의 유형이 'std::basic_filebuf<char,std::char_traits<char>> *'이므로 유효하지 않습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\DataManager.cpp(13,9): warning C4552: '<<': 식의 결과가 사용되지 않습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\DataManager.cpp(33,3): error C2039: 'contains': 'std::map<int64,MonsterData,std::less<int64>,std::allocator<std::pair<const int64,MonsterData>>>'의 멤버가 아닙니다.
+  Day17.cpp
+  Day18.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day19.cpp
+  Day20.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Day21.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day22.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day23.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day24.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day25.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day26.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day27.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Day27.cpp(47,33): error C2838: 'd': 멤버 선언의 정규화된 이름이 잘못되었습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Day27.cpp(47,33): error C2065: 'd': 선언되지 않은 식별자입니다.
+  Day28.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day29.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day30.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day31.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day32.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day33.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day34.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day35.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day36.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day37.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day38.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day50.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Day54.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Dev1Scene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\CameraComponent.h(4,7): warning C4099: 'CenterRect': 처음에는 'struct'을(를) 사용하여 형식 이름을 표시했는데 이제는 'class'을(를) 사용하여 표시합니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  Dev2Scene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Dev2Scene.cpp(57,56): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Dev2Scene.cpp(57,45): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Flipbook.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  FlipbookActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Game.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Game.cpp(73,21): error C3861: 'format': 식별자를 찾을 수 없습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Game.cpp(81,21): error C3861: 'format': 식별자를 찾을 수 없습니다.
+  Game2048BoardActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Game2048Scene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Game2048Scene.cpp(12,40): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Game2048Scene.cpp(13,40): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameEvent.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  GameEventManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\GameEventManager.cpp(23,18): error C2039: 'contains': 'std::map<std::string,GameEvent *,std::less<std::string>,std::allocator<std::pair<const std::string,GameEvent *>>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\GameEventManager.cpp(36,18): error C2039: 'contains': 'std::map<std::string,GameEvent *,std::less<std::string>,std::allocator<std::pair<const std::string,GameEvent *>>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\GameEventManager.cpp(46,18): error C2039: 'contains': 'std::map<std::string,GameEvent *,std::less<std::string>,std::allocator<std::pair<const std::string,GameEvent *>>>'의 멤버가 아닙니다.
+  GameEvent_CreatureChangeDir.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  HammerActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Image.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  InGameScene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\InGameScene.cpp(30,55): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\InGameScene.cpp(30,47): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\InGameScene.cpp(55,25): error C3861: 'format': 식별자를 찾을 수 없습니다.
+  InputManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  ITilemapActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  MapToolController.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  MapToolTilemapActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  MoleActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  MoleGameScene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\MoleGameScene.cpp(178,21): error C3861: 'format': 식별자를 찾을 수 없습니다.
+  NumBoxActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\NumBoxActor.cpp(20,20): error C3861: 'format': 식별자를 찾을 수 없습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\NumBoxActor.cpp(21,66): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\NumBoxActor.cpp(21,39): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  OmokStoneActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  PaddleActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Panel.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  pch.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  PlayerActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\PlayerActor.cpp(22,32): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\PlayerActor.cpp(22,26): warning C4244: '인수': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  PlayerController.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  PlayerHammerController.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  RandomManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  ResourceBase.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  ResourceManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\ResourceManager.cpp(30,17): error C2039: 'contains': 'std::map<std::wstring,ResourceBase *,std::less<std::wstring>,std::allocator<std::pair<const std::wstring,ResourceBase *>>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\ResourceManager.cpp(52,17): error C2039: 'contains': 'std::map<std::wstring,ResourceBase *,std::less<std::wstring>,std::allocator<std::pair<const std::wstring,ResourceBase *>>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\ResourceManager.cpp(80,17): error C2039: 'contains': 'std::map<std::wstring,ResourceBase *,std::less<std::wstring>,std::allocator<std::pair<const std::wstring,ResourceBase *>>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\ResourceManager.cpp(129,17): error C2039: 'contains': 'std::map<std::wstring,ResourceBase *,std::less<std::wstring>,std::allocator<std::pair<const std::wstring,ResourceBase *>>>'의 멤버가 아닙니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\ResourceManager.cpp(142,17): error C2039: 'contains': 'std::map<std::wstring,ResourceBase *,std::less<std::wstring>,std::allocator<std::pair<const std::wstring,ResourceBase *>>>'의 멤버가 아닙니다.
+  Scene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  SceneManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Sound.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  SoundManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Sprite.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  SpriteActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  TestPanel.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Texture.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Tilemap.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  TilemapActor.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(41,38): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(44,37): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(47,37): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(50,38): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(57,24): warning C4018: '<=': signed 또는 unsigned가 일치하지 않습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(105,45): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\TilemapActor.cpp(106,45): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  TilemapScene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  TimeManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  TowerDefenseScene.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Tilemap.h(4,8): warning C4099: 'Tile': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  UI.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\UI.cpp(74,15): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\UI.cpp(73,15): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  UISpriteNumber.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\UISpriteNumber.cpp(75,23): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\UISpriteNumber.cpp(92,17): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Vector2.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  Vector2Int.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\Vector2Int.cpp(52,33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  WindowsGame.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244: '인수': '_Rep'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         with
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         [
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:             _Rep=__int64
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(11,16): warning C4244:         ]
+D:\git\2024-GameAcademy\WindowsGame\WindowsGame\WindowsGame\RandomManager.h(22,2): warning C4102: 'std': 참조되지 않은 레이블입니다.
+  코드를 생성하고 있습니다...

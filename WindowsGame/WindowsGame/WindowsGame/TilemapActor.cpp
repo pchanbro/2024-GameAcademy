@@ -41,7 +41,7 @@ void TilemapActor::Render(HDC hdc)
 	startX = (left - this->_body.pos.x) / tileSize;
 	startX = max(startX, 0);
 
-	startY = (top - this->_body.pos.y) / tileSize;
+	startY = (top - this->_body.pos.y) / tileSize; 
 	startY = max(startY, 0);
 
 	endX = (right - this->_body.pos.x) / tileSize;

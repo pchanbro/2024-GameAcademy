@@ -1,4 +1,0 @@
-서버에서 안한내용.
- - DB에 Insert, Update, Delete 하는 행동을 안했습니다.
-
- - Insert Update Delete는 너무 간단합니다

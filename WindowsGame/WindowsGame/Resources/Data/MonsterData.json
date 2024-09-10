@@ -3,22 +3,22 @@
     "id": 100001,
     "name": "Monster1",
     "hp": 1000,
-    "moveSpeed": 300,
-    "skillId": 200001
+    "moveSpeed": 100,
+    "resourceName": "FB_EnemyShip1"
   },
   {
     "id": 100002,
     "name": "Monster2",
     "hp": 2000,
     "moveSpeed": 400,
-    "skillId": 200002
+    "resourceName": "FB_EnemyShip2"
   },
   {
     "id": 100003,
     "name": "Monster3",
     "hp": 300,
     "moveSpeed": 500,
-    "skillId": 200003
+    "resourceName": "FB_EnemyShip3"
   }
 
 ]

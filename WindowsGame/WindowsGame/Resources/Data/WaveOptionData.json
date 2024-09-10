@@ -1,0 +1,13 @@
+{
+  "waveTime": 10,
+  "buildTime": 10,
+  "floatingTextTime": 7,
+  "startPoint": {
+    "x": 40,
+    "y": 25
+  },
+  "endPoint": {
+    "x": 5,
+    "y": 3
+  }
+}

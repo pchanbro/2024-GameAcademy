@@ -12,7 +12,7 @@ void MonsterData::FromJson(string json)
 	this->Id = document["id"].GetInt64();
 	this->MoveSpeed = document["moveSpeed"].GetFloat();
 	this->Name = document["name"].GetString();
-	this->SkillId = document["skillId"].GetInt64();
+	//this->SkillId = document["skillId"].GetInt64();
 	
 }
 

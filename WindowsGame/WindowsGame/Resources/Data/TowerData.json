@@ -4,6 +4,15 @@
     "name": "Tower1",
     "damage": 50,
     "attackSpeed": 300,
-	"attackRange" : 200
+    "attackRange": 200,
+    "resourceName": "FB_DrillTank"
+  },
+  {
+    "id": 100002,
+    "name": "Tower2",
+    "damage": 50,
+    "attackSpeed": 300,
+    "attackRange": 200,
+    "resourceName": "FB_Tank"
   }
 ]
