@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj": {}
+    "D:\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj": {
+    "D:\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj",
+        "projectUniqueName": "D:\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj",
         "projectName": "ConsoleClient",
-        "projectPath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj",
-        "packagesPath": "C:\\Users\\82102\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\82102\\Desktop\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\obj\\",
+        "projectPath": "D:\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\ConsoleClient.csproj",
+        "packagesPath": "C:\\Users\\박찬형\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\2024-GameAcademy\\WebApi\\WebApi\\ConsoleClient\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\82102\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\박찬형\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
